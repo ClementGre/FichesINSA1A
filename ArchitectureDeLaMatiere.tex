@@ -1,0 +1,321 @@
+\documentclass[13pt, twoside, a4paper, french, tikz]{report}
+
+\usepackage{ficheslib}
+\usepackage{booktabs}
+\newcommand*{\getSubject}{Architecture de la matière}
+
+\begin{document}
+\title{\getSubject}
+\author{Clément GRENNERAT}
+\date{Septembre 2022}
+
+
+\chapter{Le modèle quantique}\label{ch:le-modele-quantique}
+  
+  
+  \section{Les interactions radiation électromagnétique - matière}\label{sec:les-interactions-radiation-electromagnetique---matiere}
+    
+    Radiation électromagnétique : forme de déplacement d'énergie dans l'espace.\\
+    
+    \textbf{Aspect ondulatoire :} onde caractérisé par : sa vitesse $c$, sa fréquence $\nu$, sa longueur d'onde $\lambda$, son amplitude\ldots\\
+    
+    \resizebox{\textwidth}{!}{
+      \includestandalone[mode=buildnew,page=1, scale]{out/electromagnetic_spectrum}
+    }
+    
+    \textbf{Aspect corpusculaire :} photon associé à une radiation de longueur d'onde $\nu$, tel que $E = h . \nu$
+    
+    \subsection{Mise en oeuvre de la spectroscopie}\label{subsec:mise-en-oeuvre-de-la-spectroscopie}
+      
+      \twoCol{
+      \textbf{Pour l'émission}, on a dans l'ordre : source à analyser, fente, achromat (lentille convergente), prisme, achromat, écran.
+      On peut avoir : un spectre continu (ex. lumière visible), ou un spectre de raies (ex. vapeur métallique excitée).\\
+      
+      (Avec $n' \le n$, car descend du niveau $n$ à $n'$), Formule de Ritz-Balmer ou de Rydberg :
+      \[\dfrac{1}{\lambda} = R_{x} Z^2 \left(\dfrac{1}{n'^2} - \dfrac{1}{n^2}\right)\]
+      
+      \makebox[3cm][l]{$n' = 1$ : Lyman} \;\; $n' = 2$ : Balmer\\
+      \makebox[3cm][l]{$n' = 3$ : Paschen} \;\; $n' = 4$ : Brackett
+      
+    }{
+      \textbf{Pour l'absorption}, on place une source de lumière blanche, puis on place la cuve de la substance absorbante avant le prisme. On a alors un spectre discontinu.\\
+      
+      (Part toujours de l'état fondamental, monte jusqu'au niveau $n$)
+      \[\dfrac{1}{\lambda} = R_{x} Z^2 \left(1 - \dfrac{1}{n^2}\right)\]
+      
+    }
+      
+      \vspace*{10pt}
+      Pour les hydrogénoïdes, on utilise $Z$ (numéro athomique) et $R_x \approx R_H$.\\
+      
+      Raie de tête : du niveau $n'+1 \rightarrow n'$ \;\;\; Raie limite : du niveau $\infty\rightarrow n'$
+  
+  
+  \section{Interprétation théorique : le modèle de Bohr pour l'atome d'hydrogène}\label{sec:interpretation-theorique--le-modele-de-bohr-pour-latome-dhydrogene}
+    
+    \textbf{Trois hypothèses :}
+    \begin{itemize}
+      \item L'électron gravite autour du noyau sur une orbite circulaire de rayon $r$, à vitesse $v$.
+      \item Le rayon de Bohr $r$ est quantifié (seuls certaines valeurs possibles).
+      \item Si $r$ est constant, l'élection ne rayonne pas d'énergie (état stationnaire).
+    \end{itemize}
+    \textbf{Limites :}
+    \begin{itemize}
+      \item Raie = ensemble de sous raies très fines.
+      \item Spectre d'émission modifié dans un champ magnétique ou électrique intense.
+      \item Ne fonctionne pas pour les atomes polyélectroniques.
+    \end{itemize}
+  
+  
+  \section{Présentation des résultats : diagramme d'énergie de Grotrian}\label{sec:presentation-des-resultats--diagramme-denergie-de-grotrian}
+    
+    L'énergie d'un niveau s'exprime à partir de celle du niveau 1 : $E_n = -\dfrac{R_H}{n^2}$.\\
+    L'énergie d'ionisation correspond à la transition $1 \rightarrow \infty$.\\
+    On a donc $E_{incident} = E_{ionisation} + E_c$
+
+
+\chapter{Le modèle ondulatoire de l'atome}\label{ch:le-modele-ondulatoire-de-l'atome}
+  
+  
+  \section{Édification de la mécanique quantique}\label{sec:edification-de-la-mecanique-quantique}
+    
+    Modèles de l'atome non viables $\rightarrow$ mécanique quantique, propre aux atomes et molécules (tout système influençé par un quantum $h.\nu$).
+  
+  
+  \section{Particule ou onde ? Relation de Bröglie}\label{sec:particule-ou-onde-?-relation-de-broglie}
+    
+    Dualité onde-corpuscule (onde, caractérisé par $\nu$, $\lambda$, $c$ ; corpuscule, caractérisé par $E = h . \nu = \dfrac{h.c}{\lambda}$).\\
+    Relation de Bröglie : $\lambda = \dfrac{h}{m . v} = \dfrac{h}{p}$\\
+    Pour les photons (masse nulle), on utilise ka quantité de mouvement $p$.
+  
+  
+  \section{De la notion d'orbite à la notion d'orbitale}\label{sec:de-la-notion-dorbite-a-la-notion-dorbitale}
+    
+    Principe d'indétermination d'Heisenberg : dans la théorie quantique, la position et la vitesse ne sont pas déterminés, on parle donc de densité électronique (probabilité de présence).
+    La densité électronique définie une orbitale.\\
+    
+    L'équation de Schrödinger lie l'énergie d'un électron et sa probabilité de présence en différents points, avec la fonction d'onde $\Psi(x, y, z)$.
+    \begin{itemize}
+      \item La probabilité de présence ne peut prendre qu'une seule valeur par point de l'espace.
+      \item La probabilité de présence ne peut pas présenter de discontinuité.
+      \item En explorant tout l'espace, la probabilité de présence doit être égale à 1 (évènement certain).
+    \end{itemize}
+    
+    \vspace{7pt}
+    \textbf{Nombres quantiques :}
+    \vspace{7pt}
+    
+    \begin{tabular}{|c|c|c|c|}
+      \hline
+      \textbf{Symbole} & \textbf{Nom}             & \textbf{Représentation}          & \textbf{Valeurs possibles}         \\\hline
+      $n$              & principal                & Taille de l'orbitale             & $n \ge 1$                          \\\hline
+      $l$              & secondaire (ou azimutal) & Type d'orbitale                  & $0 \le l \le n-1$                  \\\hline
+      $m_l$ (ou $m$)   & magnétique ou orbital    & Orientation de l'orbitale        & $-l \le m_l \le l$                 \\\hline
+      $s$ (ou $m_s$)   & spin                     & Rotation de l'$e^-$ sur lui même & $+\sfrac{1}{2}$ ou $-\sfrac{1}{2}$ \\\hline
+    \end{tabular}\label{tab:table}
+    
+    \vspace{7pt}
+    \textbf{Différentes orbitales :}
+    \vspace{7pt}
+    
+    \begin{tabular}{|c|c|c|l|}
+      \hline
+      \textbf{$l$} & \textbf{Nom} & \textbf{Origine} & \textbf{Forme}                \\\hline
+      0            & $s$          & sharp            & Sphérique                     \\\hline
+      1            & $p$          & principal        & Deux ellipsoïdes, ou haltères \\\hline
+      2            & $d$          & diffuse          &                               \\\hline
+      3            & $f$          & fundamental      &                               \\\hline
+    \end{tabular}
+
+
+\chapter{Atomes polyélectroniques,\\configuration électronique}\label{ch:atomes-polyelectroniques---configuration-electronique}
+  
+  
+  \section{Approximation monoélectronique. Charge nucléaire effective}\label{sec:approximation-monoelectronique.-charge-nucleaire-effective}
+    
+    Pour les atomes à plusieurs électrons, les spectres d'absorption et d'émission sont nettement plus complexes, et l'équation de Schrödinger est trop complexe pour être résolue.\\
+    
+    On fait donc une approximation monoélectronique en remplaçant l'ensemble {noyau + autres électrons} par un noyau fictif de \textbf{charge nucléaire effective} $Z^*$.\\
+    Les autres électrons exercent sur un électron particulier, un \textbf{effet d'écran} représenté par la constante d'écran $\sigma$ : $Z^* = Z - \sigma$.
+  
+  
+  \section{Orbitales atomiques}\label{sec:orbitales-atomiques}
+    
+    Pour les atomes polyélectroniques, les énergies dépendent de $n$, de $l$ et de $Z^*$.
+  
+  
+  \section{Organisation du nuage électronique}\label{sec:organisation-du-nuage-electronique}
+    
+    \twoCol {
+      
+      Couche électronique (ou période) :\\
+      
+      \begin{tabular}{lllllllL}
+        \toprule
+        \textbf{n}       & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} \\
+        \midrule
+        Symbole          & K          & L          & M          & N          & O          & P          & Q          \\
+        \midrule
+        Valeurs de $m_l$ & 1          & 4          & 9          & 14         & 14         & 9          & 4          \\
+        \midrule
+        Électrons        & 2          & 8          & 8          & 18         & 18         & 32         & 32         \\
+        \bottomrule
+      \end{tabular}
+      \vspace{7pt}\\
+      Dans une période $n$, il y a $n^2$ valeurs de $m_l$ possibles, soit $2n^2$ électrons, mais l'ordre de remplissage modifie le nombre d'électrons dans chaque période\\
+    }{
+      Sous-couches :\\
+      
+      \begin{tabular}{lllllll}
+        \toprule
+        \textbf{n}       & \textbf{0} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} \\
+        \midrule
+        Symbole          & $s$        & $p$        & $d$        & $f$        & $g$        & $h$        \\
+        \midrule
+        Valeurs de $m_l$ & 1          & 3          & 5          & 7          &            &            \\
+        \midrule
+        Électrons        & 2          & 6          & 10         & 14         &            &            \\
+        \bottomrule
+      \end{tabular}
+      \vspace{7pt}\\
+      Dans une sous-couche $l$, il y a $2l + 1$ valeurs de $m_l$ possibles, soit $2(2l+1)$ électrons.
+    }
+    
+    Principe de Pauli : un atome ne peut pas avoir deux électrons avec les quatre mêmes nombres quantiques (trivial).\\
+    
+    \twoCol[55]{
+      
+      \subsection{Règle de Klechkowski}\label{subsec:regle-de-klechkowski}
+      
+      Le remplissage se fait à $(n+l)$ croissant, et à $n$ croissant en cas d'égalité :\\
+      
+      Ordre de remplissage des couches :\\
+      
+      \begin{tabular}{cc|llll|llll}
+        \toprule
+        \multirow{2}{*}{Couche} & \multirow{2}{*}{n} & \multicolumn{4}{c|}{Sous-couche} & \multicolumn{4}{c}{\multirow{2}{*}{Remplissage}} \\
+        &   & l=0  & 1    & 2    & 3    &      &      &      &      \\
+        \midrule
+        K & 1 & $1s$ &      &      &      & $1s$ &      &      &      \\
+        L & 2 & $2s$ & $2p$ &      &      & $2s$ &      &      & $2p$ \\
+        M & 3 & $3s$ & $3p$ & $3d$ &      & $3s$ &      &      & $3p$ \\
+        N & 4 & $4s$ & $4p$ & $4d$ & $4f$ & $4s$ &      & $3d$ & $4p$ \\
+        O & 5 & $5s$ & $5p$ & $5d$ & $5f$ & $5s$ &      & $4d$ & $5p$ \\
+        P & 6 & $6s$ & $6p$ & $6d$ &      & $6s$ & $4f$ & $5d$ & $6p$ \\
+        Q & 7 & $7s$ & $7p$ &      &      & $7s$ & $5f$ & $6d$ & $7p$ \\
+        \bottomrule
+      \end{tabular}
+    }{
+      \subsection{Règle de Hund}\label{subsec:regle-de-hund}
+      
+      Toutes les orbitales d'une sous-couche doivent être occupées chacune par un électron célibataire avant que l'une d'elles puisse être occupé par deux électrons appariés (on remplis d'abord toutes les cases quantiques de la sous-couche avant d'apparier les électrons de spin opposé).\\
+      
+      \subsection{Exceptions aux règles de remplissage}\label{subsec:exceptions-aux-regles-de-remplissage}
+      
+      La sous-couche $d$ est particulièrement stable lorsqu'elle est pleine ou remplie à moitié (5 ou 10 électrons)
+      \begin{itemize}
+        \item Le chrome (Cr) a 5 électrons $3d$ et seulement unn électron $4s$
+        \item Le cuivre (Cu) a dix électrons $3d$ et seulement un électron $4s$
+      \end{itemize}
+    }
+
+
+\chapter{La Classification Périodique des Éléments}\label{ch:la-classification-periodique-des-elements}
+  
+  
+  \section{Présentation}\label{sec:presentation}
+    
+    Classement des éléments par numéro atomique $Z$ croissant.\\
+    Un peu plus de 100 éléments dont 90 existent naturellement.
+  
+  
+  \section{Construction et description}\label{sec:construction-et-description}
+    
+    \resizebox{\textwidth}{!}{
+      \includestandalone[mode=buildnew,page=1, scale]{out/periodic_table}
+    }
+    
+    \begin{itemize}
+      \item Période ou couche : ligne horizontale, correspond au nombre quantique $n$
+      \item Groupe ou famille : colonne verticale (propriétés chimiques semblables).
+      \item Bloc : correspond au nombre quantique $l$ (bloc $s$, $p$, $d$, et $f$)
+    \end{itemize}
+    
+    \vspace{7pt}
+    
+    Une couche est pseudo-saturée si la couche est bel et bien pleine, mais qu'il reste la sous-couche $d$ ou $f$ à remplir.\\
+    La couche $n=3$ est pseudo-saturée si $s$ et $p$ sont remplies, mais pas $d$.
+  
+  
+  \section{Familles principales}\label{sec:familles-principales}
+    
+    \twoCol[70]{
+      \vspace{-7pt}\\
+      \begin{tabular}{l|lll}
+        \toprule
+        Famille                             & Position              & Structure    & Couleur      \\
+        \midrule
+        \textbf{Alcalins}                   & groupe 1              & $ns^1$       & Bleu         \\
+        \textbf{Alcalino-terreux}           & groupe 2              & $ns^2$       & Violet foncé \\
+        \textbf{Halogènes}                  & groupe 17             & $ns^2\ np^5$ & Jaune        \\
+        \textbf{Gaz rares ou nobles}        & groupe 18             & $ns^2\ np^6$ & Vert         \\
+        \textbf{Lanthanides (terres rares)} & bloc $f$, période $6$ & $6s^2\ 4f^x$ & Rouge        \\
+        \textbf{Actinides (terres rares)}   & bloc $f$, période $7$ & $7s^2\ 5f^x$ & Rouge        \\
+        \bottomrule
+      \end{tabular}\\
+    }{
+      \subsection{Métaux de transition}\label{subsec:metaux-de-transition}
+      
+      Ce sont les éléments du groupe 3 à 11 (bloc $d$, dernière colonne exclue).\\
+      Les métaux de transition interne sont les lanthanides et les actinides (terres rares, bloc $f$, deux dernières colonnes exclues).
+    }
+    
+    \vspace{7pt}\\
+    
+    Les éléments sont métalliques jusqu'à la couche 12.
+    Le bloc $d$ se divise ensuite en diagonale selon la \textbf{règle de Sanderson} :\\
+    L'élément sera métallique si le nombre d'électrons $N_e$ sur sa couche de $n$ le plus élevé ($ns^a\ np^b$ avec $N_e = a + b$) est inférieur ou égal au numéro de la période.
+
+
+\chapter{Propriétés physiques des éléments}\label{ch:propriete-physique-des-elements}
+  
+  
+  \section{Charge nucléaire effective}\label{sec:charge-nucleaire-effective}
+    
+    \textbf{Règles de slater} (empiriques) permettent de calculer la constante d'écran $\sigma_i$ et la charge nucléaire effective $Z^* = Z - \sigma_i$ agissant sur le $i^{\text{ème}}$ électron.\\
+    
+    \begin{itemize}
+      \item On écrit la configuration électronique de l'élément sous forme de groupe : \[(1s)(2s, 2p)(3s, 3p)(3d)(4s, 4p)(4d)(4f)(5s, 5p)(5d)\ \ldot\]
+      \item Les électrons du même groupe apportent une contribution de $0,35$ et $0,30$ pour la couche $1s$.
+      \item Les électrons des groupes de gauche apportent chacun une contribution dépendant des groupes et périodes relatives.
+    \end{itemize}
+  
+  
+  \section{Rayon atomique}\label{sec:rayon-atomique}
+    
+    C'est la moitié de la distance séparant deux atomes engagés dans une liaison simple.
+    \begin{itemize}
+      \item Dans une période donnée (ligne, $n$ fixé), le rayon atomique est \textbf{décroissant} (Diminue quand $Z$ augmente).
+      \item Dans un groupe donné (colonne), le rayon atomique est \textbf{croissant} (Augmente avec $Z$).
+    \end{itemize}
+    \vspace{7pt}
+    En effet, plus Z est grand, plus il y a de protons qui attirent les électrons.
+    Mais quand $n$ augmente, le rayon de l'orbite la plus grande augmente d'un coup et crée un saut.
+  
+  \section{Énergie d'ionisation}\label{sec:energie-d'ionisation}
+    
+    Énergie correspondant à la réaction $\ce{A_{(gaz)}} \longrightarrow \ce{A^+_{(gaz)}} + \ce{e^-}$
+    
+    \begin{itemize}
+      \item Dans une période donnée (ligne, $n$ fixé), l'énergie d'ionisation est \textbf{croissante} (Augmente avec $Z$).
+      \item Dans un groupe donné (colonne), l'énergie d'ionisation est \textbf{décroissante} (Diminue quand $Z$ augmente).
+      \item Pour les élément de transition, l'énergie d'ionisation augmente moins vite.
+    \end{itemize}
+    \vspace{7pt}
+    
+    
+  
+  \section{Électronégativité}\label{sec:electronegativite}
+
+
+\end{document}

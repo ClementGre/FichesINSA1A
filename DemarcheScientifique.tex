@@ -1,0 +1,170 @@
+\documentclass[13pt, twoside, a4paper, french]{report}
+
+\usepackage{ficheslib}
+\newcommand*{\getSubject}{Démarche scientifique et concepts fondamentaux}
+
+\begin{document}
+\title{\getSubject}
+\author{Clément GRENNERAT}
+\date{Septembre 2022}
+
+
+\chapter{Grandeurs physiques, dimensions et unités}\label{ch:grandeur-physique-dimension-unite}
+  
+  
+  \section{Grandeurs physiques}\label{sec:grandeur-physique}
+    
+    Grandeur = propriété d'un corps ou d'un phénomène (distance, durée, charge, force\ldots)
+    Pour mesurer une grandeur, on établit le rapport entre cette grandeur et son unité de mesure.\\
+    On marque donc $g = \dfrac{G}{u}$ ou $G = g . u$ avec G la grandeur et u l'unité.
+    
+    \subsection{Grandeurs vectorielles}\label{subsec:grandeurs-vectorielles}
+      
+      \textbf{4 paramètres :} point d'application et (direction, norme, sens) ou (x, y, z).
+    
+    \subsection{Grandeurs scalaires}\label{subsec:grandeurs-scalaires}
+      
+      Représenté par un nombre unique.
+      
+      \begin{tabular}[t]{|c|c|c|}
+        \hline
+        \headRow Non mesurable & \multicolumn{2}{c|}{Mesurable} \\\hline
+        \multirow{2}{*}{Classement uniquement} & \headRow Extensive                       & Intensive           \\\cline{2-3}
+        & Proportionnelle à la quantité de matière & Non proportionnelle \\\hline
+      \end{tabular}%
+  
+  
+  \section{Dimensions}\label{sec:dimensions}
+    
+    \begin{minipage}[t]{0.5\textwidth}%
+      Dimension d'une grandeur : $\dim(G)$
+      
+      Il y a sept dimensions fondamentales.
+      L'équation aux dimensions exprime la dimension d'une grandeur à partir des sept dimensions fondamentales\\
+      
+      Les angles n'ont pas de dimensions, ainsi que les arguments des fonctions $\sin$, $\cos$, $\tan$, $\ln$ et $\exp$.\\
+      
+      Sans dimension signifie que $\dim(G) = 1$
+    \end{minipage}\hspace{0.03\textwidth}
+    \begin{minipage}[t]{0.47\textwidth}%
+      \begin{tabular}[t]{|c|c|}
+        \hline
+        \headRow Dimension fondamentale & Symbole  \\\hline
+        Longueur                        & $L$      \\\hline
+        Masse                           & $M$      \\\hline
+        Temps                           & $T$      \\\hline
+        Intensité électrique            & $I$      \\\hline
+        Température                     & $\theta$ \\\hline
+        Quantité de matière             & $N$      \\\hline
+        Intensité lumineuse             & $J$      \\\hline
+      \end{tabular}%
+    \end{minipage}
+  
+  
+  \section{Unités}\label{sec:unites}
+    
+    \begin{minipage}[t]{0.25\textwidth}%
+      L’unité de mesure est une grandeur scalaire, définie par
+      convention.\\
+      
+      On fait alors le rapport avec cette unité : $g = \dfrac{G}{u}$
+    \end{minipage}\hspace{0.03\textwidth}
+    \begin{minipage}[t]{0.62\textwidth}%
+      \begin{tabular}[t]{|c|c|c|c|}
+        \hline
+        \headRow Dimension fondamentale & Symbole Dim & Unité      & Symbole unité \\\hline
+        Longueur                        & $L$         & mètre      & $m$           \\\hline
+        Masse                           & $M$         & kilogramme & $kg$          \\\hline
+        Temps                           & $T$         & seconde    & $s$           \\\hline
+        Intensité électrique            & $I$         & ampère     & $A$           \\\hline
+        Température                     & $\theta$    & kelvin     & $K$           \\\hline
+        Quantité de matière             & $N$         & mole       & $mol$         \\\hline
+        Intensité lumineuse             & $J$         & candela    & $cd$          \\\hline
+      \end{tabular}%
+    \end{minipage}
+
+
+\chapter{Incertitudes}\label{ch:incertitudes}
+  
+  
+  \section{Définition erreur et incertitude}\label{sec:definition-erreur-et-incertitude}
+    
+    \subsection{Qu'est-ce qu'une erreur}\label{subsec:qu-est-ce-qu-une-erreur}
+      
+      \begin{minipage}[t]{0.50\textwidth}%
+        \textbf{Erreur absolue :} $\delta g = m - g$ où $m$ est la mesure et $g$ la valeur exacte.
+        
+        \textbf{Erreur relative :} $\delta g_r = \dfrac{m - g}{g}$ où $m$ est la mesure et $g$ la valeur exacte.
+      \end{minipage}\hspace{0.03\textwidth}
+      \begin{minipage}[t]{0.47\textwidth}%
+        L'erreur n'est pas connue (sinon, on aurait la valeur exacte).\\
+        On s'intéresse donc à l'incertitude, qui a pour but d'estimer l'erreur de manière raisonnable.
+      \end{minipage}
+    
+    \subsection{Origine des erreurs}\label{subsec:origine-des-erreurs}
+      
+      \begin{tabular}[t]{|l|l|l|}
+        \hline
+        \headRow Type d'erreur & Description                             & Exemple sur la mesure du volume d'un poly         \\\hline
+        Matière                & Grandeur mal définie ou fluctuante      & Coins arrondis                                    \\\hline
+        Méthode & \makecell[l]{Perturbation du système par \\ l’introduction d’un appareil de mesure}                 & Pied à coulisse qui écrase le poly             \\\hline
+        Moyens           & Imperfections de l’appareil                         & Règle imparfaite \\\hline
+        Main d’œuvre                 & Expérimentateur & Mauvaise lecture des graduations, parallaxe\ldots             \\\hline
+        Milieu                 & Influence des conditions expérimentales & Taille dépend de la température\ldots             \\\hline
+      \end{tabular}%
+    
+    \subsection{Les deux sortes d'erreurs}\label{subsec:les-deux-sortes-d'erreurs}
+      
+      \begin{minipage}[t]{0.50\textwidth}%
+        \textbf{Erreur systématique :} erreur qui se répète identiquement à chaque mesure.
+        Peut être due à la méthode, à la main-d'oeuvre ou aux moyens.\\
+        
+        \textbf{Erreur aléatoire :} erreur qui varie aléatoirement d'une mesure à l'autre.
+        Peut être due aux 5 causes possibles.
+      \end{minipage}\hspace{0.03\textwidth}
+      \begin{minipage}[t]{0.47\textwidth}%
+        \textbf{Mesures justes :} moyenne des mesures proche de la valeur vraie.\\
+        \textbf{Mesures fidèles :} valeurs proches lors de mesures répétées.\\
+        \textbf{Résolution d’un appareil :} plus petite variation décelable.
+      \end{minipage}
+    
+    \subsection{Incertitude}\label{subsec:incertitude}
+      
+      Permet d’estimer la dispersion des résultats de mesure.\\
+      
+      \textbf{Incertitude absolue $\Delta g$ :} limite \textbf{supérieure raisonnable} estimée de la valeur absolue de l’erreur $\lvert \Delta g \rvert$ sur la mesure.\\ La valeur vraie appartient donc à $[g - \Delta g\ ;\ g + \Delta g]$
+  
+  
+  \section{Estimation des incertitudes}\label{sec:estimation-des-incertitudes}
+    
+    \begin{minipage}[t]{0.65\textwidth}%
+      \subsection{Mesure directe}\label{subsec:mesure-directe}
+        
+        Essayer de changer d'instrument de mesure, de méthode, ou de mesurer une grandeur étalon.
+        
+        \textbf{Incertitude de type A :} Série de mesure → étude statistique. (Valeurs souvent réparties selon une loi normale).\\
+        Espérance (estimée par la limite de la moyenne) : $\displaystyle \mu = \lim_{n \to +\infty} = \dfrac{1}{n} \sum_{i=1}^{n} x_i$\\
+        Écart-type expérimental : $\displaystyle \sigma = \sqrt{\dfrac{1}{n-1} \sum_{i=1}^{n} (g_i - \overline{g})^2}$\\
+        Incertitude type (estimation de l'erreur) : $\Delta g = \dfrac{\sigma}{\sqrt{n}}$\\
+        
+        \textbf{Incertitude de type B :} Mesure unique (ou faible nombre de répétitions) → estimation de l'erreur.\\
+        → Estimation des sources d'erreurs et des contributions.
+        On obtiens l'incertitude maximale (somme).
+    
+    \end{minipage}\hspace{0.03\textwidth}
+    \begin{minipage}[t]{0.32\textwidth}%
+      \subsection{Mesure indirecte}\label{subsec:mesure-indirecte}
+        
+        \textbf{Méthode par encadrement :} on applique d'une part les incertitudes de manière à minimiser le résultat, puis de manière à le maximiser :
+        \begin{gather*}
+          g_{\min} < g < g_{\max}\\
+          \min(f(x, y, z)) < g < \max(f(x, y, z))\\
+          \Delta g = \frac{g_{\max} - g_{\min}}{2}\\
+        \end{gather*}
+        
+        \textbf{Méthode par différentielle :}\\ Voir OMNI.
+    
+    \end{minipage}
+
+
+\end{document}
