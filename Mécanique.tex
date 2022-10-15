@@ -1,0 +1,71 @@
+\documentclass[13pt, twoside, a4paper, french]{report}
+
+\usepackage{ficheslib}
+\newcommand*{\getSubject}{Mécanique}
+
+\begin{document}
+\title{\getSubject}
+\author{Clément GRENNERAT}
+\date{Septembre 2022}
+
+
+\chapter{Statique du solide}\label{ch:statique-du-solide}
+  
+  
+  \section{Définitions indispensables}\label{sec:definitions-indispensables}
+    
+    \subsection{Fluides et solides}\label{subsec:fluides-et-solides}
+      
+      \begin{outline}
+        \1 \textbf{Solide} : possède une forme et un volume propre, indéformable, la distance entre deux points quelconques reste constante.
+        \1 \textbf{Fluide :} n'a pas de forme propre
+        \2 \textbf{Liquide :} Volume propre
+        \2 \textbf{Gaz :} Pas de volume propre, occupe toute la place disponible
+      \end{outline}
+      
+      \textbf{point matériel ou masse ponctuelle :} point d'un volume nul et de masse non nulle.
+    
+    \subsection{Système et référentiel}\label{subsec:systeme-et-referentiel}
+      
+      Penser à définir le \textbf{système} et le \textbf{référentiel} au début du problème.
+      
+      Barycentre d'un système :
+      \[\sum_{i=1}^n m_i\ \overrightarrow{GA_i} = \overrightarrow{0} \qquad \text{ou} \qquad \overrightarrow{OG} = \dfrac{\sum_{i=1}^n m_i\ \overrightarrow{OA_i}}{M_{total}}\]
+      Pour un solide de masse $M$ :
+      \[\overrightarrow{OG} = \dfrac{1}{M} * \iiint_{\text{solide}} {\rho\ \rm d V\ \overrightarrow{OM}} \]
+    
+    \subsection{Modéliser des interactions par des forces}\label{subsec:modeliser-des-interactions-par-des-forces}
+      
+      Force : concept physique modélisant l'interaction entre deux systèmes (créant un mouvement, une déformation).\\
+      
+      \textbf{Troisième loi de Newton} (actions réciproques) : $\overrightarrow{F_{1\rightarrow2}} = - \overrightarrow{F_{2\rightarrow1}}$ (dans tout référentiel).\\
+      
+      \textbf{Deux types de forces :} force à distance ou de contact.
+      \begin{outline}
+        \1 \underline{Interaction gravitationnelle} : $\overrightarrow{F_{g1\rightarrow2}} = - G\dfrac{m_1 m_2}{d^2}\overrightarrow{u_{1\rightarrow2}}$
+        \1 \underline{Interaction Électromagnétique} : $\overrightarrow{F_{e1\rightarrow2}} = \dfrac{q_1 q_2}{4\pi\epsilon_0 d^2}\overrightarrow{u_{1\rightarrow2}}$.
+        \1 \underline{Tension d'un fil} : toujours inconnue sauf si le fil est détendu.
+        \1 \underline{Rappel élastique d'un ressort} : $\vec{F} = - k (l - l_0)\vec{\imath}$.\\Avec $l_0$ la longueur à vide, $l$ la longueur étiré/comprimé et $k$ la constante de raideur du ressort.
+        \1 \underline{Réaction d'un support}
+        \2 Composante normale $\overrightarrow{R_N}$ : perpendiculaire au support.
+        \2 Composante tangentielle $\overrightarrow{R_T} = \overrightarrow{f}$, frottements solides : s'oppose au mouvement.\\Ne dépend que de la masse, $\|\overrightarrow{R_T}\| = \mu_d \|\overrightarrow{R_N}\|$. ($\mu_d$ coefficient de frottements dynamique).\\Le système est immobile si $\|\overrightarrow{R_T}\| < \mu_s \|\overrightarrow{R_N}\|$ ($\mu_s$ coefficient de frottements statique).\\En général, $\mu_s > \mu_d$.
+        \1 \underline{Forces pressantes}, la somme de des forces pressantes donne la poussée d'Archimède : $\overrightarrow{\Pi} = - \rho_{fluide}\ V_{fluide \ d\acute eplac\acute e}\ \vec{g}$
+      \end{outline}
+  
+  
+  \section{Énergie cinétique et potentielle}\label{sec:energie-cinetique-et-potentielle}
+    
+    \twoCol {
+      \underline{Énergie cinétique (point matériel)} : $\overrightarrow{E_c} = \dfrac{1}{2} m v^2$\\
+      Pour un solide : \[\overrightarrow{E_c} = \sum \dfrac{1}{2} m_i v_i^2\]
+    }{
+      \underline{Énergie potentielle de position} : \[ E_{pp}(M) = E_{pp}(0) + mgz \]
+      Bien définir l'origine des $E_{pp}$\\
+      Pour un solide, on prend l'altitude du barycentre.
+    }
+    \underline{Énergie potentielle élastique} : \[\displaystyle E_{pe}(M) = \dfrac{1}{2} k (x - l_0)^2\]
+    Avec $E_{pe} = 0$ pour $x = l_0$.
+    
+     \section{}
+
+\end{document}

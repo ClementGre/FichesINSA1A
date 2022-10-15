@@ -10,9 +10,11 @@
 
 
 \chapter{Logique et raisonnement}\label{ch:logique-et-raisonnement}
-\input{mathematiques/logique-et-raisonnement}
+  \input{mathematiques/logique-et-raisonnement}
+
 
 \chapter{Généralités sur les fonctions}\label{ch:generalites-sur-les-fonctions}
+  
   
   \section{Généralités}\label{sec:generalites}
     
@@ -22,7 +24,7 @@
       Une fonction est une application d'une partie $D_f$ d'un ensemble de départ. $D_f$ est appelé ensemble de définition.\\
       Une fonction n'est donc pas forcément définie sur l'entièreté de l'ensemble de départ.
       
-      \vspace*{10pt}
+      \vspace*{7pt}
       
       \fourCol[25][26][20]{
       \subsection{Image directe}\label{subsec:image-directe}
@@ -44,7 +46,7 @@
       $(f \circ g) \circ h = f \circ (g \circ h)$
     }
       
-      \vspace*{10pt}
+      \vspace*{7pt}
       
       \twoCol[55]{
       \subsection{Injectivité}\label{subsec:injectivite}
@@ -67,5 +69,69 @@
   
   
   \section{Fonctions de $\mathbb{R}$ dans $\mathbb{R}$}\label{sec:fonctions-de-r-dans-r}
+    
+    \twoCol{
+      
+      \subsection{Sens de variation}\label{subsec:sens-de-variation}
+      
+      $f \circ g$ est :
+      \begin{itemize}
+        \item Croissante si $f$ et $g$ sont de même monotonie.
+        \item Décroissante si $f$ et $g$ sont de sens de monotonies contraires.
+      \end{itemize}
+      
+      \vspace*{7pt}
+      Si $f$ est strictement monotone, alors elle est injective (au plus un antécédent par image).
+    }{
+      
+      \subsection{Majorant et minorant}\label{subsec:majorant-et-minorant}
+      
+      \begin{outline}
+        \1 \textbf{$\alpha$ maximum de A} si $\alpha$ est à la fois majorant et élément de A : $\alpha = \max(A)$ \;\; (resp. $\min(A)$).
+        \1 \textbf{$\alpha$ borne supérieure de A} si $\alpha$ est le plus petit des majorants : $\alpha = \sup(A)$ \;\; (resp. $\inf(A)$).
+        \2 si A est non vide non majoré : $\sup(A) = +\infty$
+        \2 si A est non vide non minoré : $\inf(A) = -\infty$
+      \end{outline}
+      Si le maximum existe, il est égal à la borne supérieure.
+    }
+    
+    \subsection{Parité}\label{subsec:parite}
+      
+      \begin{itemize}
+        \item Si $f$ et $g$ sont paires, $f + g$ est paire (resp. impaires).
+        \item Si $f$ et $g$ ont même parité, $f \times g$ est paire (resp. $\sfrac{f}{g}$).
+        \item Si $f$ et $g$ ont des parités contraires, $f \times g$ est impaire (resp. $\sfrac{f}{g}$).
+        \item Si $f$ est paire, $g \circ f$ est paire.
+        \item Si $f$ est impaire, $g \circ f$ a la même parité que $g$.
+      \end{itemize}
+      
+      \vspace*{7pt}
+      
+      \twoCol {
+      
+      \subsection{Périodicité}\label{subsec:periodicite}
+      
+      $T$-périodique si $\forall (x,x+T) \in D_f^2$,\; $f(x + T) = f(x)$.
+      \begin{itemize}
+        \item Si $f$ et $g$ sont $T$-périodiques,\\$f + g$ et $f \times g$ sont $T$-périodiques.
+        \item Si $g$ est $T$-périodique,\\$g \circ f$ est $T$-périodique.
+      \end{itemize}
+    }{
+      
+      \subsection{Bijectivité et symétrie}\label{subsec:bijectivite-et-symetrie}
+      
+      \begin{itemize}
+        \item Si $f$ est une bijection, $C_f$ et $C_{f^{-1}}$ sont symétriques par rapport à $y = x$.
+        \item $x \mapsto f(-x)$ : symétrie par l'axe des ordonnées.
+        \item $x \mapsto -f(x)$ : symétrie par l'axe des abscisses.
+        \item $x \mapsto f(x + a)$ : translation de vecteur $-a \vec{\imath}$.
+        \item $x \mapsto f(x) + a$ : translation de vecteur $b \vec{\jmath}$.
+        \item $x \mapsto f(ax)$ : réduction/agrandissement sur axe x.
+        \item $x \mapsto af(x)$ : réduction/agrandissement sur axe y.
+      \end{itemize}
+    }
+
+
+\chapter{Fonctions usuelles}\label{ch:fonctions-usuelles}
 
 \end{document}
