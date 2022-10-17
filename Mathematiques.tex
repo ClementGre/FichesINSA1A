@@ -133,5 +133,44 @@
 
 
 \chapter{Fonctions usuelles}\label{ch:fonctions-usuelles}
+  
+  
+  \section{Fonction partie entière}\label{sec:fonction-partie-entiere}
+    
+    $E(x) = \lfloor x \rfloor$ (Plus grand entier inférieur ou égal à x).\\
+    
+    \begin{itemize}
+      \item $E(x) \le x < E(x) + 1$ et $x-1 < E(x) \le x$.
+      \item $E(x) = x \Leftrightarrow x \in \mathbb{Z}$.
+      \item $\forall n \in \mathbb{Z},\ E(x + n) = E(x) + n$
+    \end{itemize}
+  
+  
+  \section{Fonction log, exp et puissances}\label{sec:fonction-log-exp-puissances}
+    
+    \subsection{Logarithme naturel / népérien}\label{subsec:logarithme-naturel-/-neperien}
+      
+      $\forall x > 0,\ \ln(a)$ vaut l'aire sous la courbe de $\dfrac{1}{x}$ entre $1$ et $a$.\\
+      On note $e$ tel que $\ln(e) = 1$ (base du logarithme népérien).\\
+      Sa bijection réciproque est la fonction exponentielle, dont l'unique dérivée vérifiant la condition initiale $f(0) = 1$ est elle même.\\
+      
+      \twoCol {
+      
+      \subsection{Fonctions logarithmes}\label{subsec:fonctions-logarithmes}
+      
+      $\log_b(x) = \dfrac{\ln a}{\ln x}$.\\
+      $log_e$ : népérien, $log_2$ : binaire, $log_{10}$ : décimal (noté $\log$).
+      De même, $\exp_a(x) = a^x$.
+    }{
+      
+      \subsection{Fonctions puissances}\label{subsec:fonctions-puissances}
+      
+      $x^a$ est croissante si $a > 0$ et décroissante $a < 0$.\\
+      $x^a$ est bijective (si a $\neq 0$) de réciproque $a^\frac{1}{a}$
+    }\\
+  
+  
+  \section{Fonctions trigonométriques}\label{sec:fonctions-trigonometriques}
+
 
 \end{document}
