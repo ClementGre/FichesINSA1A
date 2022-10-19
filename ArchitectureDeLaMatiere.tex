@@ -158,7 +158,7 @@
         \midrule
         Valeurs de $l$   & 1          & 2          & 3          & 4          & 4          & 3          & 2          \\
         \midrule
-        Valeurs de $m_l$ & 1          & 4          & 9          & 14         & 14         & 9         & 4         \\
+        Valeurs de $m_l$ & 1          & 4          & 9          & 14         & 14         & 9          & 4          \\
         \midrule
         Électrons        & 2          & 8          & 8          & 18         & 18         & 32         & 32         \\
         \bottomrule
@@ -332,5 +332,75 @@
     \vspace{7pt}
     
     Le sens de variation est le même que pour l'énergie d'ionisation, excepté pour le bloc $d$.
+
+
+\chapter{Spectroscopie des rayons X}\label{ch:spectroscopie-des-rayons-x}
+  
+  
+  \section{Les rayons X : nature et production}\label{sec:les-rayons-x-:-nature-et-production}
+    
+    Radiations inférieures à $10 nm$. Rayons X de spectroscopie/radiocristallographie : $10 nm$ (quelques $keV$).
+    
+    On produit les rayons X par accélération d'électrons : ils partent de la cathode (filament chauffé), et arrivent sur l'anticathode ou anode.
+  
+  
+  \section{Spectre d'émission des rayons X}\label{sec:spectre-d'emission-des-rayons-x}
+    
+    \subsection{Fond continu}\label{subsec:fond-continu}
+      
+      $\Rightarrow$ Émis par l'électron ralentis dans la cible.
+      L'énergie des rayons X produits ne peut pas dépasser l'énergie de l'électron incident, on a donc $\dfrac{hc}{\lambda e} \le U$ (avec U la tension d'accélération).\\
+      Il vient $\lambda \ge \dfrac{hc}{eU}$.
+      Le fond continu n'est donc présent qu'après une certaine longueur d'onde $\lambda_{0}$ (seuil).
+    
+    \subsection{Le spectre de raies caractéristiques}\label{subsec:le-spectre-de-raies-caracteristiques}
+      
+      Lors de l'expérience de spectroscopie, un électron de couche interne est arraché et une réorganisation électronique emmet des raies caractéristiques de l'élément constituant l'anticathode.
+      Séries de raies : K, L, M, N\ldots\\
+      
+      \textbf{Couplage spin-orbite} : cinquième nombre quantique $j = \bigg | l \pm \dfrac{1}{2} \bigg |$.
+      Les niveaux $p$, $d$, et $f$ sont donc dédoublés.\\
+      
+      \textbf{Règles de selection} : $\Delta l = \pm 1$ et $\Delta j = 0$ ou $\pm 1$.
+      De plus, les probabilités de transitions intra couche sont tellement faibles qu'elles ne seront pas considérées.\\
+      
+      Les transitions sont identifiées par deux lettres et éventuellement un indice, par exemple : $K$-$L_2$ ou $L_2$-$M_1$.
+  
+  
+  \section{La loi de Moseley pour l'émission des rayons X}\label{sec:la-loi-de-moseley-pour-l'emission-des-rayons-x}
+    
+    La fréquence des raies est liée au numéro atomique par la loi de Moseley : $\sqrt{\nu} = a(Z-b)$, $a$ et $b$ constantes pour une raie donnée (mais garder un domaine de valeurs de $Z$ faible pour limiter les écarts à la linéarité).\\
+    Ceci découle de la généralisation de la formule de Ritz-Balmer : $\nu_{n\rightarrow n'} = c R_X (Z - \sigma)^2\left(\dfrac{1}{n'^2} - \dfrac{1}{n^2}\right)$.
+  
+  
+  \section{Atténuation des rayons X}\label{sec:attenuation-des-rayons-x}
+    
+    On place un filtre devant le faisceau de rayons X : les photons interagissent alors avec les atomes par effet photoélectrique et diffusion.
+    \begin{itemize}
+      \item \underline{Interaction photoélectrique} : photon absorbé et électron arraché : $E_{\text{inscident}} = E_{\text{électron}} + E_c$.
+      Lors de la réorganisation des couches, est émis un rayonnement de fluorescence caractéristique du filtre.
+      \item \underline{Diffusion} : photon absorbé, un électron absorbe une partie de l'énergie et est éjecté, et le reste de l'énergie contribue à l'émission d'un photon secondaire.
+    \end{itemize}
+    \vspace{7pt}
+    \twoCol {
+      
+      \subsection{Loi de Beer Lambert}\label{subsec:loi-de-beer-lambert}
+      
+      $I = I_0 \exp(-\mu l)$ avec $\mu$ le coefficient d'atténuation linéique.
+      Dans le cas d'un faisceau large, il faut ajouter à l'intensité transmise, celle du rayonnement diffusé.
+      \vspace{1pt}\\
+      Plus $Z$ de l'élément absorbant est faible plus $\mu$ est petit, et plus $\lambda$ de la radiations est faible (soit $E$ grand), plus $\mu$ est petit.
+    }{
+      
+      \subsection{Monochromatisation d'un faisceau de RX}\label{subsec:monochromatisation-d'un-faisceau-de-rx}
+      
+      Le coefficient d'atténuation linéique décroit brusquement quand $\lambda$ dépasse la longueur d'onde d'un niveau (car l'énergie n'est plus suffisante pour arracher les électrons du niveau). On peut donc utiliser ces discontinuités pour monochromatiser le faisceau.\\
+      Par exemple pour absorber la raie $K$-$L$ on doit avoir :
+      \vspace{3pt}\\
+      $\lambda_{K\text{-}M\text{ (anticathode)}} < \lambda_{K \text{ (absorbant)}} < \lambda_{K\text{-}L\text{ (anticathode)}}$
+      \vspace{3pt}\\
+      Généralement, le métal de $Z' = Z-1$ peut satisfaire.
+    }
+    
 
 \end{document}
