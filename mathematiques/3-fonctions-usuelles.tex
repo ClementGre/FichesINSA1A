@@ -1,0 +1,94 @@
+  \section{Fonction partie entière}\label{sec:fonction-partie-entiere}
+
+    $E(x) = \lfloor x \rfloor$ (Plus grand entier inférieur ou égal à x).\\
+
+    \begin{itemize}
+      \item $E(x) \le x < E(x) + 1$ et $x-1 < E(x) \le x$.
+      \item $E(x) = x \Leftrightarrow x \in \mathbb{Z}$.
+      \item $\forall n \in \mathbb{Z},\ E(x + n) = E(x) + n$
+    \end{itemize}
+
+
+  \section{Fonction log, exp et puissances}\label{sec:fonction-log-exp-puissances}
+
+    \subsection{Logarithme naturel / népérien}\label{subsec:logarithme-naturel-/-neperien}
+
+      $\forall x > 0,\ \ln(a)$ vaut l'aire sous la courbe de $\dfrac{1}{x}$ entre $1$ et $a$.\\
+      On note $e$ tel que $\ln(e) = 1$ (base du logarithme népérien).\\
+      Sa bijection réciproque est la fonction exponentielle, dont l'unique dérivée vérifiant la condition initiale $f(0) = 1$ est elle même.\\
+
+      \twoCol {
+
+      \subsection{Fonctions logarithmes}\label{subsec:fonctions-logarithmes}
+
+      $\log_b(a) = \dfrac{\ln a}{\ln b}$.\\
+      $\log_e$ : népérien, $\log_2$ : binaire, $\log_{10}$ : décimal ($\log$).
+      De même, $\exp_a(x) = a^x$.
+    }{
+
+      \subsection{Fonctions puissances}\label{subsec:fonctions-puissances}
+      $X^a$ est bijective de réciproque $X^\frac{1}{a}$ ($a \neq 0$)\\
+      Sur $\mathbb{R}_+^*$ :\\
+      $X^a$ est croissante si $a > 0$ et décroissante si $a < 0$.
+    }\\
+
+
+  \section{Fonctions trigonométriques}\label{sec:fonctions-trigonometriques}
+
+    \twoCol {
+      \underline{Angles opposés :}\\
+      \makebox[4cm][l]{$\cos(-\theta) = \cos(\theta)$} $\sin(-\theta) = -\sin(\theta)$.\\
+      \underline{Angles supplémentaires :}\\
+      \makebox[4cm][l]{$\cos(\pi - \theta) = - \cos(\theta)$} $\sin(\pi - \theta) = \sin(\theta)$\\
+      \makebox[4cm][l]{$\cos(\pi + \theta) = - \cos(\theta)$} $\sin(\pi + \theta) = - \sin(\theta)$\\
+      \underline{Angles complémentaires :}\\
+      \makebox[4cm][l]{$\cos\left(\frac{\pi}{2} - \theta\right) = \sin(\theta)$} $\sin\left(\frac{\pi}{2} - \theta\right) = \cos(\theta)$\\
+      \makebox[4cm][l]{$\cos\left(\frac{\pi}{2} + \theta\right) = - \sin(\theta)$} $\sin\left(\frac{\pi}{2} + \theta\right) = \cos(\theta)$
+    }{
+      \underline{Somme des angles :}\\
+      $\cos(\theta + \varphi) = \cos \theta \cos \varphi - \sin \theta \sin \varphi$\\
+      $\cos(\theta - \varphi) = \cos \theta \cos \varphi + \sin \theta \sin \varphi$\\
+      $\sin(\theta + \varphi) = \sin \theta \cos \varphi + \cos \theta \sin \varphi$\\
+      $\sin(\theta - \varphi) = \sin \theta \cos \varphi - \cos \theta \sin \varphi$\\
+
+      $\cos(2\theta) = \cos^2 \theta - \sin^2 \theta = 2 \cos^2 \theta - 1 = 1 - 2 \sin^2 \theta$\\
+      $\sin(2\theta) = 2 \sin \theta \cos \theta$
+    }
+
+
+  \section{Fonctions hyperboliques}\label{sec:fonctions-hyperboliques}
+
+    \threeCol{
+      \underline{Cosinus hyperbolique :}\\
+      $\cosh(x) = \dfrac{e^x + e^{-x}}{2}$\\
+      \begin{itemize}
+        \item Fonction paire
+        \item Strict. décroissante sur $\mathbb{R}_-$
+        \item Strict. croissante sur $\mathbb{R}_+$
+      \end{itemize}
+    }{
+      \underline{Sinus hyperbolique :}\\
+      $\sinh(x) = \dfrac{e^x - e^{-x}}{2}$\\
+      \begin{itemize}
+        \item Fonction impaire
+        \item Strictement croissante
+      \end{itemize}
+    }{
+      \underline{Tangeante hyperbolique :}\\
+      $\tanh(x) = \dfrac{\sinh(x)}{\cosh(x)}$\\
+      \begin{itemize}
+        \item Fonction impaire
+        \item Strictement croissante
+        \item Définie sur $\mathbb{R}$.
+      \end{itemize}
+    }
+    \vspace{5pt}\\
+    \underline{Lien avec sinus et cosinus :}
+    \begin{itemize}
+      \item $\cosh(a + b) = \cosh a \cosh b + \sinh a \sinh b$
+      \item $\sinh(a + b) = \sinh a \cosh b + \cosh a \sinh b$
+      \item $\cosh^2 a - \sinh^2 a = 1$
+    \end{itemize}
+    \vspace{5pt}\\
+    $\cosh a = \cos(ia)$\\
+    $\sinh a = -i\sin(ia)$
