@@ -158,15 +158,15 @@
       
       \subsection{Fonctions logarithmes}\label{subsec:fonctions-logarithmes}
       
-      $\log_b(x) = \dfrac{\ln a}{\ln x}$.\\
+      $\log_b(a) = \dfrac{\ln a}{\ln b}$.\\
       $\log_e$ : népérien, $\log_2$ : binaire, $\log_{10}$ : décimal ($\log$).
       De même, $\exp_a(x) = a^x$.
     }{
       
       \subsection{Fonctions puissances}\label{subsec:fonctions-puissances}
-      
-      $X^a$ est croissante si $a > 0$ et décroissante $a < 0$.\\
-      $X^a$ est bijective (si a $\neq 0$) de réciproque $a^\frac{1}{a}$
+      $X^a$ est bijective de réciproque $X^\frac{1}{a}$ ($a \neq 0$)\\
+      Sur $\mathbb{R}_+^*$ :\\
+      $X^a$ est croissante si $a > 0$ et décroissante si $a < 0$.
     }\\
   
   
@@ -229,7 +229,70 @@
     \vspace{5pt}\\
     $\cosh a = \cos(ia)$\\
     $\sinh a = -i\sin(ia)$
+
+
+\chapter{Polynômes}\label{ch:polynomes}
+  
+  \twoCol[45] {
     
     
+    \section{Définitions}\label{sec:definitions}
+    
+    $\deg(0) = -\infty$\\
+    
+    \textbf{Opérations :}
+    \begin{itemize}
+      \item $P = Q \Leftrightarrow$ même degré et mêmes coefs.
+      \item $\deg(P + Q) \le \max(\deg(p), \deg(Q))$
+      \item $\deg(P \times Q) = \deg(p) + \deg(Q)$
+      \item $\deg(P \circ Q) \le \deg(p) \times \deg(Q)$
+    \end{itemize}
+  }{
+    \section{Division euclidienne et racines}\label{sec:division-euclidienne}
+    
+    Les polynômes peuvent être divisés par un polynôme non nul, au même titre que les réels.\\
+    Soit $\alpha$ une racine de $P$, alors $P$ est divisible par $(X - \alpha)$.\\
+    Un polynôme $P$ admet $n$ racines avec $n \le \deg(P)$.\\
+    
+    Un polynôme a la même limite en $+\infty$ et en $-\infty$ que son terme de plus haut degré.\\
+    Si un polynôme $P$ est de degré impair, alors $P$ a au moins une racine réelle.
+  }
+  
+  
+  \section{Formule de Taylor}\label{sec:formule-de-taylor}
+    
+    La dérivée d'un polynôme $\displaystyle P = \sum^n_{k=0} a_k X^k$ est donnée par : $\displaystyle P' = \sum^n_{k=1} ka_k X^{k-1}$\\
+    
+    Pour la dérivée $k-$ième, on retrouve $k!$ pour le premier coefficient.
+    Ainsi, on a $\forall\ k \le \deg(P)$, $P^{(k)}(0) = k!\ a_k$
+    
+    Ainsi, on a $\displaystyle P = \sum^n_{k=0} \dfrac{P^{(k)}(0)}{k!} X^k$\\
+    
+    Généralisation (formule de Taylor) : $\displaystyle P = \sum^n_{k=0} \dfrac{P^{(k)}(\alpha)}{k!} (X-\alpha)^k$
+  
+  
+  \section{Racines multiples}\label{sec:racines-multiples}
+    
+    $\alpha$ est une racine d'ordre de multiplicité $m$ de $P$ si $P = (X - \alpha)^m\ Q$ avec $Q(\alpha) \neq 0$.\\
+    (Racine simple, double, triple, ...).\\
+    
+    La formule de Taylor permet de donner une caractérisation de la multiplicité :\\
+    $\alpha$ est une racine de $P$ d'ordre de multiplicité $m$ ssi :
+    \begin{equation}
+      \label{eq:equation}
+      \begin{cases}
+        P(\alpha) = P'(\alpha) = \cdots = P^{(m-1)}(\alpha) = 0\\
+        P^{(m)}(\alpha) \neq 0
+      \end{cases}
+    \end{equation}
+    
+    (Par exemple, pour une racine double, la tangente est horizontale, et pour une racine triple, il y a en plus un point d'inflexion).
+    
+    
+  \section{Factorisation}\label{sec:factorisation}
+
+    Tout polynôme $P$ à coefficient dans $\mathbb{C}$ admet exactement $\deg(P)$ racines complexes, comptées avec leur ordre de multiplicité.\\
+    
+    Si $z$ est une racine complexe (non réelle) de $P$ et de multiplicité $m$, alors $\overline{z}$ est de même une racine de $P$ de multiplicité $m$.\\
 
 \end{document}
