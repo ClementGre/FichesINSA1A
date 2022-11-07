@@ -100,9 +100,45 @@
   
   
   \section{Comment repérer la position d’un point ?}\label{sec:comment-reperer-la-position-dun-point-?}
+    
+    \twoCol{
+      \textbf{Trajectoire :}
+      Rectiligne : ligne droite\\
+      Circulaire : arc de cercle\\
+      Curviligne : courbe quelconque
+    }{
+      Équation de la forme $y = f(x)$ ou $y = g(\theta)$\\
+      Le temps n'intervient plus.
+    }
   
   
   \section{Vitesse et accélération d’un point matériel}\label{sec:vitesse-et-acceleration-dun-point-materiel}
-
+    
+    \underline{Mouvement uniforme :} $\|\vec{v}\| = const$\\
+    
+    \twoCol{
+      \textbf{Cilindrique :}\\
+      $\vec{OM} = r \vec{e_r} + z \vec{e_z}$, mais $\vec{e_r}$ varie aussi en fonction du temps :\\
+      $\dfrac{\re{d}\vec{e_r}}{\re{d}t} = \dot{\theta} \vec{e_\theta}$ \quad et \quad $\dfrac{\re{d}\vec{e_\theta}}{\re{d}t} = - \dot{\theta} \vec{e_r}$\\
+      $\vec v = \dot{r} \vec{e_r} + r \dot{\theta} \vec{e_\theta} + \dot{z} \vec{e_z}$
+    }{
+      \textbf{Base de Frénet :}\\
+      $\vec{v} = \|\vec{v}\| \vec{u_T}$\\
+      $\vec{a} = \dfrac{d\|\vec{v}\|}{d\text{t}} \vec{u_T} + \dfrac{\|\vec{v}\|^2}{R_C} \vec{u_N}$\\
+      Si mouvement uniforme : $\vec{a} = \|\vec{a}\| \vec{u_N}$
+    }
+  
+  
+  \section{Étude de quelques mouvements simples d’un point}\label{sec:etude-de-quelques-mouvements-simples-dun-point}
+    
+    \twoCol {
+      \textbf{Mouvement rectiligne uniforme :}\\
+      $\vec{a} = \vec{0}$\\
+      $v(t) = v_0$\\
+      $x(t) = v_o t + x_0$
+    }{
+      Rectiligne accéléré si $\vec v$ et $\vec a$ sont dans le même sens, décéléré sinon.\\
+      Rectiligne uniformément accéléré si $\vec a = k \vec{e_x}$ ($k$ constante).
+    }
 
 \end{document}
