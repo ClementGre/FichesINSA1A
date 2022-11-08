@@ -1,4 +1,33 @@
 \section{Structure d'espace vectoriel}\label{sec:structure-d'espace-vectoriel}
+  
+  Un ensemble $E$ est un $\mathbb K$-espace vectoriel ($\mathbb K$ désigne $\mathbb{R}$ ou $\mathbb{C}$) si il est muni d'une loi interne $\textbf{+}$ et d'une loi externe \textbf{$\cdot$}.\\
+  
+  On redéfinit les lois de bases (commutativité et associativité de l'addition, élément neutre\ldots).
 
 
 \section{Sous espaces vectoriels}\label{sec:sous-espaces-vectoriels}
+  
+  $F$ est un sous-espace vectoriel de $E$ si $F$ est une partie de $E$, avec $(E, +, \cdot)$ et $(F, +, \cdot)$ des $\mathbb K$-espace vectoriel.\\
+  
+  \textbf{Stabilité par combinaison linéaire :}
+  \begin{equation}
+    F \text{ est un s.e.v de } E \iff
+    \begin{cases}
+      F \neq \emptyset \text{ (Un s.e.v. contient toujours le vecteur nul)}\\
+      \forall (\alpha, \beta, \vec u, \vec v) \in \mathbb{K}^2 \times F^2,\ \alpha \vec u + \beta \vec v \in F\\
+      \text{(F est stable par combinaison linéaire)}
+    \end{cases}\label{eq:equation2}
+  \end{equation}
+  
+  L'intersection de deux s.e.v est un s.e.v.\ Ce n'est pas le cas pour l'union.\\
+  
+  \textbf{Sous-espace vectoriel engendré par A} ($Vect(A)$) : c'est le plus petit s.e.v. de $E$ contenant $A$.\\
+  Par convention : $Vect(\emptyset) = {\vec{0_E}}$\\
+  On dit que $Vect(A)$ est constitué de toutes les combinaisons linéaires des vecteurs de $A$.
+
+
+\section{Dimension d'un espace vectoriel}\label{sec:dimension-d'un-espace-vectoriel}
+  
+  
+  
+  
