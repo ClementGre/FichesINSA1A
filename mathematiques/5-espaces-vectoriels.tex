@@ -7,7 +7,7 @@
 
 \section{Sous espaces vectoriels}\label{sec:sous-espaces-vectoriels}
   
-  $F$ est un sous-espace vectoriel de $E$ si $F$ est une partie de $E$, avec $(E, +, \cdot)$ et $(F, +, \cdot)$ des $\mathbb K$-espace vectoriel.\\
+  $F$ est un sous-espace vectoriel de $E$ si $F \subset E$ avec $(E, +, \cdot)$ et $(F, +, \cdot)$ des $\mathbb K$-espace vectoriel.\\
   
   \textbf{Stabilité par combinaison linéaire :}
   \begin{equation}
@@ -28,6 +28,22 @@
 
 \section{Dimension d'un espace vectoriel}\label{sec:dimension-d'un-espace-vectoriel}
   
+  Une famille de vecteurs de $E$ est \underline{libre} s'ils sont linéairement indépendants (seul la combinaison linéaire avec des coefficients nuls mène à $\vec 0$).\\
+  
+  Sinon, la famille est \underline{liée}, les vecteurs sont alors linéairement dépendants (il existe des coefficients non tous nuls tel que la combinaison linéaire de ces vecteurs soit nulle).\\
+  
+  Deux vecteurs formant une famille liée sont colinéaires.
+  Trois vecteurs formant une famille liée sont coplanaires.\\
+  
+  \begin{itemize}
+    \item Une famille de vecteurs est liée $\iif$ l'un des vecteurs est combinaison linéaire des autres.
+    \item Si une famille de vecteurs contient le vecteur nul, elle est liée.
+    \item Une famille extraite d'une famille libre est libre.
+    \item Une famille contenant une famille liée est liée.\\
+  \end{itemize}
+  
+  Une famille de vecteurs de $E$ est \underline{génératrice} si tout vecteur de $E$ est combinaison linéaire de vecteurs de la famille.\\
+  Une famille libre et génératrice de $E$ est une \underline{base} de $E$.\\
   
   
   
