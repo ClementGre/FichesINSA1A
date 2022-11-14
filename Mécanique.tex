@@ -102,12 +102,13 @@
   \section{Comment repérer la position d’un point ?}\label{sec:comment-reperer-la-position-dun-point-?}
     
     \twoCol{
-      \textbf{Trajectoire :}
+      \textbf{Trajectoire du point :}\\
       Rectiligne : ligne droite\\
       Circulaire : arc de cercle\\
       Curviligne : courbe quelconque
     }{
-      Équation de la forme $y = f(x)$ ou $y = g(\theta)$\\
+    \textbf{Équation de trajectoire :}\\
+      Équation de la forme $y = f(x)$ ou $r = g(\theta)$\\
       Le temps n'intervient plus.
     }
   
@@ -125,7 +126,7 @@
       \textbf{Base de Frénet :}\\
       $\vec{v} = \|\vec{v}\| \vec{u_T}$\\
       $\vec{a} = \dfrac{d\|\vec{v}\|}{d\text{t}} \vec{u_T} + \dfrac{\|\vec{v}\|^2}{R_C} \vec{u_N}$\\
-      Si mouvement uniforme : $\vec{a} = \|\vec{a}\| \vec{u_N}$
+      Si mouvement uniforme : $\vec{a} = \dfrac{\|\vec{v}\|^2}{R_C} \vec{u_N}$
     }
   
   
@@ -140,5 +141,34 @@
       Rectiligne accéléré si $\vec v$ et $\vec a$ sont dans le même sens, décéléré sinon.\\
       Rectiligne uniformément accéléré si $\vec a = k \vec{e_x}$ ($k$ constante).
     }
+    \\
+    \textbf{Mouvement circulaire :}\\
+    Vitesse angulaire : $\omega = \dfrac{\re{d}t}{\re d \theta} = \dot \theta$
+    
+  \section{Étude de quelques mouvements simples d’un solide}\label{sec:etude-de-quelques-mouvements-simples-dun-solide}
+    
+    \textbf{Translation :} tous les points ont la même vitesse et le même vecteur accélération.\\
+    
+    \textbf{Rotation autour d'un point fixe :} tous les points ont la même vitesse angulaire (et le même vecteur accélération angulaire).
+    
+  \section{Changement de référentiels}\label{sec:changement-de-referentiels}
+    
+    Soit deux référentiels $R$ et $R'$, de centres $O$ et $O'$, on a : $\vec{OM} = \vec{OO'} + \vec{O'M}$
+
+    On a alors une position absolue ($\vec{OM}$) et relative ($\vec{O'M}$).
+    De même pour la vitesse.\\
+    
+    Si on dérive par rapport au référentiel $R$, il faudra dériver les vecteurs unitaires du référentiel $R'$ et vice versa.\\
+    
+    Soit $\vec{OM} = \vec{OO'} + x' \vec{e_{x'}} + y' \vec{e_{y'}} + z' \vec{e_{z'}}$\\
+    Alors $\left( \dfrac{\re d \vec{OM}}{\re d t} \right)_R =
+\left( \dfrac{\re d \vec{OO'}}{\re d t} \right)_R + x' \left( \dfrac{\re d \vec{e_{x'}}}{\re t} \right)_R + y' \left( \dfrac{\re d \vec{e_{y'}}}{\re d t} \right)_R + z' \left( \dfrac{\re d \vec{e_{z'}}}{\re d t} \right)_R
+  + \dfrac{\re d x'}{\re d t} \vec{e_{x'}} + \dfrac{\re d y'}{\re d t} \vec{e_{y'}} + \dfrac{\re d z'}{\re d t} \vec{e_{z'}}$\\
+    
+    Dérivée de $\vec{OO'}$ = translation.
+    Dérivées des vecteurs unitaires = rotation : peut être retiré en cas de translation :\\
+    Pour l'accélération, on a alors :\\
+    
+    $\vec{a_R} = \left( \dfrac{\re{d}^2 \vec{OO'}}{\re d t^2} \right)_R + \vec{a_{R'}}$
 
 \end{document}
