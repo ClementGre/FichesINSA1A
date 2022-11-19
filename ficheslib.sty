@@ -13,7 +13,7 @@
 \RequirePackage{amsfonts,amssymb}% permet la definition des ensembles
 \RequirePackage{float} % pour le placement des figure
 \RequirePackage{url} % pour une gestion efficace des url
-\RequirePackage[a4paper, margin={2cm, 2cm}]{geometry}
+\RequirePackage[a4paper, margin={2cm, 2.2cm}]{geometry}
 \RequirePackage{titlesec} % pour modifier le format des titres
 \RequirePackage[table, svgnames, dvipsnames]{xcolor}
 \RequirePackage{multicol} % pour le texte sur plusieurs colonnes style journal
@@ -39,7 +39,9 @@
 
 \standaloneconfig{border=0pt, crop=true, tikz=true}
 
-\titlespacing*{\chapter}{0pt}{-10pt}{20pt}
+% Title
+
+\titlespacing*{\chapter}{0pt}{-30pt}{20pt}
 \titleformat
 {\chapter} % Command
 [frame] % shape
@@ -58,6 +60,7 @@
 {0pt} % sep
 {} % before code
 [\hrule] % after code
+
 \renewcommand{\thesection}{}% Remove section references...
 \renewcommand{\thesubsection}{\arabic{subsection}}%... from subsections
 
@@ -71,9 +74,20 @@
 {} % before code
 [] % after code
 
-\renewcommand{\vec}{\overrightarrow}
-\renewcommand{\re}{\textrm}
+% Headers & Footers
 
+\renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
+
+\fancypagestyle{non-chapter-style}{%
+    \fancyhf{}%
+    \fancyhead[L]{\leftmark}%
+    \fancyhead[R]{\getSubject}
+    \fancyfoot[L]{Cours FIMI INSA de Lyon}%
+    \fancyfoot[C]{\thepage\,/\,\pageref{LastPage}}%
+    \fancyfoot[R]{Clément GRENNERAT}%
+    \renewcommand{\headrulewidth}{0.4pt}% Line at the header invisible
+    \renewcommand{\footrulewidth}{0.4pt}% Line at the footer visible
+}
 \fancypagestyle{plain}{%
     \fancyhf{}%
     \fancyfoot[L]{Cours FIMI INSA de Lyon}%
@@ -90,12 +104,7 @@
 
 \setlength\columnsep{0.03\textwidth}
 
-% Commands
-
-\newcommand*{\headRow}{\rowcolor{gray!15}}
-
 % Colonnes
-
 
 \newenvironment{col}[1]
 {\begin{minipage}[t]{\dimexpr \textwidth * #1/100 - 0.03\textwidth}}{\end{minipage}\hspace{0.03\textwidth}}
@@ -120,4 +129,10 @@
     \begin{col}{#3}#6\end{col}
     \begin{colf}{\numexpr 100 - #1 - #2 - #3\relax}#7\end{colf}
 }
+
+% Commands / Raccourcis
+
+\newcommand*{\headRow}{\rowcolor{gray!15}}
+\renewcommand{\vec}{\overrightarrow}
+\renewcommand{\re}{\textrm}
 

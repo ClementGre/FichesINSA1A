@@ -7,6 +7,7 @@
 \title{\getSubject}
 \author{Clément GRENNERAT}
 \date{Septembre 2022}
+\pagestyle{non-chapter-style}
 
 
 \chapter{Statique du solide}\label{ch:statique-du-solide}
@@ -32,7 +33,7 @@
       Barycentre d'un système :
       \[\sum_{i=1}^n m_i\ \overrightarrow{GA_i} = \overrightarrow{0} \qquad \text{ou} \qquad \overrightarrow{OG} = \dfrac{\sum_{i=1}^n m_i\ \overrightarrow{OA_i}}{M_{total}}\]
       Pour un solide de masse $M$ :
-      \[\overrightarrow{OG} = \dfrac{1}{M} * \iiint_{\text{solide}} {\rho\ \rm d V\ \overrightarrow{OM}} \]
+      \[\overrightarrow{OG} = \dfrac{1}{M} * \iiint_{\text{solide}} {\rho\ \re d V\ \overrightarrow{OM}} \]
     
     \subsection{Modéliser des interactions par des forces}\label{subsec:modeliser-des-interactions-par-des-forces}
       
@@ -48,8 +49,9 @@
         \1 \underline{Rappel élastique d'un ressort} : $\vec{F} = - k (l - l_0)\vec{\imath}$.\\Avec $l_0$ la longueur à vide, $l$ la longueur étiré/comprimé et $k$ la constante de raideur du ressort.
         \1 \underline{Réaction d'un support}
         \2 Composante normale $\overrightarrow{R_N}$ : perpendiculaire au support.
-        \2 Composante tangentielle $\overrightarrow{R_T} = \overrightarrow{f}$, frottements solides : s'oppose au mouvement.\\Ne dépend que de la masse, $\|\overrightarrow{R_T}\| = \mu_d \|\overrightarrow{R_N}\|$. ($\mu_d$ coefficient de frottements dynamique).\\Le système est immobile si $\|\overrightarrow{R_T}\| < \mu_s \|\overrightarrow{R_N}\|$ ($\mu_s$ coefficient de frottements statique).\\En général, $\mu_s > \mu_d$.
-        \1 \underline{Forces pressantes}, la somme de des forces pressantes donne la poussée d'Archimède : $\overrightarrow{\Pi} = - \rho_{fluide}\ V_{fluide \ d\acute eplac\acute e}\ \vec{g}$
+        \2 Composante tangentielle $\overrightarrow{R_T} = \overrightarrow{f}$, frottements solides : s'oppose au mouvement.\\Ne dépend que de la masse, $\|\overrightarrow{R_T}\| = \mu_d \|\overrightarrow{R_N}\|$. ($\mu_d$ coefficient de frottements dynamique).\\Le système est immobile si $\|\overrightarrow{R_T}\| < \mu_s \|\overrightarrow{R_N}\|$ ($\mu_s$ coef. frottements statique). En général, $\mu_s > \mu_d$.
+        \1 \underline{Forces pressantes}, la somme de des forces pressantes donne la poussée d'Archimède :
+        \\$\overrightarrow{\Pi} = - \rho_{fluide}\ V_{fluide \ d\acute eplac\acute e}\ \vec{g}$
       \end{outline}
   
   
@@ -107,7 +109,7 @@
       Circulaire : arc de cercle\\
       Curviligne : courbe quelconque
     }{
-    \textbf{Équation de trajectoire :}\\
+      \textbf{Équation de trajectoire :}\\
       Équation de la forme $y = f(x)$ ou $r = g(\theta)$\\
       Le temps n'intervient plus.
     }
@@ -144,17 +146,19 @@
     \\
     \textbf{Mouvement circulaire :}\\
     Vitesse angulaire : $\omega = \dfrac{\re{d}t}{\re d \theta} = \dot \theta$
-    
+  
+  
   \section{Étude de quelques mouvements simples d’un solide}\label{sec:etude-de-quelques-mouvements-simples-dun-solide}
     
     \textbf{Translation :} tous les points ont la même vitesse et le même vecteur accélération.\\
     
     \textbf{Rotation autour d'un point fixe :} tous les points ont la même vitesse angulaire (et le même vecteur accélération angulaire).
-    
+  
+  
   \section{Changement de référentiels}\label{sec:changement-de-referentiels}
     
     Soit deux référentiels $R$ et $R'$, de centres $O$ et $O'$, on a : $\vec{OM} = \vec{OO'} + \vec{O'M}$
-
+    
     On a alors une position absolue ($\vec{OM}$) et relative ($\vec{O'M}$).
     De même pour la vitesse.\\
     
@@ -163,7 +167,7 @@
     Soit $\vec{OM} = \vec{OO'} + x' \vec{e_{x'}} + y' \vec{e_{y'}} + z' \vec{e_{z'}}$\\
     Alors $\left( \dfrac{\re d \vec{OM}}{\re d t} \right)_R =
 \left( \dfrac{\re d \vec{OO'}}{\re d t} \right)_R + x' \left( \dfrac{\re d \vec{e_{x'}}}{\re t} \right)_R + y' \left( \dfrac{\re d \vec{e_{y'}}}{\re d t} \right)_R + z' \left( \dfrac{\re d \vec{e_{z'}}}{\re d t} \right)_R
-  + \dfrac{\re d x'}{\re d t} \vec{e_{x'}} + \dfrac{\re d y'}{\re d t} \vec{e_{y'}} + \dfrac{\re d z'}{\re d t} \vec{e_{z'}}$\\
++ \dfrac{\re d x'}{\re d t} \vec{e_{x'}} + \dfrac{\re d y'}{\re d t} \vec{e_{y'}} + \dfrac{\re d z'}{\re d t} \vec{e_{z'}}$\\
     
     Dérivée de $\vec{OO'}$ = translation.
     Dérivées des vecteurs unitaires = rotation : peut être retiré en cas de translation :\\
