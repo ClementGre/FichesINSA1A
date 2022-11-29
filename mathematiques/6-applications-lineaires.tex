@@ -1,13 +1,31 @@
 \section{L'espace vectoriel $\mathcal{L}(E, F)$}\label{sec:l'espace-vectoriel-$mathcal{l}(e-f)$}
   
   $f$ est une application linéaire si $f \in \mathcal{L}(E, F)$\\
-  $\iff \forall (\alpha, \beta) \in \mathbb{K}^2, \forall (\vec u, \vec v) \in E^2, f(\alpha \cdot_E \vec u +_E  \beta \cdot_E \vec v) = \alpha \cdot_F f(\vec u) +_F \beta \cdot_F f(\vec v)$
-
-  Toute réciproque d'une bijection linéaire, combinaison linéaire d'une application linéaire ou composée de deux applications linéaires \textbf{est linéaire}.\\
+  $\iff \forall (\alpha, \beta) \in \mathbb{K}^2, \forall (\vec u, \vec v) \in E^2, f(\alpha \cdot_E \vec u +_E  \beta \cdot_E \vec v) = \alpha \cdot_F f(\vec u) +_F \beta \cdot_F f(\vec v)$\\
+  
+  Toute réciproque d'une bijection linéaire, combinaison linéaire de deux applications linéaires ou composée de deux applications linéaires \textbf{est linéaire}.\\
   Une application linéaire bijective de $E$ dans $F$ est un isomorphisme de $E$ sur $F$.
-  $E$ et $F$ sont isomorphes.
+  $E$ et $F$ sont isomorphes.\\
+  Si $E = F$, c'est un endomorphisme bijectif ou automorphisme de $E$.
+
 
 \section{Image par une application linéaire}\label{sec:image-par-une-application-lineaire}
+  
+  \begin{itemize}
+    \item Image directe : image d'un ensemble.
+    \item Image réciproque : antécédents d'un ensemble : $f^{-1}(A)$ (toujours définis contrairement à la réciproque).
+  \end{itemize}
+  
+  L'image s'un s.e.v. est un s.e.v. dans l'ensemble de définition.\\
+  
+  Soit une application linéaire $f \in \mathcal{L}(E, F)$ :
+  \begin{itemize}
+    \item L'image de $f$ est le s.e.v $\Im(f) = f(E)$ (Ensemble d'arrivée de $f$).
+    \item Le noyau de $f$ est le s.e.v. $\Ker(f) = f^{-1}(\vec{0_F})$ (Tous les $\vec u$ de $E$ ayant pour image $\vec 0$).
+  \end{itemize}
+  
+  $f$ est surjective $\iff \Im(f) = F$.\\
+  $f$ est injective $\iff \Ker(f) = \{\vec 0\}$.
 
 
 \section{Applications linéaires en dimension finie}\label{sec:applications-lineaires-en-dimension-finie}
