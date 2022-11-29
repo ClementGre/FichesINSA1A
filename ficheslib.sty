@@ -24,6 +24,7 @@
 \RequirePackage{xargs}
 \RequirePackage{tikz}
 \RequirePackage{standalone}
+\RequirePackage{biblatex} % Roman numbers
 \tikzset{>=latex} % for LaTeX arrow head
 \RequirePackage{ifthen}
 \RequirePackage{physics}
@@ -135,4 +136,7 @@
 \newcommand*{\headRow}{\rowcolor{gray!15}}
 \renewcommand{\vec}{\overrightarrow}
 \renewcommand{\re}{\textrm}
+
+\DeclareMathOperator{\Vect}{Vect}
+\DeclareMathOperator{\rg}{rg}
 

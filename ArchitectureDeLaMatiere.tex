@@ -2,6 +2,7 @@
 
 \usepackage{ficheslib}
 \usepackage{booktabs}
+\usepackage{mhchem}
 \newcommand*{\getSubject}{Architecture de la matière}
 
 \begin{document}
@@ -331,7 +332,11 @@
     \end{itemize}
     \vspace{7pt}
     
-    Le sens de variation est le même que pour l'énergie d'ionisation, excepté pour le bloc $d$.
+    Le sens de variation est le même que pour l'énergie d'ionisation, excepté pour le bloc $d$.\\
+    
+    Classement de quelques éléments par électronégativité décroissante :
+    \[F,\ O,\ Cl,\ N,\ Br,\ C,\ S,\ I,\ Se,\ H,\ P,\ As,\ Si,\ Be,\ Al\ldots\]
+    (Le fluor est le plus électronégatif de tous les éléments, devant l'oxygène)
 
 
 \chapter{Spectroscopie des rayons X}\label{ch:spectroscopie-des-rayons-x}
@@ -512,6 +517,30 @@
     Molécule non polaire : somme des moments dipolaires nuls.
   
   
+  \section{Notion de degré d'oxydation : calcul et utilisation}\label{sec:notion-de-degre-d'oxydation-:-calcul-et-utilisation}
+    
+    \subsection{Rappels Oxydoréduction}\label{subsec:rappels-oxydoreduction}
+      \ce{Ox + ne^- <=> Red}
+    
+    \subsection{Degré d'oxydation}\label{subsec:degre-d'oxydation}
+  
+      On calcule le nombre d'électrons après une \textbf{ionisation fictive} :
+      \begin{itemize}
+        \item Liaisons polarisées : L'atome le plus électronégatif prend tous les électrons de la liaison.
+        \item Liaison non polarisée : Chaque atome garde ses électrons (moitié-moitié).
+      \end{itemize}
+      
+      \[\text{Nombre d'oxydation} = \text{Électrons de valence} - \text{Électrons après ionisation fictive}\]
+      
+      Ainsi, $H$ aura souvent $n.o. = 1$, avec une valence ayant un électron de plus que son nombre d'électrons fictifs.\\
+      Dans une rédox, l'oxydant a le $n.o.$ le plus élevé.\\
+      
+      Pour un ion, il s'agit de la charge de l'ion.\\
+      Pour une molécule formée d'atome identiques, $n.o. = 0$.\\
+      Le Fluor sera toujours -\RN{1} sauf s'il est liée à lui-même, et l'Oxygène -\RN{2}, sauf s'il est lié au Fluor ou à lui même.\\
+      
+      La somme des $n.o.$ dans une molécule est nulle (ou vaut la charge de l'ion polyatomique).
+  
   \section{Le modèle ondulatoire de la liaison covalente}\label{sec:le-modele-ondulatoire-de-la-liaison-covalente}
     
     Liaison covalente = recouvrement de deux orbitales atomiques de valence.\\
@@ -535,5 +564,19 @@
     La délocalisation d'une liaison double/triple peut forcer la molécule à être plane ($sp^2$), en créant une liaison $\pi$ par couple d'atome.
     On parle alors d'électron délocalisé, dont la probabilité de présence s'étend sur l'ensemble de la molécule (excepté les atomes périphériques).
 
+
+\chapter{Forces intermoléculaires}\label{ch:forces-intermoleculaires}
+
+
+\chapter{Modèle du cristal parfait}\label{ch:modele-du-cristal-parfait}
+
+
+\chapter{Les cristaux covalents - Les cristaux moléculaires}\label{ch:les-cristaux-covalents---les-cristaux-moleculaires}
+
+
+\chapter{La liaison métallique - Les cristaux métalliques}\label{ch:la-liaison-metallique---les-cristaux-metalliques}
+
+
+\chapter{La liaison ionique - Les cristaux ioniques}\label{ch:la-liaison-ionique---les-cristaux-ioniques}
 
 \end{document}

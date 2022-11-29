@@ -1,6 +1,6 @@
 \section{Structure d'espace vectoriel}\label{sec:structure-d'espace-vectoriel}
   
-  Un ensemble $E$ est un $\mathbb K$-espace vectoriel ($\mathbb K$ désigne $\mathbb{R}$ ou $\mathbb{C}$) si il est muni d'une loi interne $\textbf{+}$ et d'une loi externe \textbf{$\cdot$}.\\
+  Un ensemble $E$ est un $\mathbb K$-espace vectoriel ($\mathbb K$ désigne $\mathbb{R}$ ou $\mathbb{C}$) si il est muni d'une loi interne $\textbf{+}$ et d'une loi externe \textbf{$\cdot$}, respectant les 8 axiomes de base :\\
   
   On redéfinit les lois de bases (commutativité et associativité de l'addition, élément neutre\ldots).
 
@@ -21,32 +21,81 @@
   
   L'intersection de deux s.e.v est un s.e.v.\ Ce n'est pas le cas pour l'union.\\
   
-  \textbf{Sous-espace vectoriel engendré par A} ($Vect(A)$) : c'est le plus petit s.e.v. de $E$ contenant $A$.\\
-  Par convention : $Vect(\emptyset) = {\vec{0_E}}$\\
-  On dit que $Vect(A)$ est constitué de toutes les combinaisons linéaires des vecteurs de $A$.
+  \textbf{Sous-espace vectoriel engendré par A} ($\Vect(A)$) : c'est le plus petit s.e.v. de $E$ contenant $A$.\\
+  Par convention : $\Vect(\emptyset) = {\vec{0_E}}$\\
+  On dit que $\Vect(A)$ est constitué de toutes les combinaisons linéaires des vecteurs de $A$.
 
 
 \section{Dimension d'un espace vectoriel}\label{sec:dimension-d'un-espace-vectoriel}
   
-  Une famille de vecteurs de $E$ est \underline{libre} s'ils sont linéairement indépendants (seul la combinaison linéaire avec des coefficients nuls mène à $\vec 0$).\\
+  \subsection{Familles libres, génératrices, bases}\label{subsec:familles-libres-generatrices-bases}
+    
+    Une famille de vecteurs de $E$ est \underline{libre} s'ils sont linéairement indépendants (seul la combinaison linéaire avec des coefficients tous nuls mène à $\vec 0$).\\
+    
+    Sinon, la famille est \underline{liée}, les vecteurs sont alors linéairement dépendants (il existe des coefficients non tous nuls tel que la combinaison linéaire de ces vecteurs soit nulle).\\
+    
+    Deux vecteurs formant une famille liée sont colinéaires.
+    Trois vecteurs formant une famille liée sont coplanaires.\\
+    
+    \begin{itemize}
+      \item Une famille de vecteurs est liée $\iff$ l'un des vecteurs est combinaison linéaire des autres.
+      \item Si une famille de vecteurs contient le vecteur nul, elle est liée.
+      \item Une famille extraite d'une famille libre est libre.
+      \item Une famille contenant une famille liée est liée.\\
+    \end{itemize}
+    
+    Une famille de vecteurs $(\vec{v_1}, \dots, \vec{v_p})$ d'un e.v. $E$ est \underline{génératrice} de $E$ si tout vecteur de $E$ est combinaison linéaire de vecteurs de la famille (Ce qui équivaut à dire que $E = \Vect(\vec{v_1}, \dots, \vec{v_p})$).\\
+    Une famille libre et génératrice de $E$ est une \underline{base} de $E$ (Elle est canonique si chaque vecteur a une unique composante égale à 1).\\
   
-  Sinon, la famille est \underline{liée}, les vecteurs sont alors linéairement dépendants (il existe des coefficients non tous nuls tel que la combinaison linéaire de ces vecteurs soit nulle).\\
+  \subsection{Dimension finie}\label{subsec:dimension-finie}
+    
+    Un e.v. $E$ est de dimension finie s'il existe une famille finie de vecteurs génératrice de $E$.
+    Sinon, $\dim(E) = +\infty$\\
+    
+    Soit $E$ un e.v. de dimension finie, on peut compléter une famille libre de $E$ par des vecteurs bien choisis d'une famille génératrice de $E$ pour obtenir une base de $E$.\\
+    
+    \newpage
+    Soit $n = \dim(E)$ :
+    \begin{itemize}
+      \item Toute famille libre de E contient au plus $n$ vecteurs.
+      \item Toute famille génératrice de E contient au moins $n$ vecteurs.
+      \item Toute famille libre de $n$ vecteurs de $E$ est une base de $E$.
+      \item Toute famille génératrice de $n$ vecteurs de $E$ est une base de $E$.
+    \end{itemize}
+    $\Rightarrow$ Soit $F$ une famille de $\dim(E)$ vecteurs : $F$ est une base de E $\iff$ $F$ est libre $\iff$ $F$ est génératrice de $E$\\
+    
+    \twoCol{
+      \subsection{Sous-espace en dimension finie}\label{subsec:sous-espace-en-dimension-finie}
+      
+      Soit $F$ et $G$ des s.e.v de $E$ de dimension finie.
+      \begin{itemize}
+        \item $\dim F \le \dim E$
+        \item $\dim F = \dim E \iff F = E$
+        \item $\dim(F \cap G) \le \min(\dim F, \dim G)$
+        \item Si $F \subset G$ et $\dim F = \dim G$ alors $F = G$
+      \end{itemize}
+    }{
+      
+      \subsection{Rang d'une famille de vecteurs}\label{subsec:rang-d-une-famille-de-vecteurs}
+      
+      Soit $F$ une famille de $p$ vecteurs d'un e.v. $E$ :\\
+      $\rg(F) = \dim(\Vect(F))$
+      \begin{itemize}
+        \item Si $F$ est libre, $\rg(F) = p$\quad Sinon, $\rg(F) < p$
+        \item $\rg(F) = \dim E \iff$ $F$ est génératrice de $E$
+        \item $\rg(F) = p = \dim E \iff$ $F$ est une base de $E$
+      \end{itemize}
+    }
   
-  Deux vecteurs formant une famille liée sont colinéaires.
-  Trois vecteurs formant une famille liée sont coplanaires.\\
+  \subsection{Méthode des zéros échelonnés}\label{subsec:methode-des-zeros-echelonnes}
+    
+    Une famille est échelonnée relativement à une base si dans l'écriture des vecteurs exprimés dans la base, chaque vecteur commence par au moins un zéro de plus que le précédent.\\
+    Toute famille de vecteurs tous non nuls échelonnée relativement à une base est libre.\\
+    
+    On peut échelonner des vecteurs en les écrivant en colonne (comme dans les systèmes), mais en faisant des combinaisons linéaires avec les colonnes (et non avec les lignes).
+    On a donc pas d'équivalence, mais uniquement une égalité de rang $\rg(F)$.\\
+    
   
-  \begin{itemize}
-    \item Une famille de vecteurs est liée $\iff$ l'un des vecteurs est combinaison linéaire des autres.
-    \item Si une famille de vecteurs contient le vecteur nul, elle est liée.
-    \item Une famille extraite d'une famille libre est libre.
-    \item Une famille contenant une famille liée est liée.\\
-  \end{itemize}
-  
-  Une famille de vecteurs $(\vec{v_1}, \dots, \vec{v_1})$ d'un e.v. $E$ est \underline{génératrice} si tout vecteur de $E$ est combinaison linéaire de vecteurs de la famille ($\iff E = Vect(\vec{v_1}, \dots, \vec{v_p})$).\\
-  Une famille libre et génératrice de $E$ est une \underline{base} de $E$ (Elle est canonique si chaque vecteur a une unique composante égale à 1).\\
-  
-  Un e.v. $E$ est de dimension finie s'il existe une famille finie de vecteurs génératrice de $E$.
-  Sinon, $\dim(E) = +\infty$\\
-  
-  Soit $E$ un e.v. de dimension finie, on peut compléter une famille libre de $E$ par des vecteurs bien choisis d'une famille génératrice de $E$ pour obtenir une base de $E$.
+    
+    
   
