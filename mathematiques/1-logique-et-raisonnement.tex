@@ -63,8 +63,8 @@
   \subsection{Quantificateurs}\label{subsec:quantificateurs}
     
     $\forall x \in A, P(x)$ : quel que soit $x$ élément de $A$ (ou pour tout $x$ appartenant à $A$). \hfill \textbf{Négation :} $\exists x \in A, \neg P(x)$\\
-    $\exists x \in A, P(x)$ : il existe au moins un élément $x$ de $A$ \hfill \textbf{Négation :} $\forall x \in A, \neg P(x)$\\
-    $\exists !x \in A, P(x)$ : il y a existence et \textbf{unicité} de l'élément $x$ dans $A$ vérifiant la propriété $P$
+    $\exists x \in A, P(x)$ : il existe au moins un élément $x$ de $A$ vérifiant $P$. \hfill \textbf{Négation :} $\forall x \in A, \neg P(x)$\\
+    $\exists !x \in A, P(x)$ : il y a existence et \textbf{unicité} de l'élément $x$ dans $A$ vérifiant $P$.
 
 
 \section{Méthodes de raisonnement}\label{sec:methodes-de-raisonnement}
@@ -79,7 +79,7 @@
     
     \subsection{Raisonnement par disjonction des cas}\label{subsec:raisonnement-par-disjonction-des-cas}
       
-      Raisonnement direct dans lequel l'hypothèse peut de décomposer en plusieurs autres hypothèses\\
+      Raisonnement direct dans lequel l'hypothèse peut se décomposer en plusieurs sous hypothèses :\\
       $H \Leftrightarrow H_1 \land H_2$\\
       On montre ensuite $H_1 \Rightarrow C$ et $H_2 \Rightarrow C$
     

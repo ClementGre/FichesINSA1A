@@ -164,14 +164,12 @@
     Si on dérive par rapport au référentiel $R$, il faudra dériver les vecteurs unitaires du référentiel $R'$ et vice versa.\\
     
     Soit $\vec{OM} = \vec{OO'} + x' \vec{e_{x'}} + y' \vec{e_{y'}} + z' \vec{e_{z'}}$\\
-    Alors $\left( \dfrac{\re d \vec{OM}}{\re d t} \right)_R =
-\left( \dfrac{\re d \vec{OO'}}{\re d t} \right)_R + x' \left( \dfrac{\re d \vec{e_{x'}}}{\re t} \right)_R + y' \left( \dfrac{\re d \vec{e_{y'}}}{\re d t} \right)_R + z' \left( \dfrac{\re d \vec{e_{z'}}}{\re d t} \right)_R
-+ \dfrac{\re d x'}{\re d t} \vec{e_{x'}} + \dfrac{\re d y'}{\re d t} \vec{e_{y'}} + \dfrac{\re d z'}{\re d t} \vec{e_{z'}}$\\
+    Alors $\vec{v_{R}} = \vec{v_{R'}} + \vec{v_{R'/R}}(M) = \dfrac{\re d x'}{\re d t} \vec{e_{x'}} + \dfrac{\re d y'}{\re d t} \vec{e_{y'}} + \dfrac{\re d z'}{\re d t} \vec{e_{z'}} + \left( \dfrac{\re d \vec{OO'}}{\re d t} \right)_R + x' \left( \dfrac{\re d \vec{e_{x'}}}{\re d t} \right)_R + y' \left( \dfrac{\re d \vec{e_{y'}}}{\re d t} \right)_R + z' \left( \dfrac{\re d \vec{e_{z'}}}{\re d t} \right)_R$\\
     
     Dérivée de $\vec{OO'}$ = translation.
-    Dérivées des vecteurs unitaires = rotation : peut être retiré en cas de translation :\\
-    Pour l'accélération, on a alors :\\
+    Dérivées des vecteurs unitaires = rotation : peut être retiré en cas de translation.\\
+    En translation, l'accélération vaut :\\
     
-    $\vec{a_R} = \left( \dfrac{\re{d}^2 \vec{OO'}}{\re d t^2} \right)_R + \vec{a_{R'}}$
+    $\vec{a_R} = \vec{a_{R'}} + \left( \dfrac{\re{d}^2 \vec{OO'}}{\re d t^2} \right)_R$
     
 \end{document}
