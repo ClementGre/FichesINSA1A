@@ -1,0 +1,60 @@
+\documentclass[13pt, twoside, a4paper, french]{report}
+
+\usepackage{ficheslib}
+\newcommand*{\getSubject}{Électricité}
+
+\begin{document}
+\title{\getSubject}
+\author{Clément GRENNERAT}
+\date{Décembre 2022}
+\pagestyle{non-chapter-style}
+
+
+\chapter{Concepts fondamentaux en électricité}\label{ch:concepts-fondamentaux-en-electricite}
+  
+  
+  \section{Grandeurs fondamentales en électricité}\label{sec:grandeurs-fondamentales-en-electricite}
+    
+    Le sens réel du courant électrique est celui des charges positives (produit $q \cdot \vec v$).\\
+    
+    Les multimètres comptent le courant positivement quand il va de la borne A/V à la borne COM (donc quand les électrons entrent par COM).\\
+    
+    \begin{itemize}
+      \item Régime continu ou stationnaire : $U$ et $I$ constantes.
+      \item Régime variable : $u$ et $i$ variables (régime permanent sinusoïdal ou régime transitoire).
+    \end{itemize}
+  
+  
+  \section{Circuit électrique}\label{sec:circuit-electrique}
+    
+    Caractéristique d'un dipôle : $i = f(u)$.\\
+    Tout point $M$ appartenant à la caractéristique s'appelle point de fonctionnement du dipôle.\\
+    
+    Convention générateur : $\vec u$ et $\vec i$ de même sens.\\
+    Convention récepteur : $\vec u$ et $\vec i$ de sens opposés.\\
+    La caractéristique d'un dipôle dépend de la convention utilisée.\\
+    
+    \underline{Dipôle linéaire :} caractéristique linéaire.\\
+    \underline{Dipôle non polarisé :} symétrique par rapport à $(0, 0)$ (ne dépend pas du sens de branchement).\\
+    \underline{Dipôle passif :} quand débranché, la tension à ses bornes est nulle (si $i = 0$, alors $u = 0$).\\
+  
+  
+  \section{Aspects énergétiques}\label{sec:aspects-energetiques}
+
+    Soit $E_{pélec}$ l'énergie potentielle électrique et $V$ le potentiel électrique :
+    \begin{equation}
+      E_{pélec} = q \cdot V\label{eq:equation1}
+    \end{equation}
+    \begin{equation}
+      \Delta E_{pélec} = q \cdot (V_B - V_A) \label{eq:equation2}
+    \end{equation}
+    
+    $U_{AB} = V_A - V_B$, avec $\vec U$ de $B$ vers $A$.\\
+    En convention générateur, si $U_{AB} > 0$, alors $\Delta E_{pélec} > 0$.\\
+    En convention récepteur, si $U_{AB} > 0$, alors $\Delta E_{pélec} < 0$.\\
+
+    Mais si $i < 0$, il faut inverser les inéquations car le sens réel du courant est l'opposé.\\
+    
+    Ainsi, la puissance $P$ est algébrique et dépend du signe de $i \cdot \Delta E_{pélec}$.
+    
+\end{document}
