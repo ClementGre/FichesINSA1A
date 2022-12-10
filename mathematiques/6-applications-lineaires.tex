@@ -1,7 +1,7 @@
 \section{L'espace vectoriel $\mathcal{L}(E, F)$}\label{sec:l'espace-vectoriel-$mathcal{l}(e-f)$}
   
-  $f$ est une application linéaire si $f \in \mathcal{L}(E, F)$\\
-  $\iff \forall (\alpha, \beta) \in \mathbb{K}^2, \forall (\vec u, \vec v) \in E^2, f(\alpha \cdot_E \vec u +_E  \beta \cdot_E \vec v) = \alpha \cdot_F f(\vec u) +_F \beta \cdot_F f(\vec v)$\\
+  On considérera $f$ une application linéaire tel que $f \in \mathcal{L}(E, F)$\\
+  On a : $\forall (\alpha, \beta) \in \mathbb{K}^2, \forall (\vec u, \vec v) \in E^2, f(\alpha \cdot_E \vec u +_E  \beta \cdot_E \vec v) = \alpha \cdot_F f(\vec u) +_F \beta \cdot_F f(\vec v)$\\
   
   Toute réciproque d'une bijection linéaire, combinaison linéaire de deux applications linéaires ou composée de deux applications linéaires \textbf{est linéaire}.\\
   Une application linéaire bijective de $E$ dans $F$ est un isomorphisme de $E$ sur $F$.
@@ -11,21 +11,67 @@
 
 \section{Image par une application linéaire}\label{sec:image-par-une-application-lineaire}
   
-  \begin{itemize}
-    \item Image directe : image d'un ensemble.
-    \item Image réciproque : antécédents d'un ensemble : $f^{-1}(A)$ (toujours définis contrairement à la réciproque).
-  \end{itemize}
+  \twoCol{
+    
+    \subsection{Image et image réciproque}\label{subsec:image-et-image-reciproque}
+    
+    \begin{itemize}
+      \item Image directe : image d'un ensemble.
+      \item Image réciproque : antécédents d'un ensemble : $f^{-1}(A)$ (toujours définie contrairement à la réciproque).
+    \end{itemize}
+    \\
+    L'image s'un s.e.v. est un s.e.v. dans l'ensemble de définition.
+  }{
+    
+    \subsection{Noyau et image}\label{subsec:noyau-et-image}
+    
+    \begin{itemize}
+      \item L'image de $f$ est le s.e.v $\Im(f) = f(E)$\\(Ensemble d'arrivée de $f$).
+      \item Le noyau de $f$ est le s.e.v. $\Ker(f) = f^{-1}(\vec{0_F})$\\(Tous les $\vec u$ de $E$ ayant pour image $\vec 0$).
+    \end{itemize}
+    
+    $f$ est surjective $\iff \Im(f) = F$.\\
+    $f$ est injective $\iff \Ker(f) = \{\vec 0\}$.
+  }
   
-  L'image s'un s.e.v. est un s.e.v. dans l'ensemble de définition.\\
-  
-  Soit une application linéaire $f \in \mathcal{L}(E, F)$ :
-  \begin{itemize}
-    \item L'image de $f$ est le s.e.v $\Im(f) = f(E)$ (Ensemble d'arrivée de $f$).
-    \item Le noyau de $f$ est le s.e.v. $\Ker(f) = f^{-1}(\vec{0_F})$ (Tous les $\vec u$ de $E$ ayant pour image $\vec 0$).
-  \end{itemize}
-  
-  $f$ est surjective $\iff \Im(f) = F$.\\
-  $f$ est injective $\iff \Ker(f) = \{\vec 0\}$.
+  \subsection{Image d'une famille de vecteurs}\label{subsec:image-d'une-famille-de-vecteurs}
+    
+    Soit $f \in \mathcal{L}(E, F)$ et $(\vec{u_1}, \dots, \vec{u_p})$ une famille de $E$ :
+    \begin{itemize}
+      \item Si $(\vec{u_1}, \dots, \vec{u_p})$ est liée, alors $(f(\vec{u_1}), \dots, f(\vec{u_p}))$ est liée.
+      \item Si $(\vec{u_1}, \dots, \vec{u_p})$ est libre et $f$ injective, alors $(f(\vec{u_1}), \dots, f(\vec{u_p}))$ est libre.
+      \item Si $(\vec{u_1}, \dots, \vec{u_p})$ est génératrice et $f$ surjective, alors $(f(\vec{u_1}), \dots, f(\vec{u_p}))$ est génératrice.
+      \item Si $G = \Vect(\vec{u_1}, \dots, \vec{u_p})$, alors $f(G) = \Vect(f(\vec{u_1}), \dots, f(\vec{fu_p}))$.
+    \end{itemize}
 
 
 \section{Applications linéaires en dimension finie}\label{sec:applications-lineaires-en-dimension-finie}
+  
+  \subsection{Image d'une famille de vecteurs}\label{subsec:image-d'une-famille-de-vecteurs2}
+    
+    Soit $f \in \mathcal{L}(E, F)$ et $(\vec{e_1}, \dots, \vec{e_p})$ une base de $E$, de dimension finie :
+    \begin{itemize}
+      \item $(f(\vec{e_1}, \dots, f(\vec{e_p}))$ est libre dans $F$ ssi $f$ est injective.
+      \item $(f(\vec{e_1}, \dots, f(\vec{e_p}))$ est génératrice dans $F$ ssi $f$ est surjective.
+      \item $(f(\vec{e_1}, \dots, f(\vec{e_p}))$ est une base de $F$ ssi $f$ est un isomorphisme.
+      \item Si $f$ injective, alors $\dim{F} \ge \dim{E}$
+      \item Si $f$ surjective, alors $\dim{F} \le \dim{E}$
+      \item Si $f$ est un isomorphisme, alors $\dim{F} = \dim{E}$
+      \item Si $\forall i \in \llbracket 0~;~n \rrbracket$, $f(\vec{e_i}) = 0$, alors $f$ est l'application nulle.
+      \item Si $(f, g) \in \mathcal{L}(E, F)$ et que $f(\vec{e_i}) = g(\vec{e_i})$, alors $f = g$.
+      \item Soit $(\vec{\epsilon_1}, \dots, \vec{\epsilon_n})$ des vecteurs de $F$, alors il existe une unique A.L. $f$ telle que $\forall i \in \llbracket 0~;~n \rrbracket$, $f(\vec{e_i}) = \vec{\epsilon_i}$.
+    \end{itemize}
+    \ \\
+    \twoCol{
+      \subsection{Représentation analytique}\label{itm:representation-analytique}
+      
+      On peut écrire un système appelé représentation analytique de $f$, qui exprime chacun des coordonnés de $f(\vec{u})$ en fonction de combinaison linéaire des composantes de $\vec{u}$ et des coefficients de $f$.
+    }{
+      \subsection{Matrice d'une application linéaire}\label{itm:matrice-d'une-application-lineaire}
+      
+      On peut aussi écrire matriciellement :\\
+      $\vec v = f(\vec u) \iff Y = AX$.\\
+      Avec $A$ la matrice des coefficients de $f$ et $X$ la matrice colonne des composantes de $\vec u$.
+    }
+  
+  \subsection{Rang d'une application linéaire}\label{subsec:rang-d'une-application-lineaire}
