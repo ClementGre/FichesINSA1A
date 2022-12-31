@@ -116,6 +116,10 @@
     \begin{col}{#1}#2\end{col}
     \begin{colf}{\numexpr 100 - #1\relax}#3\end{colf}
 }
+\newcommandx{\twoColSized}[4][1=48, 2=48]{
+    \begin{colf}{#1}#3\end{colf}
+    \begin{colf}{#2}#4\end{colf}
+}
 
 \newcommand{\threeCol}[5]{}
 \renewcommandx{\threeCol}[5][1=33, 2=33]{

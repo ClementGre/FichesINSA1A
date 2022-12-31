@@ -1,60 +1,164 @@
 \documentclass[13pt, twoside, a4paper, french]{report}
 
 \usepackage{ficheslib}
+\usepackage{hyperref}
 \newcommand*{\getSubject}{Électricité}
 
 \begin{document}
-\title{\getSubject}
-\author{Clément GRENNERAT}
-\date{Décembre 2022}
-\pagestyle{non-chapter-style}
+    \title{\getSubject}
+    \author{Clément GRENNERAT}
+    \date{Décembre 2022}
+    \pagestyle{non-chapter-style}
+    
+    
+    \chapter{Concepts fondamentaux en électricité}\label{ch:concepts-fondamentaux-en-electricite}
+        
+        
+        \section{Grandeurs fondamentales en électricité}\label{sec:grandeurs-fondamentales-en-electricite}
+            
+            Le sens réel du courant électrique est celui des charges positives (produit $q \cdot \vec v$).\\
+            
+            Les multimètres comptent le courant positivement quand le courant va de la borne A/V à la borne COM (donc quand les électrons entrent par COM).\\
+            
+            \begin{itemize}
+                \item Régime continu ou stationnaire : $U$ et $I$ constantes.
+                \item Régime variable : $u$ et $i$ variables (régime permanent sinusoïdal ou régime transitoire).
+            \end{itemize}
+        
+        
+        \section{Circuit électrique}\label{sec:circuit-electrique}
+            
+            Caractéristique d'un dipôle : $i = f(u)$.\\
+            Tout point $M$ appartenant à la caractéristique s'appelle point de fonctionnement du dipôle.\\
+            
+            Convention générateur : $\vec u$ et $\vec i$ de même sens.\\
+            Convention récepteur : $\vec u$ et $\vec i$ de sens opposés.\\
+            La caractéristique d'un dipôle dépend de la convention utilisée.\\
+            
+            \underline{Dipôle linéaire :} caractéristique linéaire.\\
+            \underline{Dipôle non polarisé :} symétrique par rapport à $(0, 0)$ (ne dépend pas du sens de branchement).\\
+            \underline{Dipôle passif :} quand débranché, la tension à ses bornes est nulle (si $i = 0$, alors $u = 0$).\\
+        
+        
+        \section{Aspects énergétiques}\label{sec:aspects-energetiques}
+            
+            Soit $E_{p\acute elec}$ l'énergie potentielle électrique et $V$ le potentiel électrique :
+            \begin{equation}
+                E_{p\acute elec} = q \cdot V\label{eq:equation1}
+            \end{equation}
+            \begin{equation}
+                \Delta E_{p\acute elec} = q \cdot (V_B - V_A) \label{eq:equation2}
+            \end{equation}
+            
+            $U_{AB} = V_A - V_B$, avec $\vec U$ de $B$ vers $A$.\\
+            En convention générateur, si $U_{AB} > 0$, alors $\Delta E_{p\acute elec} > 0$.\\
+            En convention récepteur, si $U_{AB} > 0$, alors $\Delta E_{p\acute elec} < 0$.
+    
+    
+    \chapter{Circuits en régime continu ou stationnaire}\label{ch:circuits-en-regime-continu-ou-stationnaire}
+        
+        
+        \section{Lois de Kirchhoff}\label{sec:lois-de-kirchhoff}
+            
+            \subsection{Définitions}\label{subsec:definitions}
+                \begin{itemize}
+                    \item \underline{Branche :} portion de circuit entre 2 noeuds consécutifs.
+                    \item \underline{Maille :} succession de branches formant une boucle fermée.
+                    \item \underline{Dipôles en série :} parcourus par le même courant.
+                    \item \underline{Dipôles en parallèle ou dérivation :} même tension à leurs bornes.
+                \end{itemize}
+            
+            \subsection{Lois}\label{subsec:lois}
+                \begin{itemize}
+                    \item \underline{Loi des noeuds :} la somme des courants entrants dans un noeud est égale à la somme des courants sortants.
+                    \item \underline{Loi des mailles :} la somme des tensions aux bornes des branches successives d'une maille est nulle.
+                \end{itemize}
+            
+            \subsection{Équivalence source de Thévenin / Norton}\label{subsec:equivalence-source-de-thevenin-/-norton}
+                
+                \begin{figure}[!htb]
+                    \twoColSized[40][35]{
+                        \centering
+                        \includegraphics[width=\textwidth]{graphs/Thévenin}
+                        \centering
+                        \caption{Thévenin}
+                        \label{fig:courbe1}
+                    }{
+                        \centering
+                        \includegraphics[width=\textwidth]{graphs/Norton}
+                        \centering
+                        \caption{Norton}
+                        \label{fig:courbe2}
+                    }
+                \end{figure}
+                
+                On peut passer d'une représentation à une autre pour simplifier les résistances d'un circuit.\\
+        
+        
+        \section{Méthodes de résolution}\label{sec:methodes-de-resolution}
+            
+            \subsection{Équations de résolution}\label{subsec:equations-de-resolution}
+                
+                Si on a $b$ branches, il va falloir $b$ équations pour déterminer tous les courants.\\
+                La loi des mailles nous donne $n-1$ équations, où $n$ est le nombre de noeuds.\\
+                On établit donc $b - n + 1$ équations aux mailles pour déterminer toutes les intensités.
+            
+            \subsection{Transfiguration du réseau}\label{subsec:transfiguration-du-reseau}
+                
+                Deux sources de tension en série ou de courant en parallèle peuvent être simplifiées en appliquant la loi des mailles ou des noeuds.\\
+                
+                Deux résistances en séries peuvent être simplifiées en une seule résistance où $R_{eq} = R_1 + R_2$.\\
+                En parallèle, c'est les intensités qui s'ajoutent donc $\dfrac{1}{R_{eq}} = \dfrac{1}{R_1} + \dfrac{1}{R_2}$, soit $R_{eq} = \dfrac{R_1 R_2}{R_1 + R_2}$.\\
+                Si $R_1 = R_2$, alors $R_{eq} = \dfrac{R_1}{2}$.\\
+        
+        
+        \section{Bilans de puissance}\label{sec:bilans-de-puissance}
+            
+            La puissance vaut toujours $P = UI$, mais sa signification dépend de la convention utilisée.
+    
+    
+    \chapter{Circuits en régime transitoire}\label{ch:circuits-en-regime-transitoire}
+        
+        
+        \section{Effet capacitif d'ordre 1}\label{sec:effet-capacitif-d'ordre-1}
+            
+            \subsection{Condensateur}\label{subsec:condensateur}
+                
+                Il s'établit un équilibre entre la charge du condensateur et la tension à ses bornes : $q = C u_c$.\\
+                
+                On a $i_c = \dfrac{\re d q}{\re d t} = C \dfrac{\re d u_c}{\re d t}$.\\
+                $\rightarrow$ force la tension à être continue, car $i_c$ ne peut pas être infini.\\
+            
+            \subsection{Caractérisation du régime transitoire}\label{subsec:caracterisation-du-regime-transitoire}
+                
+                Tension de la forme : $u_c(t) = A e^{-\dfrac{t}{\tau}} + u_p$.\\
+                
+                $\tau$ caractérise la durée d'existence du régime transitoire.\\
+                On peut le déterminer quantitativement :
+                \begin{itemize}
+                    \item Pente à l'origine $p = \dfrac{u_p - u_i}{\tau}$ :\\
+                    on regarde la distance horizontale, à la hauteur finale de la tension.
+                    \item Hauteur à $63\%$ :\\
+                    on regarde après quelle durée la tension est à $63\%$ de sa valeur finale.
+                \end{itemize}
+            
+            \subsection{Analyse énergétique}\label{subsec:analyse-energetique}
+                
+                On associe une énergie à un condensateur : $E_c = \dfrac{1}{2} C u_c^2$.\\
+                La puissance reçue par le condensateur est donc $P = \dfrac{\re d E_c}{\re d t} = C u_c \dfrac{\re d u_c}{\re d t}$.\\
+        
+        
+        \section{Effet inductif d'ordre 1}\label{sec:effet-inductif-d'ordre-1}
+            
+            \subsection{Bobine}\label{subsec:bobine}
+                
+                Tension et courant sont liés par la relation : $u_L = L \dfrac{\re d i_L}{\re d t}$.\\
+                $\rightarrow$ force le courant à être continue, car $u_L$ ne peut pas être infini.\\
+            
+            \subsection{Analyse énergétique}\label{subsec:analyse-energetique-2}
+                
+                On associe une énergie à une bobine : $E_L = \dfrac{1}{2} L i_L^2$.\\
+                La puissance reçue par la bobine est donc $P = \dfrac{\re d E_L}{\re d t} = L i_L \dfrac{\re d i_L}{\re d t}$.\\
 
 
-\chapter{Concepts fondamentaux en électricité}\label{ch:concepts-fondamentaux-en-electricite}
-  
-  
-  \section{Grandeurs fondamentales en électricité}\label{sec:grandeurs-fondamentales-en-electricite}
-    
-    Le sens réel du courant électrique est celui des charges positives (produit $q \cdot \vec v$).\\
-    
-    Les multimètres comptent le courant positivement quand le courant va de la borne A/V à la borne COM (donc quand les électrons entrent par COM).\\
-    
-    \begin{itemize}
-      \item Régime continu ou stationnaire : $U$ et $I$ constantes.
-      \item Régime variable : $u$ et $i$ variables (régime permanent sinusoïdal ou régime transitoire).
-    \end{itemize}
-  
-  
-  \section{Circuit électrique}\label{sec:circuit-electrique}
-    
-    Caractéristique d'un dipôle : $i = f(u)$.\\
-    Tout point $M$ appartenant à la caractéristique s'appelle point de fonctionnement du dipôle.\\
-    
-    Convention générateur : $\vec u$ et $\vec i$ de même sens.\\
-    Convention récepteur : $\vec u$ et $\vec i$ de sens opposés.\\
-    La caractéristique d'un dipôle dépend de la convention utilisée.\\
-    
-    \underline{Dipôle linéaire :} caractéristique linéaire.\\
-    \underline{Dipôle non polarisé :} symétrique par rapport à $(0, 0)$ (ne dépend pas du sens de branchement).\\
-    \underline{Dipôle passif :} quand débranché, la tension à ses bornes est nulle (si $i = 0$, alors $u = 0$).\\
-  
-  
-  \section{Aspects énergétiques}\label{sec:aspects-energetiques}
-
-    Soit $E_{pélec}$ l'énergie potentielle électrique et $V$ le potentiel électrique :
-    \begin{equation}
-      E_{pélec} = q \cdot V\label{eq:equation1}
-    \end{equation}
-    \begin{equation}
-      \Delta E_{pélec} = q \cdot (V_B - V_A) \label{eq:equation2}
-    \end{equation}
-    
-    $U_{AB} = V_A - V_B$, avec $\vec U$ de $B$ vers $A$.\\
-    En convention générateur, si $U_{AB} > 0$, alors $\Delta E_{pélec} > 0$.\\
-    En convention récepteur, si $U_{AB} > 0$, alors $\Delta E_{pélec} < 0$.\\
-
-    Mais si $i < 0$, il faut inverser les inéquations car le sens réel du courant est l'opposé.\\
-    
-    Ainsi, la puissance $P$ est algébrique et dépend du signe de $i \cdot \Delta E_{pélec}$.
-    
 \end{document}
