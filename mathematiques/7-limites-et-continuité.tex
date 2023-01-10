@@ -1,54 +1,86 @@
 \section{Bornes sup/inf d'une fonction}\label{sec:bornes-sup/inf-d'une-fonction}
-    
-    $f$ est majorée sur $D$ si $\exists \alpha \in \mathbb{R}\ /\ \forall x \in D, f(x) \le \alpha$ (resp. minorée)\\
-    
-    Ainsi, $f$ admet un \underline{plus petit majorant} et un \underline{plus grand minorant} : borne supérieure et borne inférieure\\
-    Si $f$ est non majorée, $\sup f(x) = +\infty$ (resp. non minorée, $\inf f(x) = -\infty$)
+
+$f$ est majorée sur $D$ si $\exists \alpha \in \mathbb{R}\ /\ \forall x \in D, f(x) \le \alpha$ (resp. minorée)\\
+
+Ainsi, $f$ admet un \underline{plus petit majorant} et un \underline{plus grand minorant} : borne supérieure et borne inférieure\\
+Si $f$ est non majorée, $\sup f(x) = +\infty$ (resp. non minorée, $\inf f(x) = -\infty$)
 
 
 \section{Limites d'une fonction}\label{sec:limites-d'une-fonction}
-    
-    Une propriété esr vraie au voisinage d'un réel $x_0$ s'il existe un intervalle de la forme $I = ]x_0 - \alpha ; x_0 + \alpha[$ où la propriété est vraie sur $I \textbackslash \{x_0\}$.
-    De même pour un voisinnage en $\pm \infty$, un intervalle $]A ; +\infty[$ ou $]-\infty ; A[$.
-    
-    
-    \twoCol {
-        
-        \subsection{Limite finie en l'infini}\label{subsec:limite-finite-en-l'infini}
-        $\forall \epsilon > 0,\ \exists X_\epsilon \in \mathbb{R}\ / \ \forall x \in D_f,\ x > X_\epsilon \Rightarrow |f(x) - l| < \epsilon$\\
-        On a alors une asymptote horizontale $y = l$ à $C_f$.\\
-        
-        \subsection{Limite infinie en l'infini}\label{subsec:limite-infinie-en-l'infini}
-        $\forall A \in \mathbb{R},\ \exists X_A \in \mathbb{R}\ / \ \forall x \in D_f,\ x > X_A \Rightarrow f(x) > A$\\
-    }{
-        
-        \subsection{Limite infinie en un réel}\label{subsec:limite-infinie-en-un-reel}
-        $\forall A \in \mathbb{R}, \exists \alpha_A > 0,\ \forall x \in D_f,\ |x - x_0| < \alpha_A \Rightarrow f(x) > A$\\
-        On a alors une asymptote verticale $x = x_0$ à $C_f$.\\
-        
-        \subsection{Limite finie en un réel}\label{subsec:limite-finite-en-un-reel}
-        $\forall \epsilon > 0,\ \exists \alpha_\epsilon > 0,\ \forall x \in D_f,\ |x - x_0| < \alpha_\epsilon \Rightarrow |f(x) - l| < \epsilon$\\
-    }
-    
+
+Une propriété esr vraie au voisinage d'un réel $x_0$ s'il existe un intervalle de la forme $I = ]x_0 - \alpha ; x_0 + \alpha[$ où la propriété est vraie sur $I \textbackslash \{x_0\}$.
+De même pour un voisinnage en $\pm \infty$, un intervalle $]A ; +\infty[$ ou $]-\infty ; A[$.
+
+
+\twoCol {
+
+    \subsection{Limite finie en l'infini}\label{subsec:limite-finite-en-l'infini}
+    $\forall \epsilon > 0,\ \exists X_\epsilon \in \mathbb{R}\ / \ \forall x \in D_f,\ x > X_\epsilon \Rightarrow |f(x) - l| < \epsilon$\\
+    On a alors une asymptote horizontale $y = l$ à $C_f$.\\
+
+    \subsection{Limite infinie en l'infini}\label{subsec:limite-infinie-en-l'infini}
+    $\forall A \in \mathbb{R},\ \exists X_A \in \mathbb{R}\ / \ \forall x \in D_f,\ x > X_A \Rightarrow f(x) > A$\\
+}{
+
+    \subsection{Limite infinie en un réel}\label{subsec:limite-infinie-en-un-reel}
+    $\forall A \in \mathbb{R}, \exists \alpha_A > 0,\ \forall x \in D_f,\ |x - x_0| < \alpha_A \Rightarrow f(x) > A$\\
+    On a alors une asymptote verticale $x = x_0$ à $C_f$.\\
+
+    \subsection{Limite finie en un réel}\label{subsec:limite-finite-en-un-reel}
+    $\forall \epsilon > 0,\ \exists \alpha_\epsilon > 0,\ \forall x \in D_f,\ |x - x_0| < \alpha_\epsilon \Rightarrow |f(x) - l| < \epsilon$\\
+}
+
+\twoCol {
     \subsection{Limite en général}\label{subsec:limite-en-general}
-        
-        Dans le cas général, $f$ admet $l$ pour limite en $x_0$ si pour tout voisinage $V_l$ de $l$, il existe un voisinage $V_x_0$ de $x_0$ tel que $f(V_x_0 \cap D_f) \subset V_l$\\
-        Une limite est unique, démontre la continuité ($l = f(x_0)$), et si elle est finie, $f$ est bornée au voisinage de $x_0$.\\
-    
+
+    Dans le cas général, $f$ admet $l$ pour limite en $x_0$ si pour tout voisinage $V_l$ de $l$, il existe un voisinage $V_{x_0}$ de $x_0$ tel que $f(V_{x_0} \cap D_f) \subset V_l$.
+    Une limite est unique, démontre la continuité ($l = f(x_0)$), et si elle est finie, $f$ est bornée au voisinage de $x_0$.\\
+}{
     \subsection{Limites à gauche/droite}\label{subsec:limites-a-gauche/droite}
-        
-        Si $x_0 \notin D_f$, $f$ admet une limite en $x_0$ ssi $f$ admet une limite à gauche et à droite identique en $x_0$.\\
-        Si $x_0 \in D_f$, il faut que ces limites vaillent $l = f(x_0)$.
-        C'est la continuité.\\
-    
+
+    Si $x_0 \notin D_f$, $f$ admet une limite en $x_0$ ssi $f$ admet une limite à gauche et à droite identique en $x_0$.\\
+    Si $x_0 \in D_f$, il faut que ces limites vaillent $l = f(x_0)$.
+    C'est la continuité.\\
+}
+
+\twoCol {
     \subsection{Opérations sur les limites}\label{subsec:operations-sur-les-limites}
-        
-        \underline{Formes indéterminées :} $+\infty -\infty$, $0 \times \infty$, $\dfrac{\infty}{\infty}$, $\dfrac{0}{0}$, $\infty^0$, $0^0$, $1^{\infty}$.\\
-        \underline{Polynômes et fractions rationnelles :} termes de plus haut degré.\\
-    
+
+    \underline{Formes indéterminées :} $+\infty -\infty$, $0 \times \infty$, $\dfrac{\infty}{\infty}$, $\dfrac{0}{0}$, $\infty^0$, $0^0$, $1^{\infty}$.\\
+    \underline{Polynômes et fractions rationnelles :} termes de plus haut degré.\\
+
+    $f$ et $g$ équivalentes : $f \underset{x_0}{\sim} g \iff \lim_{x_0} \dfrac{f}{g} = 1$\\
+    $f$ négligeable devant $g$ : $f \underset{x_0}{=} o(g) \iff \lim_{x_0} \dfrac{f}{g} = 0$\\
+
     \subsection{Branches infinies}\label{subsec:branches-infinies}
-    
+
+    Si $\limm{x}{+\infty} (f(x) - (ax+b)) = 0$ \\
+    $y = ax + b$ est asymptote oblique à $C_f$ en $+\infty$.\\
+
+    Si $\limm{x}{+\infty} \dfrac{f(x)}{x} = a$ et $\limm{x}{+\infty} (f(x) -ax) = \pm \infty$ :\\
+    $f$ admet une branche parabolique de direction asymptotique à la droite $y = ax$ en $+\infty$.\\
+    Si $a = \pm \infty$, la direction asymptotique est l'axe des ordonnées.\\
+}{
+
     \subsection{Ordre et limites}\label{subsec:ordre-et-limites}
+    Si $f$ croissante (resp. décroissante) sur $I =\ ]a, b[$\\
+    où $a, b \in [-\infty, +\infty]$ :
+    \begin{itemize}
+        \item Si $f$ majorée sur $I$, elle admet une limite à gauche finie en $b$.
+        \item Si $f$ non majorée sur $I$, $\limm{x}{b^-} f(x) = +\infty$.
+        \item Dans les deux cas $\limm{x}{b^-} f(x) = \sup f(x)$.
+    \end{itemize}
+    \phantom{s}\\
+    \underline{Croissance comparées :}
+    \begin{itemize}
+        \item Les puissance du logarithme sont négligeables devant les fonctions puissances positives.
+        \item Les fonctions puissance sont négligeables devant les puissances positives de l'exponentielle.
+    \end{itemize}
+    \phantom{s}\\
+    \underline{Ordre et limites :}
+    Si $f \le g$, $\limm{x}{x_0} f(x) \le \limm{x}{x_0} g(x)$.\\
+    On peut étendre ceci pour définir le théorème de l'encadrement.
+}
 
 
 \section{Continuité d'une fonction}\label{sec:continuite-d'une-fonction}
