@@ -49,15 +49,12 @@ De même pour un voisinnage en $\pm \infty$, un intervalle $]A ; +\infty[$ ou $]
     \underline{Formes indéterminées :} $+\infty -\infty$, $0 \times \infty$, $\dfrac{\infty}{\infty}$, $\dfrac{0}{0}$, $\infty^0$, $0^0$, $1^{\infty}$.\\
     \underline{Polynômes et fractions rationnelles :} termes de plus haut degré.\\
 
-    $f$ et $g$ équivalentes : $f \underset{x_0}{\sim} g \iff \lim_{x_0} \dfrac{f}{g} = 1$\\
-    $f$ négligeable devant $g$ : $f \underset{x_0}{=} o(g) \iff \lim_{x_0} \dfrac{f}{g} = 0$\\
-
     \subsection{Branches infinies}\label{subsec:branches-infinies}
 
-    Si $\limm{x}{+\infty} (f(x) - (ax+b)) = 0$ \\
+    Si $\limm{+\infty} (f(x) - (ax+b)) = 0$ \\
     $y = ax + b$ est asymptote oblique à $C_f$ en $+\infty$.\\
 
-    Si $\limm{x}{+\infty} \dfrac{f(x)}{x} = a$ et $\limm{x}{+\infty} (f(x) -ax) = \pm \infty$ :\\
+    Si $\limm{+\infty} \dfrac{f(x)}{x} = a$ et $\limm{x}{+\infty} (f(x) -ax) = \pm \infty$ :\\
     $f$ admet une branche parabolique de direction asymptotique à la droite $y = ax$ en $+\infty$.\\
     Si $a = \pm \infty$, la direction asymptotique est l'axe des ordonnées.\\
 }{
@@ -67,8 +64,8 @@ De même pour un voisinnage en $\pm \infty$, un intervalle $]A ; +\infty[$ ou $]
     où $a, b \in [-\infty, +\infty]$ :
     \begin{itemize}
         \item Si $f$ majorée sur $I$, elle admet une limite à gauche finie en $b$.
-        \item Si $f$ non majorée sur $I$, $\limm{x}{b^-} f(x) = +\infty$.
-        \item Dans les deux cas $\limm{x}{b^-} f(x) = \sup f(x)$.
+        \item Si $f$ non majorée sur $I$, $\limm{b^-} f(x) = +\infty$.
+        \item Dans les deux cas $\limm{b^-} f(x) = \sup f(x)$.
     \end{itemize}
     \phantom{s}\\
     \underline{Croissance comparées :}
@@ -78,18 +75,65 @@ De même pour un voisinnage en $\pm \infty$, un intervalle $]A ; +\infty[$ ou $]
     \end{itemize}
     \phantom{s}\\
     \underline{Ordre et limites :}
-    Si $f \le g$, $\limm{x}{x_0} f(x) \le \limm{x}{x_0} g(x)$.\\
+    Si $f \le g$, $\limm{x_0} f(x) \le \limm{x_0} g(x)$.\\
     On peut étendre ceci pour définir le théorème de l'encadrement.
 }
 
 
 \section{Continuité d'une fonction}\label{sec:continuite-d'une-fonction}
 
+\subsection{Continuité en un point}\label{subsec:continuite-en-un-point}
+
+$f$ continue en $x_0 \iff \limm{x_0} f(x) = f(x_0)$.
+Sinon, $f$ peut être continue uniquement à gauche ou à droite de $x_0$.
+
+\subsection{Prolongement par continuité}\label{subsec:prolongement-par-continuite}
+
+Si $x_0 \not\in D_f$ mais que f admet une limite $l$ en $x_0$, on peut prolonger $f$ par continuité en définissant $\tilde{f}(x_0) = l$.
+
+\subsection{Opérations}\label{subsec:operations}
+
+Une combinaison linéaire, division ou composition de fonctions continues est continue.\\
+Si $f$ est continue en $x_0$ et si $f(x_0) > 0$ alors $f(x) > 0$ au voisinage de $x_0$.
+
 
 \section{Comparaison locale de deux fonctions}\label{sec:comparaison-locale-de-deux-fonctions}
 
+\subsection{Négligeabilité}\label{subsec:negligeabilite}
 
+$f$ négligeable devant $g$ : $f \underset{x_0}{=} o(g) \iff \limm{x_0} \dfrac{f}{g} = 0$\\
+La négligeabilité se conserve par transitivité ou opérations d'addition, multiplication, division et puissance.
 
+\subsection{Équivalence de fonctions}\label{subsec:equivalence-de-fonctions}
 
+$f$ et $g$ équivalentes : $f \underset{x_0}{\sim} g \iff \limm{x_0} \dfrac{f}{g} = 1$\\
+L'équivalence est symétrique, transitive et réflexive, et se conserve aussi par multiplication, division et puissance.\\
 
+$\limm{x_0} f(x) = l \iff f \underset{x_0}{\sim} l$\\
+$f \underset{x_0}{\sim} g \iff (f - g) \underset{x_0}{=} o(g) \underset{x_0}{=} o(f)$
 
+\subsubsection{Équivalents usuels}
+
+\threeCol{
+    \begin{itemize}
+        \item $e^x \underset{0}{\sim} 1 + x$
+        \item $\ln(1+x) \underset{0}{\sim} x$
+        \item $(1+x)^\alpha \underset{0}{\sim} 1 + \alpha x$
+    \end{itemize}
+}{
+    \begin{itemize}
+        \item $\cos x \underset{0}{\sim} 1 - \dfrac{x^2}{2}$
+        \item $\sin x \underset{0}{\sim} x$
+        \item $\tan x \underset{0}{\sim} x$
+        \item $\arcsin x \underset{0}{\sim} x$
+        \item $\arctan x \underset{0}{\sim} x$
+    \end{itemize}
+}{
+    \begin{itemize}
+        \item $\cosh x \underset{0}{\sim}  1 + \dfrac{x^2}{2}$
+        \item $\sinh x \underset{0}{\sim} x$
+        \item $\tanh x \underset{0}{\sim} x$
+        \item $\cosh x \underset{+\infty}{\sim} \dfrac{e^x}{2}$
+        \item $\sinh x \underset{+\infty}{\sim} \dfrac{e^x}{2}$
+    \end{itemize}
+}
