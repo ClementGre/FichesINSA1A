@@ -167,6 +167,7 @@
     \section{Introduction et définitions}\label{sec:introduction-et-definitions}
 
     \twoCol[53]{
+
         \subsection{Caractéristiques d'un signal sinusoïdal}\label{subsec:caracteristiques-d'un-signal-sinusoidal}
 
         \begin{itemize}
@@ -208,8 +209,71 @@
     \subsection{Notation complexe associée}\label{subsec:notation-complexe-associée}
 
     La notation complexe n'a pas de sens physique.
+    Module = amplitude, argument = phase.\\
     On s'intéressera uniquement à la partie réelle si $\cos$ ou imaginaire si $\sin$.\\
 
-    $u(t) = U_m \cos(\omega t + \varphi)$ =
+    $u(t) = U_m \cos(\omega t + \varphi)$ = \Re($U_m e^{j(\omega t + \varphi_u)}$)\\
+
+    Amplitude complexe : $\underline{U_m} = U_m e^{j\varphi_u}$ \quad On a donc $\underline{u}(t) = \underline{U_m} e^{j\omega t}$.
+
+    \section{Impédances complexes}\label{sec:impedances-complexes}
+
+    Impédance en convention récepteur : $\underline{z} = \dfrac{\underline{u}}{\underline{i}} = \dfrac{U_m}{I_m} e^{j(\varphi_u - \varphi_i)}$.\\
+
+    \begin{itemize}
+        \item Module de $\underline{z}$ : donne le rapport d'amplitude entre tension et courant.
+        \item Argument de $\underline{z}$ : déphasage ($\varphi_u - \varphi_i$).
+    \end{itemize}
+    \\ \vspace{7pt}\\
+    Impédances courantes :
+    \begin{itemize}
+        \item Résistance : $z = R$ (réel donc déphasage nul).
+        \item Condensateur : $\underline{z} = \dfrac{-j}{C \omega}$ (imaginaire pur négatif donc déphasage de $-\frac{\pi}{2}$).
+        \item Condensateur : $\underline{z} = jL \omega$ (imaginaire pur positif donc déphasage de $\frac{\pi}{2}$).
+    \end{itemize}
+
+    \section{Lois en régime sinusoidal forcé}\label{sec:lois-en-regime-sinusoidal-force}
+
+    Les lois de Kirchhoff sont toujours valables, mais bien uniquement avec les $u(t)$ et les $i(t)$.\\
+
+    Les impédances s'additionnent en série et leurs inverse s'additionnent en parallèle.\\
+
+    On a toujours l'équivalence Thévenin/Norton :\\
+    $\underline{u} = \underline{e} - \underline{z} \underline{i} \iff \underline{i} = \dfrac{\underline{e}}{\underline{z}} - \dfrac{\underline{u}}{\underline{z}}$
+
+
+    \chapter{Puissance en régime sinusoïdal}\label{ch:puissance-en-regime-sinusoidal}
+
+
+    \section{Définitions}\label{sec:definitions}
+    P. instant, moy/active, apparente
+
+    Puissance instantanée : varie en fonction du temps. On choisit $\varphi_i = 0$ et $\varphi_u \neq 0$.\\
+    $P =  U_{eff} I_{eff} e^{j\varphi_u} + U_{eff} I_{eff} e^{j(2\omega t + \varphi_u)}$
+    $p(t) =  U_{eff} I_{eff} e^{j\varphi_u} + U_{eff} I_{eff} e^{j(2\omega t + \varphi_u)}$
+
+    -> puissance moyenne (ou active) = terme qui ne dépend pas du temps
+    Puissance apparente : $U_{eff} I_{eff}$
+
+
+
+    \section{Puissance des dipôles usuels}\label{sec:puissance-des-dipoles-usuels}
+
+    \subsection{Résistance}\label{subsec:resistance}
+
+    $\varphi_u = \varphi_i$ donc $p(t) = U_{eff} I_{eff} + U_{eff} I_{eff} \cos(2 \omega t) \ge 0$
+
+    \subsection{Condensateur}\label{subsec:condensateur-2}
+
+    $\varphi_u - \varphi_i = - \dfrac{\pi}{2}$ donc $p(t) = 0 + U_{eff} I_{eff} \cos\left(2 \omega t - \frac{\pi}{2}\right)$
+
+    \subsection{Bobine idéale}\label{subsec:bobine-ideale}
+
+    $\varphi_u - \varphi_i = \dfrac{\pi}{2}$ donc $p(t) = 0 + U_{eff} I_{eff} \cos\left(2 \omega t + \frac{\pi}{2}\right)$
+
+
+
+    \section{Transfert d'énergie - adaptation d'impedance}\label{sec:transfert-d'energie---adaptation-d'impedance}
+
 
 \end{document}
