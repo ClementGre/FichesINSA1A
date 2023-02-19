@@ -216,6 +216,7 @@
 
     Amplitude complexe : $\underline{U_m} = U_m e^{j\varphi_u}$ \quad On a donc $\underline{u}(t) = \underline{U_m} e^{j\omega t}$.
 
+
     \section{Impédances complexes}\label{sec:impedances-complexes}
 
     Impédance en convention récepteur : $\underline{z} = \dfrac{\underline{u}}{\underline{i}} = \dfrac{U_m}{I_m} e^{j(\varphi_u - \varphi_i)}$.\\
@@ -232,6 +233,7 @@
         \item Condensateur : $\underline{z} = jL \omega$ (imaginaire pur positif donc déphasage de $\frac{\pi}{2}$).
     \end{itemize}
 
+
     \section{Lois en régime sinusoidal forcé}\label{sec:lois-en-regime-sinusoidal-force}
 
     Les lois de Kirchhoff sont toujours valables, mais bien uniquement avec les $u(t)$ et les $i(t)$.\\
@@ -246,34 +248,35 @@
 
 
     \section{Définitions}\label{sec:definitions}
-    P. instant, moy/active, apparente
 
-    Puissance instantanée : varie en fonction du temps. On choisit $\varphi_i = 0$ et $\varphi_u \neq 0$.\\
-    $P =  U_{eff} I_{eff} e^{j\varphi_u} + U_{eff} I_{eff} e^{j(2\omega t + \varphi_u)}$
-    $p(t) =  U_{eff} I_{eff} e^{j\varphi_u} + U_{eff} I_{eff} e^{j(2\omega t + \varphi_u)}$
+    \underline{Puissance instantanée :} dépend du temps.
+    On choisit $\varphi_i = 0$ et $\varphi_u \neq 0$ (ou l'inverse).\\
+    On note alors $\varphi$ le déphasage de $u$ par rapport à $i$.\\
 
-    -> puissance moyenne (ou active) = terme qui ne dépend pas du temps
-    Puissance apparente : $U_{eff} I_{eff}$
+    $p(t)$ $= U_{m} I_{m} \cos(\omega t) \cos(\omega t + \varphi)$\\
+    \phantom{$p(t)$ }$= U_{eff} I_{eff} \cos(\varphi) + U_{eff} I_{eff} \cos(2\omega t + \varphi)$\\
 
+    Le premier terme ne dépend pas du temps : c'est la \underline{puissance active} (ou moyenne).\\
+    $U_{eff} I_{eff}$ est la puissance apparente, et $\cos(\varphi_u)$ le facteur de puissance.\\
+
+    Le second terme dépend du temps et a une période doublée.
 
 
     \section{Puissance des dipôles usuels}\label{sec:puissance-des-dipoles-usuels}
 
     \subsection{Résistance}\label{subsec:resistance}
 
-    $\varphi_u = \varphi_i$ donc $p(t) = U_{eff} I_{eff} + U_{eff} I_{eff} \cos(2 \omega t) \ge 0$
+    $\varphi_u = \varphi_i$\\
+    $p(t) = U_{eff} I_{eff} + U_{eff} I_{eff} \cos(2 \omega t) \ge 0$
 
     \subsection{Condensateur}\label{subsec:condensateur-2}
 
-    $\varphi_u - \varphi_i = - \dfrac{\pi}{2}$ donc $p(t) = 0 + U_{eff} I_{eff} \cos\left(2 \omega t - \frac{\pi}{2}\right)$
+    $\varphi_u - \varphi_i = - \dfrac{\pi}{2}$\\
+    $p(t) = 0 + U_{eff} I_{eff} \cos\left(2 \omega t - \frac{\pi}{2}\right)$
 
     \subsection{Bobine idéale}\label{subsec:bobine-ideale}
 
-    $\varphi_u - \varphi_i = \dfrac{\pi}{2}$ donc $p(t) = 0 + U_{eff} I_{eff} \cos\left(2 \omega t + \frac{\pi}{2}\right)$
-
-
-
-    \section{Transfert d'énergie - adaptation d'impedance}\label{sec:transfert-d'energie---adaptation-d'impedance}
-
+    $\varphi_u - \varphi_i = \dfrac{\pi}{2}$\\
+    $p(t) = 0 + U_{eff} I_{eff} \cos\left(2 \omega t + \frac{\pi}{2}\right)$
 
 \end{document}
