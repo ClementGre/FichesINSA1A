@@ -279,4 +279,37 @@
     $\varphi_u - \varphi_i = \dfrac{\pi}{2}$\\
     $p(t) = 0 + U_{eff} I_{eff} \cos\left(2 \omega t + \frac{\pi}{2}\right)$
 
+
+    \chapter{Filtres électroniques}\label{ch:filtres-electroniques}
+
+    \section{Qu'est-ce qu'un filtre ?}\label{sec:quest-ce-qu-un-filtre}
+
+    C'est un quadripôle, un circuit avec des dipôles passifs (résistances, condensateurs et/ou bobines).\\
+    Laisse passer certaines fréquences et en atténue plus ou moins d'autres.
+
+    \section{Fonction de transfert : définitions}\label{sec:fonction-de-trandfert-definitions}
+
+    Fonction complexe, $\underline{H}(j\omega) = \dfrac{\underline{u}_s}{\underline{u}_e} = \dfrac{U_s_m}{U_e_m} e^{\varphi_{u_s} - \varphi_{u_e}}$\\
+
+    \begin{itemize}
+        \item Module de $H$ : gain $G(\omega) = \dfrac{U_s_m}{U_e_m}$
+        \item Argument de $H$ : déphasage $\varphi(\omega) = \varphi_{u_s} - \varphi_{u_e}$
+    \end{itemize}
+
+    \section{Diagramme de Bode}\label{sec:diagramme-de-bode}
+
+    Combinaison du diagramme de Bode en Gain et en Phase.\\
+
+    $G_{dB} = 20 \log G(\omega)$
+
+    \section{Fréquence(s) de coupure}\label{sec:frequence-s-de-coupure}
+
+    Fréquence de coupure : $G(\omega_C) = \dfrac{G_{\max}}{\sqrt{2}}$
+
+    Bande passante : ensemble des fréquences que le filtre laisse passer.\\
+
+    \section{Types de filtres usuels}\label{sec:types-de-filtres-usuels}
+
+    Passe bas, passe haut, passe bande et coupe bande.\\
+
 \end{document}
