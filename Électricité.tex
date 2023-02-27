@@ -230,7 +230,7 @@
     \begin{itemize}
         \item Résistance : $z = R$ (réel donc déphasage nul).
         \item Condensateur : $\underline{z} = \dfrac{-j}{C \omega}$ (imaginaire pur négatif donc déphasage de $-\frac{\pi}{2}$).
-        \item Condensateur : $\underline{z} = jL \omega$ (imaginaire pur positif donc déphasage de $\frac{\pi}{2}$).
+        \item Bobine : $\underline{z} = jL \omega$ (imaginaire pur positif donc déphasage de $\frac{\pi}{2}$).
     \end{itemize}
 
 
@@ -298,18 +298,31 @@
 
     \section{Diagramme de Bode}\label{sec:diagramme-de-bode}
 
-    Combinaison du diagramme de Bode en Gain et en Phase.\\
+    \underline{Abscisse :} $f$ ou $\omega$ (logarithmique).\\
+    \underline{Ordonnée :} $G_{dB}$ ou $\varphi$ (linéaire).\\
+    On parle de diagramme de bode en Gain ou en Phase.\\
 
-    $G_{dB} = 20 \log G(\omega)$
+    $G_{dB} = 20 \times \log(G)$
 
     \section{Fréquence(s) de coupure}\label{sec:frequence-s-de-coupure}
 
-    Fréquence de coupure : $G(\omega_C) = \dfrac{G_{\max}}{\sqrt{2}}$
+    Soit $\omega_C$ la pulsation de coupure.\\
+    Le filtre coupe si $G(j\omega) < G(\omega_C)$ et laisse passer, si $G(j\omega) > G(\omega_C)$
+    \begin{align*}
+        G(\omega_C) &= \dfrac{G_{\max}}{\sqrt{2}}\\
+        G_{dB}(\omega_C) &= G_{dB_\re{max}}(\omega_C) - 3\ dB
+    \end{align*}
 
-    Bande passante : ensemble des fréquences que le filtre laisse passer.\\
+    Bande passante : ensemble des fréquences que le filtre laisse passer.
 
     \section{Types de filtres usuels}\label{sec:types-de-filtres-usuels}
 
-    Passe bas, passe haut, passe bande et coupe bande.\\
+    \begin{itemize}
+        \item Passe bas : $G_{dB} = 0$ puis décroissant (bobine).
+        \item Passe haut : $G_{dB}$ croissant puis constant $= 0$ (condensateur).
+        \item Passe bande : $G_{dB}$ croissant, constant $= 0$ puis décroissant (condensateur et bobine en série).
+        \item Coupe bande : $G_{dB}$ constant $= 0$, constant $< 0$, constant $= 0$ (condensateur et bobine en parallèle).
+    \end{itemize}
+
 
 \end{document}
