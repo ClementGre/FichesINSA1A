@@ -4,172 +4,242 @@
 \newcommand*{\getSubject}{Mécanique}
 
 \begin{document}
-\title{\getSubject}
-\author{Clément GRENNERAT}
-\date{Septembre 2022}
-\pagestyle{non-chapter-style}
-
-\chapter{Statique du solide}\label{ch:statique-du-solide}
-  
-  
-  \section{Définitions indispensables}\label{sec:definitions-indispensables}
-    
-    \subsection{Fluides et solides}\label{subsec:fluides-et-solides}
-      
-      \begin{outline}
-        \1 \textbf{Solide} : possède une forme et un volume propre, indéformable, la distance entre deux points quelconques reste constante.
-        \1 \textbf{Fluide :} n'a pas de forme propre
-        \2 \textbf{Liquide :} Volume propre
-        \2 \textbf{Gaz :} Pas de volume propre, occupe toute la place disponible
-      \end{outline}
-      
-      \textbf{Point matériel ou masse ponctuelle :} point d'un volume nul et de masse non nulle.
-    
-    \subsection{Système et référentiel}\label{subsec:systeme-et-referentiel}
-      
-      Penser à définir le \textbf{système} et le \textbf{référentiel} au début du problème.
-      
-      Barycentre d'un système :
-      \[\sum_{i=1}^n m_i\ \overrightarrow{GA_i} = \overrightarrow{0} \qquad \text{ou} \qquad \overrightarrow{OG} = \dfrac{\sum_{i=1}^n m_i\ \overrightarrow{OA_i}}{M_{total}}\]
-      Pour un solide de masse $M$ :
-      \[\overrightarrow{OG} = \dfrac{1}{M} * \iiint_{\text{solide}} {\rho\ \re d V\ \overrightarrow{OM}} \]
-    
-    \subsection{Modéliser des interactions par des forces}\label{subsec:modeliser-des-interactions-par-des-forces}
-      
-      Force : concept physique modélisant l'interaction entre deux systèmes (créant un mouvement, une déformation).\\
-      
-      \textbf{Troisième loi de Newton} (actions réciproques) : $\overrightarrow{F_{1\rightarrow2}} = - \overrightarrow{F_{2\rightarrow1}}$ (dans tout référentiel).\\
-      
-      \textbf{Deux types de forces :} force à distance ou de contact.
-      \begin{outline}
-        \1 \underline{Interaction gravitationnelle} : $\overrightarrow{F_{g1\rightarrow2}} = - G\dfrac{m_1 m_2}{d^2}\overrightarrow{u_{1\rightarrow2}}$
-        \1 \underline{Interaction Électromagnétique} : $\overrightarrow{F_{e1\rightarrow2}} = \dfrac{q_1 q_2}{4\pi\epsilon_0 d^2}\overrightarrow{u_{1\rightarrow2}}$.
-        \1 \underline{Tension d'un fil} : toujours inconnue sauf si le fil est détendu.
-        \1 \underline{Rappel élastique d'un ressort} : $\vec{F} = - k (l - l_0)\vec{\imath}$.\\Avec $l_0$ la longueur à vide, $l$ la longueur étiré/comprimé et $k$ la constante de raideur du ressort.
-        \1 \underline{Réaction d'un support}
-        \2 Composante normale $\overrightarrow{R_N}$ : perpendiculaire au support.
-        \2 Composante tangentielle $\overrightarrow{R_T} = \overrightarrow{f}$, frottements solides : s'oppose au mouvement.\\Ne dépend que de la masse, $\|\overrightarrow{R_T}\| = \mu_d \|\overrightarrow{R_N}\|$. ($\mu_d$ coefficient de frottements dynamique).\\Quand le système est immobile : $\|\overrightarrow{R_T}\| < \mu_s \|\overrightarrow{R_N}\|$ ($\mu_s$ coef. frottements statique). En général, $\mu_s > \mu_d$.
-        \1 \underline{Forces pressantes}, la somme de des forces pressantes donne la poussée d'Archimède :
-        \\$\overrightarrow{\Pi} = - \rho_{fluide}\ V_{fluide \ d\acute eplac\acute e}\ \vec{g}$
-      \end{outline}
-  
-  
-  \section{Énergie cinétique et potentielle}\label{sec:energie-cinetique-et-potentielle}
-    
-    \twoCol {
-      \underline{Énergie cinétique (point matériel)} : $\overrightarrow{E_c} = \dfrac{1}{2} m v^2$\\
-      Pour un solide : \[\overrightarrow{E_c} = \sum \dfrac{1}{2} m_i v_i^2\]
-    }{
-      \underline{Énergie potentielle de position} : \[ E_{pp}(M) = E_{pp}(0) + mgz \]
-      Bien définir l'origine des $E_{pp}$\\
-      Pour un solide, on prend l'altitude du barycentre.
-    }
-    \underline{Énergie potentielle élastique} : \[\displaystyle E_{pe}(M) = \dfrac{1}{2} k (x - l_0)^2\]
-    Avec $E_{pe} = 0$ pour $x = l_0$.
-  
-  
-  \section{Équilibre d'un point matériel}\label{sec:equilibre-d'un-point-materiel}
-    
-    \textbf{Seconde loi de Newton : } $\sum \overrightarrow{F_{ext}} = \dfrac{\textrm{d}\vec{p}}{\textrm{d}t} = m \vec{a}$\\
-    L'équilibre d'un point s'exprime aussi en fonction de l'énergie potentielle.
-    Soit $x_{eq}$ sa position d'équilibre :
-    \[ \left( \dfrac{\textrm{d}E_p}{\textrm{d}x}\right) _{x=x_{eq}} = 0\]
-    L'équilibre est stable si le point tend à revenir vers $x_{eq}$ s'il s'en est écarté (dérivée seconde positive).
-  
-  
-  \section{Équilibre d'un solide}\label{sec:equilibre-d-un-solide}
-    
-    $\sum \overrightarrow{F_{ext}} = \vec{0}$ ne suffit pas pour un solide (exemple du couple).\\
-    $\rightarrow$ Le moment d'une force caractérise sa capacité à faire tourner un solide.
-    \[ \overrightarrow{\mathcal{M}_O}(\overrightarrow{F}) = \overrightarrow{OM} \land \overrightarrow{F} \]
-    
-    Bras de levier : distance entre la droite d'action de $\overrightarrow{F}$ et le centre $O$.
-    \[ d = \|\overrightarrow{OM}\| \cdot \sin(\overrightarrow{OM}, \overrightarrow{F}) \;\; \text{soit} \;\; \|\overrightarrow{\mathcal{M}_O}(\overrightarrow{F})\| = d\ \|\overrightarrow{F}\| \]
-    
-    Dans le plan, le moment est un scalaire, on prend alors le produit scalaire avec un vecteur directeur de l'axe de rotation (le signe du moment détermine alors le sens de rotation).\\
-    
-    \textbf{Différents cas possibles :}
-    \begin{itemize}
-      \item Couple de forces si $\sum_i \overrightarrow{F_i} = \vec 0$ et $\exists\ O\ /\ \sum_i \overrightarrow{M_0}(\overrightarrow{F_i}) \neq \vec 0$ (rotation).\\Le moment d’un couple ne dépend pas du point par rapport auquel il est calculé ($\exists \Rightarrow \forall$).
-      \item Solide à l'équilibre si $\sum_i \overrightarrow{F_i} = \vec 0$ et $\exists\ O /\ \sum_i \overrightarrow{M_0}(\overrightarrow{F_i}) = \vec 0$.
-      \item Force unique appliquée en $O$ si $\sum_i \overrightarrow{F_i} \neq \vec 0$ et $\sum_i \overrightarrow{M_0}(\overrightarrow{F_i}) = \vec 0$.
-      \item Si à la fois la résultante des moments et des forces est non nulle, le solide est à la fois en rotation et en translation.
-    \end{itemize}
+    \title{\getSubject}
+    \author{Clément GRENNERAT}
+    \date{Septembre 2022}
+    \pagestyle{non-chapter-style}
 
 
-\chapter{Cinématique}\label{ch:cinematique}
-  
-  
-  \section{Comment repérer la position d’un point ?}\label{sec:comment-reperer-la-position-dun-point-?}
-    
-    \twoCol{
-      \textbf{Trajectoire du point :}\\
-      Rectiligne : ligne droite\\
-      Circulaire : arc de cercle\\
-      Curviligne : courbe quelconque
-    }{
-      \textbf{Équation de trajectoire :}\\
-      Équation de la forme $y = f(x)$ ou $r = g(\theta)$\\
-      Le temps n'intervient plus.
-    }
-  
-  
-  \section{Vitesse et accélération d’un point matériel}\label{sec:vitesse-et-acceleration-dun-point-materiel}
-    
-    \underline{Mouvement uniforme :} $\|\vec{v}\| = const$\\
-    
-    \twoCol{
-      \textbf{Cilindrique :}\\
-      $\vec{OM} = r \vec{e_r} + z \vec{e_z}$, mais $\vec{e_r}$ varie aussi en fonction du temps :\\
-      $\dfrac{\re{d}\vec{e_r}}{\re{d}t} = \dot{\theta} \vec{e_\theta}$ \quad et \quad $\dfrac{\re{d}\vec{e_\theta}}{\re{d}t} = - \dot{\theta} \vec{e_r}$\\
-      $\vec v = \dot{r} \vec{e_r} + r \dot{\theta} \vec{e_\theta} + \dot{z} \vec{e_z}$
-    }{
-      \textbf{Base de Frénet :}\\
-      $\vec{v} = \|\vec{v}\| \vec{u_T}$\\
-      $\vec{a} = \dfrac{d\|\vec{v}\|}{d\text{t}} \vec{u_T} + \dfrac{\|\vec{v}\|^2}{R_C} \vec{u_N}$\\
-      Si mouvement uniforme : $\vec{a} = \dfrac{\|\vec{v}\|^2}{R_C} \vec{u_N}$
-    }
-  
-  
-  \section{Étude de quelques mouvements simples d’un point}\label{sec:etude-de-quelques-mouvements-simples-dun-point}
-    
-    \twoCol {
-      \textbf{Mouvement rectiligne uniforme :}\\
-      $\vec{a} = \vec{0}$\\
-      $v(t) = v_0$\\
-      $x(t) = v_o t + x_0$
-    }{
-      Rectiligne accéléré si $\vec v$ et $\vec a$ sont dans le même sens, décéléré sinon.\\
-      Rectiligne uniformément accéléré si $\vec a = k \vec{e_x}$ ($k$ constante).
-    }
-    \\
-    \textbf{Mouvement circulaire :}\\
-    Vitesse angulaire : $\omega = \dfrac{\re d \theta}{\re d t} = \dot \theta$
-  
-  
-  \section{Étude de quelques mouvements simples d’un solide}\label{sec:etude-de-quelques-mouvements-simples-dun-solide}
-    
-    \textbf{Translation :} tous les points ont la même vitesse et le même vecteur accélération.\\
-    
-    \textbf{Rotation autour d'un point fixe :} tous les points ont la même vitesse angulaire (et le même vecteur accélération angulaire).
-  
-  
-  \section{Changement de référentiels}\label{sec:changement-de-referentiels}
-    
-    Soit deux référentiels $R$ et $R'$, de centres $O$ et $O'$, on a : $\vec{OM} = \vec{OO'} + \vec{O'M}$
-    
-    On a alors une position absolue ($\vec{OM}$) et relative ($\vec{O'M}$).
-    De même pour la vitesse.\\
-    
-    Si on dérive par rapport au référentiel $R$, il faudra dériver les vecteurs unitaires du référentiel $R'$ et vice versa.\\
-    
-    Soit $\vec{OM} = \vec{OO'} + x' \vec{e_{x'}} + y' \vec{e_{y'}} + z' \vec{e_{z'}}$\\
-    Alors $\vec{v_{R}} = \vec{v_{R'}} + \vec{v_{R'/R}}(M) = \left( \dfrac{\re d \vec{OO'}}{\re d t} \right)_R + \dfrac{\re d x'}{\re d t} \vec{e_{x'}} + \dfrac{\re d y'}{\re d t} \vec{e_{y'}} + \dfrac{\re d z'}{\re d t} \vec{e_{z'}} + x' \left( \dfrac{\re d \vec{e_{x'}}}{\re d t} \right)_R + y' \left( \dfrac{\re d \vec{e_{y'}}}{\re d t} \right)_R + z' \left( \dfrac{\re d \vec{e_{z'}}}{\re d t} \right)_R$\\
-    
-    Dérivée de $\vec{OO'}$ = translation.
-    Dérivées des vecteurs unitaires = rotation : peut être retiré en cas de translation.\\
-    En translation, l'accélération vaut :\\
-    
-    $\vec{a_R} = \vec{a_{R'}} + \left( \dfrac{\re{d}^2 \vec{OO'}}{\re d t^2} \right)_R$
-    
+    \chapter{Statique du solide}\label{ch:statique-du-solide}
+
+
+        \section{Définitions indispensables}\label{sec:definitions-indispensables}
+
+            \subsection{Fluides et solides}\label{subsec:fluides-et-solides}
+
+                \begin{outline}
+                    \1 \textbf{Solide} : possède une forme et un volume propre, indéformable, la distance entre deux points quelconques reste constante.
+                    \1 \textbf{Fluide :} n'a pas de forme propre
+                    \2 \textbf{Liquide :} Volume propre
+                    \2 \textbf{Gaz :} Pas de volume propre, occupe toute la place disponible
+                \end{outline}
+
+                \textbf{Point matériel ou masse ponctuelle :} point d'un volume nul et de masse non nulle.
+
+            \subsection{Système et référentiel}\label{subsec:systeme-et-referentiel}
+
+                Penser à définir le \textbf{système} et le \textbf{référentiel} au début du problème.
+
+                Barycentre d'un système :
+                \[\sum_{i=1}^n m_i\ \overrightarrow{GA_i} = \overrightarrow{0} \qquad \text{ou} \qquad \overrightarrow{OG} = \dfrac{\sum_{i=1}^n m_i\ \overrightarrow{OA_i}}{M_{total}}\]
+                Pour un solide de masse $M$ :
+                \[\overrightarrow{OG} = \dfrac{1}{M} * \iiint_{\text{solide}} {\rho\ \re d V\ \overrightarrow{OM}} \]
+
+            \subsection{Modéliser des interactions par des forces}\label{subsec:modeliser-des-interactions-par-des-forces}
+
+                Force : concept physique modélisant l'interaction entre deux systèmes (créant un mouvement, une déformation).\\
+
+                \textbf{Troisième loi de Newton} (actions réciproques) : $\overrightarrow{F_{1\rightarrow2}} = - \overrightarrow{F_{2\rightarrow1}}$ (dans tout référentiel).\\
+
+                \textbf{Deux types de forces :} force à distance ou de contact.
+                \begin{outline}
+                    \1 \underline{Interaction gravitationnelle} : $\overrightarrow{F_{g1\rightarrow2}} = - G\dfrac{m_1 m_2}{d^2}\overrightarrow{u_{1\rightarrow2}}$
+                    \1 \underline{Interaction Électromagnétique} : $\overrightarrow{F_{e1\rightarrow2}} = \dfrac{q_1 q_2}{4\pi\epsilon_0 d^2}\overrightarrow{u_{1\rightarrow2}}$.
+                    \1 \underline{Tension d'un fil} : toujours inconnue sauf si le fil est détendu.
+                    \1 \underline{Rappel élastique d'un ressort} : $\vec{F} = - k (l - l_0)\vec{\imath}$.\\Avec $l_0$ la longueur à vide, $l$ la longueur étiré/comprimé et $k$ la constante de raideur du ressort.
+                    \1 \underline{Réaction d'un support}
+                    \2 Composante normale $\overrightarrow{R_N}$ : perpendiculaire au support.
+                    \2 Composante tangentielle $\overrightarrow{R_T} = \overrightarrow{f}$, frottements solides : s'oppose au mouvement.\\Ne dépend que de la masse, $\|\overrightarrow{R_T}\| = \mu_d \|\overrightarrow{R_N}\|$. ($\mu_d$ coefficient de frottements dynamique).\\Quand le système est immobile : $\|\overrightarrow{R_T}\| < \mu_s \|\overrightarrow{R_N}\|$ ($\mu_s$ coef. frottements statique). En général, $\mu_s > \mu_d$.
+                    \1 \underline{Forces pressantes}, la somme de des forces pressantes donne la poussée d'Archimède :
+                    \\$\overrightarrow{\Pi} = - \rho_{fluide}\ V_{fluide \ d\acute eplac\acute e}\ \vec{g}$
+                \end{outline}
+
+
+        \section{Énergie cinétique et potentielle}\label{sec:energie-cinetique-et-potentielle}
+
+            \twoCol {
+                \underline{Énergie cinétique (point matériel)} : $\overrightarrow{E_c} = \dfrac{1}{2} m v^2$\\
+                Pour un solide : \[\overrightarrow{E_c} = \sum \dfrac{1}{2} m_i v_i^2\]
+            }{
+                \underline{Énergie potentielle de position} : \[ E_{pp}(M) = E_{pp}(0) + mgz \]
+                Bien définir l'origine des $E_{pp}$\\
+                Pour un solide, on prend l'altitude du barycentre.
+            }
+            \underline{Énergie potentielle élastique} : \[\displaystyle E_{pe}(M) = \dfrac{1}{2} k (x - l_0)^2\]
+            Avec $E_{pe} = 0$ pour $x = l_0$.
+
+
+        \section{Équilibre d'un point matériel}\label{sec:equilibre-d'un-point-materiel}
+
+            \textbf{Seconde loi de Newton : } $\sum \overrightarrow{F_{ext}} = \dfrac{\textrm{d}\vec{p}}{\textrm{d}t} = m \vec{a}$\\
+            L'équilibre d'un point s'exprime aussi en fonction de l'énergie potentielle.
+            Soit $x_{eq}$ sa position d'équilibre :
+            \[ \left( \dfrac{\textrm{d}E_p}{\textrm{d}x}\right) _{x=x_{eq}} = 0\]
+            L'équilibre est stable si le point tend à revenir vers $x_{eq}$ s'il s'en est écarté (dérivée seconde positive).
+
+
+        \section{Équilibre d'un solide}\label{sec:equilibre-d-un-solide}
+
+            $\sum \overrightarrow{F_{ext}} = \vec{0}$ ne suffit pas pour un solide (exemple du couple).\\
+            $\rightarrow$ Le moment d'une force caractérise sa capacité à faire tourner un solide.
+            \[ \overrightarrow{\mathcal{M}_O}(\overrightarrow{F}) = \overrightarrow{OM} \land \overrightarrow{F} \]
+
+            Bras de levier : distance entre la droite d'action de $\overrightarrow{F}$ et le centre $O$.
+            \[ d = \|\overrightarrow{OM}\| \cdot \sin(\overrightarrow{OM}, \overrightarrow{F}) \;\; \text{soit} \;\; \|\overrightarrow{\mathcal{M}_O}(\overrightarrow{F})\| = d\ \|\overrightarrow{F}\| \]
+
+            Dans le plan, le moment est un scalaire, on prend alors le produit scalaire avec un vecteur directeur de l'axe de rotation (le signe du moment détermine alors le sens de rotation).\\
+
+            \textbf{Différents cas possibles :}
+            \begin{itemize}
+                \item Couple de forces si $\sum_i \overrightarrow{F_i} = \vec 0$ et $\exists\ O\ /\ \sum_i \overrightarrow{M_0}(\overrightarrow{F_i}) \neq \vec 0$ (rotation).\\Le moment d’un couple ne dépend pas du point par rapport auquel il est calculé ($\exists \Rightarrow \forall$).
+                \item Solide à l'équilibre si $\sum_i \overrightarrow{F_i} = \vec 0$ et $\exists\ O /\ \sum_i \overrightarrow{M_0}(\overrightarrow{F_i}) = \vec 0$.
+                \item Force unique appliquée en $O$ si $\sum_i \overrightarrow{F_i} \neq \vec 0$ et $\sum_i \overrightarrow{M_0}(\overrightarrow{F_i}) = \vec 0$.
+                \item Si à la fois la résultante des moments et des forces est non nulle, le solide est à la fois en rotation et en translation.
+            \end{itemize}
+
+
+    \chapter{Cinématique}\label{ch:cinematique}
+
+
+        \section{Comment repérer la position d’un point ?}\label{sec:comment-reperer-la-position-dun-point-?}
+
+            \twoCol{
+                \textbf{Trajectoire du point :}\\
+                Rectiligne : ligne droite\\
+                Circulaire : arc de cercle\\
+                Curviligne : courbe quelconque
+            }{
+                \textbf{Équation de trajectoire :}\\
+                Équation de la forme $y = f(x)$ ou $r = g(\theta)$\\
+                Le temps n'intervient plus.
+            }
+
+
+        \section{Vitesse et accélération d’un point matériel}\label{sec:vitesse-et-acceleration-dun-point-materiel}
+
+            \underline{Mouvement uniforme :} $\|\vec{v}\| = const$\\
+
+            \twoCol{
+                \textbf{Cilindrique :}\\
+                $\vec{OM} = r \vec{e_r} + z \vec{e_z}$, mais $\vec{e_r}$ varie aussi en fonction du temps :\\
+                $\dfrac{\re{d}\vec{e_r}}{\re{d}t} = \dot{\theta} \vec{e_\theta}$ \quad et \quad $\dfrac{\re{d}\vec{e_\theta}}{\re{d}t} = - \dot{\theta} \vec{e_r}$\\
+                $\vec v = \dot{r} \vec{e_r} + r \dot{\theta} \vec{e_\theta} + \dot{z} \vec{e_z}$
+            }{
+                \textbf{Base de Frénet :}\\
+                $\vec{v} = \|\vec{v}\| \vec{u_T}$\\
+                $\vec{a} = \dfrac{d\|\vec{v}\|}{d\text{t}} \vec{u_T} + \dfrac{\|\vec{v}\|^2}{R_C} \vec{u_N}$\\
+                Si mouvement uniforme : $\vec{a} = \dfrac{\|\vec{v}\|^2}{R_C} \vec{u_N}$
+            }
+
+
+        \section{Étude de quelques mouvements simples d’un point}\label{sec:etude-de-quelques-mouvements-simples-dun-point}
+
+            \twoCol {
+                \textbf{Mouvement rectiligne uniforme :}\\
+                $\vec{a} = \vec{0}$\\
+                $v(t) = v_0$\\
+                $x(t) = v_o t + x_0$
+            }{
+                Rectiligne accéléré si $\vec v$ et $\vec a$ sont dans le même sens, décéléré sinon.\\
+                Rectiligne uniformément accéléré si $\vec a = k \vec{e_x}$ ($k$ constante).
+            }
+            \\
+            \textbf{Mouvement circulaire :}\\
+            Vitesse angulaire : $\omega = \dfrac{\re d \theta}{\re d t} = \dot \theta$
+
+
+        \section{Étude de quelques mouvements simples d’un solide}\label{sec:etude-de-quelques-mouvements-simples-dun-solide}
+
+            \textbf{Translation :} tous les points ont la même vitesse et le même vecteur accélération.\\
+
+            \textbf{Rotation autour d'un point fixe :} tous les points ont la même vitesse angulaire (et le même vecteur accélération angulaire).
+
+
+        \section{Changement de référentiels}\label{sec:changement-de-referentiels}
+
+            Soit deux référentiels $R$ et $R'$, de centres $O$ et $O'$, on a : $\vec{OM} = \vec{OO'} + \vec{O'M}$
+
+            On a alors une position absolue ($\vec{OM}$) et relative ($\vec{O'M}$).
+            De même pour la vitesse.\\
+
+            Si on dérive par rapport au référentiel $R$, il faudra dériver les vecteurs unitaires du référentiel $R'$ et vice versa.\\
+
+            Soit $\vec{OM} = \vec{OO'} + x' \vec{e_{x'}} + y' \vec{e_{y'}} + z' \vec{e_{z'}}$\\
+            Alors $\vec{v_{R}} = \vec{v_{R'}} + \vec{v_{R'/R}}(M) = \left( \dfrac{\re d \vec{OO'}}{\re d t} \right)_R + \dfrac{\re d x'}{\re d t} \vec{e_{x'}} + \dfrac{\re d y'}{\re d t} \vec{e_{y'}} + \dfrac{\re d z'}{\re d t} \vec{e_{z'}} + x' \left( \dfrac{\re d \vec{e_{x'}}}{\re d t} \right)_R + y' \left( \dfrac{\re d \vec{e_{y'}}}{\re d t} \right)_R + z' \left( \dfrac{\re d \vec{e_{z'}}}{\re d t} \right)_R$\\
+
+            Dérivée de $\vec{OO'}$ = translation.
+            Dérivées des vecteurs unitaires = rotation : peut être retiré en cas de translation.\\
+            En translation, l'accélération vaut :\\
+
+            $\vec{a_R} = \vec{a_{R'}} + \left( \dfrac{\re{d}^2 \vec{OO'}}{\re d t^2} \right)_R$
+
+
+    \chapter{Introduction à la dynamique}\label{ch:introduction-a-la-dynamique}
+
+        À Chaque fois :
+        \begin{itemize}
+            \item Grandeur d'inertie : capacité à résister à la modification du mouvement.
+            \item Grandeur cinématique : décrit le mouvement.
+        \end{itemize}
+
+
+        \section{Les grandeurs cinétiques du point}\label{sec:les-grandeurs-cinetiques-du-point}
+
+            \twoCol {
+
+                \subsection{L'énergie cinétique}\label{subsec:l-energie-cinetique}
+
+                $\varepsilon_c = \dfrac{1}{2} m v^2$\\
+                ($m$ grandeur d'inertie et $v$ grandeur cinématique).
+
+                \[\textbf{PFD : } \dfrac{\re d \varepsilon_c}{\re d t} = \summ P_{ext}\]
+            }{
+
+                \subsection{La quantité de mouvement}\label{subsec:la-quantite-de-mouvement}
+
+                $\vec p = m \vec v$\\
+                ($m$ grandeur d'inertie et $v$ grandeur cinématique).\\
+                \vspace{-14pt}
+                \begin{align*}
+                    \textbf{PFD :   } \dfrac{\re d \vec p}{\re d t} &= \summ \vec{F_{ext}}\\
+                    m \vec a &= \sum \vec{F_{ext}}
+                \end{align*}
+            }
+
+            \subsection{Le moment cinétique}\label{subsec:le-moment-cinetique}
+                \vspace{-18pt}
+                \begin{flalign*}
+                    \vec \sigma &= \vec{OM} \wedge \vec p&\\
+                    &= \vec{OM} \wedge m \vec v&\\
+                    &= r \vec{e_r} \wedge m r \dot\theta \vec{e_\theta} \re{ (Exemple rotation d'un tourniquet par force appliquée à son extrémité selon $\vec{e_\theta}$)}&\\
+                    &= m r^2 \dot\theta \vec{e_z}&\\
+                    &= J \vec \Omega&
+                \end{flalign*}
+
+                \twoCol {
+                \begin{itemize}
+                    \item Moment d'inertie : $J = m r^2$\\(grandeur d'inertie)
+                    \item Vecteur rotation instantané : $\vec \Omega = \dot\theta \vec{e_z}$\\(grandeur cinématique)
+                \end{itemize}
+            }{
+                \[\textbf{PFD : } \dfrac{\re d \vec \sigma}{\re d t} = \summ \vec{\mathcal{M}_{ext}}\]
+            }
+
+
+        \section{Les grandeurs cinétiques d'un solide}\label{sec:les-grandeurs-cinetiques-d'un-solide}
+
+            \subsection{L'énergie cinétique d'un solide}\label{subsec:l'energie-cinetique-d'un-solide}
+
+                -> en translation
+
+                -> en rotation : $\dfrac{\re d \epsilon_R}{\re d t} = \sum \vec{M_{ext}} \wedge \vec{OM}$
+
+                Moment d'inertie : $J_\Delta = \int \( r^2 \re d m \)$ (on intègre par rapport à r)
+
+            \subsection{Le moment cinétique d'un solide}\label{subsec:le-moment-cinetique-dun-solide}
+
+
+        \section{}
+
+
 \end{document}
