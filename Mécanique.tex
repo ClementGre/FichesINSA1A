@@ -187,7 +187,7 @@
 
             \twoCol {
 
-                \subsection{L'énergie cinétique}\label{subsec:l-energie-cinetique}
+                \subsection{Énergie cinétique}\label{subsec:l-energie-cinetique}
 
                 $\varepsilon_c = \dfrac{1}{2} m v^2$\\
                 ($m$ grandeur d'inertie et $v$ grandeur cinématique).
@@ -195,7 +195,7 @@
                 \[\textbf{PFD : } \dfrac{\re d \varepsilon_c}{\re d t} = \summ P_{ext}\]
             }{
 
-                \subsection{La quantité de mouvement}\label{subsec:la-quantite-de-mouvement}
+                \subsection{Quantité de mouvement}\label{subsec:la-quantite-de-mouvement}
 
                 $\vec p = m \vec v$\\
                 ($m$ grandeur d'inertie et $v$ grandeur cinématique).\\
@@ -206,40 +206,54 @@
                 \end{align*}
             }
 
-            \subsection{Le moment cinétique}\label{subsec:le-moment-cinetique}
+            \subsection{Moment cinétique}\label{subsec:le-moment-cinetique}
+                \threeCol[15][45] {
                 \vspace{-18pt}
                 \begin{flalign*}
                     \vec \sigma &= \vec{OM} \wedge \vec p&\\
                     &= \vec{OM} \wedge m \vec v&\\
-                    &= r \vec{e_r} \wedge m r \dot\theta \vec{e_\theta} \re{ (Exemple rotation d'un tourniquet par force appliquée à son extrémité selon $\vec{e_\theta}$)}&\\
+                    &= r \vec{e_r} \wedge m r \dot\theta \vec{e_\theta}&\\
                     &= m r^2 \dot\theta \vec{e_z}&\\
                     &= J \vec \Omega&
                 \end{flalign*}
-
-                \twoCol {
+            }{
                 \begin{itemize}
                     \item Moment d'inertie : $J = m r^2$\\(grandeur d'inertie)
                     \item Vecteur rotation instantané : $\vec \Omega = \dot\theta \vec{e_z}$\\(grandeur cinématique)
                 \end{itemize}
             }{
-                \[\textbf{PFD : } \dfrac{\re d \vec \sigma}{\re d t} = \summ \vec{\mathcal{M}_{ext}}\]
+                $\textbf{PFD : } \dfrac{\re d \vec \sigma}{\re d t} = \summ \vec{\mathcal{M}_{ext}}$
             }
 
 
         \section{Les grandeurs cinétiques d'un solide}\label{sec:les-grandeurs-cinetiques-d'un-solide}
 
-            \subsection{L'énergie cinétique d'un solide}\label{subsec:l'energie-cinetique-d'un-solide}
+            \subsection{Énergie cinétique d'un solide}\label{subsec:l'energie-cinetique-d'un-solide}
 
-                -> en translation
+                Somme des énergies cinétiques des points du solide : $\varepsilon_c = \summ \varepsilon_{c,i}$\\
 
-                -> en rotation : $\dfrac{\re d \epsilon_R}{\re d t} = \sum \vec{M_{ext}} \wedge \vec{OM}$
+                \twoCol[45] {
+                \underline{En translation :}\\
+                Tous les points ont la même vitesse :\\ $\varepsilon_c = \dfrac{1}{2} m v^2$
+            }{
+                \underline{En rotation :}\\
+                $\vec v = r \dot\theta$ donc $\varepsilon_c = \dfrac{1}{2} \dot\theta^2 \summ{m_i r^2_i} = \dfrac{1}{2} \dot\theta^2 J_\Delta$\\
 
-                Moment d'inertie : $J_\Delta = \int \( r^2 \re d m \)$ (on intègre par rapport à r)
+                Moment d'inertie par rapport à l'axe $\Delta$ : $J_\Delta = \intt \( r^2 \re d m \)$
+            }
 
-            \subsection{Le moment cinétique d'un solide}\label{subsec:le-moment-cinetique-dun-solide}
+                \twoCol[45] {
+                \subsection{Quantité de mouvement d’un solide}\label{subsec:la-quantite-de-mouvement-dun-solide}
+                (Solide en translation)\\
+                $\vec p = \summ{m_i \vec v_i} = M \vec v$
+            }{
+                \subsection{Moment cinétique d'un solide}\label{subsec:le-moment-cinetique-dun-solide}
+                Solide en rotation autour d'un axe fixe $\Delta$ à vitesse $\vec \Omega = \dot\theta \vec{u_z}$\\
+                $\vec \sigma = \vec \Omega \summ{J_i} = \vec J \Omega$
+            }
 
 
-        \section{}
+        \section{Le principe d'inertie}\label{sec:le-principe-d'inertie}
 
 
 \end{document}
