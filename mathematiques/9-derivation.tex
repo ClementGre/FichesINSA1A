@@ -1,4 +1,37 @@
 \section{Dérivées successives}\label{sec:deriv-es-successives}
 
     Fonction de classe $\mathcal{C}^n$ : $n$ fois dérivable et $f^{(n)}$ continue.\\
+    Une somme, produit ou quotient de fonctions $\mathcal{C}^n$ reste $\mathcal{C}^n$ sur un intervalle $I$.\\
+    $\exp$, $\ln$, $\sin$, $\cos$, polynômes et puissances sont $\mathcal{C}^{+\infty})$.
 
+
+\section{Dérivabilité des fonctions réciproques}\label{sec:derivabilite-des-fonctions-reciproques}
+
+    Soit $f$ continue strictement monotone. $f$ réalise donc une bijection.\\
+
+    Si $f$ est dérivable en $a$ et $f'(a) \neq 0$, alors $f^{-1}$ est dérivable en $f(a) = b$.\\
+
+    On a alors $(f^{-1})'(b) = \dfrac{1}{f'(a)} = \dfrac{1}{f' \circ f^{-1}(b)}$\\
+
+    Cela permet de démontrer que $\arcsin'(x) = \dfrac{1}{\sqrt{1 - x^2}}$, $\arccos'(x) = -\dfrac{1}{\sqrt{1 - x^2}}$ et $\arctan'(x) = \dfrac{1}{1 + x^2}$.
+
+
+\section{Fonctions à valeurs complexes}\label{sec:fonctions-a-valeurs-complexes}
+
+    On peut décomposer la fonction en deux fonctions à valeurs réelles.
+    \vspace{3pt}\\
+    $f$ est dérivable si $\Re(f)$ et $\Im(f)$ le sont et $f'(x) = (\Re(f))' + i (\Im(f))'$.
+
+
+\section{Théorème des accroissements finis (TAF)}\label{sec:theoreme-des-accroissements-finis-(taf)}
+
+    \underline{Théorème de Rolle :}\\
+    Soit $f$ continue sur $[a,\ b]$ et dérivable sur $]a,\ b[$ tel que $f(a) = f(b)$,\\
+    alors il existe $c \in ]a,\ b[$ tel que $f'(c) = 0$.\\
+    ($f$ admet au moins un extremum sur $]a,\ b[$)\\
+
+    \underline{Théorème des accroissements finis :}\\
+
+
+
+\section{Applications du TAF}\label{sec:applications-du-taf}
