@@ -2,7 +2,7 @@
 
     Fonction de classe $\mathcal{C}^n$ : $n$ fois dérivable et $f^{(n)}$ continue.\\
     Une somme, produit ou quotient de fonctions $\mathcal{C}^n$ reste $\mathcal{C}^n$ sur un intervalle $I$.\\
-    $\exp$, $\ln$, $\sin$, $\cos$, polynômes et puissances sont $\mathcal{C}^{+\infty})$.
+    $\exp$, $\ln$, $\sin$, $\cos$, polynômes et puissances sont $\mathcal{C}^{+\infty}$.
 
 
 \section{Dérivabilité des fonctions réciproques}\label{sec:derivabilite-des-fonctions-reciproques}
@@ -27,11 +27,42 @@
 
     \underline{Théorème de Rolle :}\\
     Soit $f$ continue sur $[a,\ b]$ et dérivable sur $]a,\ b[$ tel que $f(a) = f(b)$,\\
-    alors il existe $c \in ]a,\ b[$ tel que $f'(c) = 0$.\\
+    alors il existe $c \in\ ]a,\ b[$ tel que $f'(c) = 0$.\\
     ($f$ admet au moins un extremum sur $]a,\ b[$)\\
 
     \underline{Théorème des accroissements finis :}\\
-
+    Soit $f$ continue sur $[a,\ b]$ et dérivable sur $]a,\ b[$,\\
+    alors il existe $c \in\ ]a,\ b[$ tel que $f(b) - f(a) = f'(c) (b - a)$.\\
+    On note aussi $f'(c) = \dfrac{f(b) - f(a)}{b - a}$
 
 
 \section{Applications du TAF}\label{sec:applications-du-taf}
+
+    \subsection{Sens de variation d'une fonction et signe de la dérivée}\label{subsec:sens-de-variation-d'une-fonction-et-signe-de-la-derivee}
+        Le signe de la dérivée donne la monotonie d'une fonction continue dérivable et vice versa.\\
+        \underline{Stricte monotonie} de $f$ continue : $f'$ de signe constant ne s'annulant qu'en un nombre fini de points.
+
+        \twoCol {
+            \subsection{Extrema d'une fonction dérivable}\label{subsec:extrema-d'une-fonction-derivable}
+            Une fonction possède un extremum local en $a$ s'il existe un voisinage $\mathcal{V}$ de $a$ où $\forall x \in \mathcal{V},\ f(x) \le f(a)$.\\
+            (ou $\ge$ pour un minimum local).\\
+
+            Dans ce cas, on a nécessairement $f'(a) = 0$.\\
+            (Pour une fonction dérvable).\\
+
+            Un réel $a$ pour lequel $f'(a) = 0$ est un point critique de $f$.\\
+            Ça n'est un extremum que si $f'$ change de signe.
+        }{
+            \subsection{Théorème de la limite dérivée}\label{subsec:theoreme-de-la-limite-derivee}
+            \begin{itemize}
+                \item Si $\limm{x_0} f'(x) = l$, alors $f$ dérivable en $x_0$ et $f'(x_0) = l$.
+                \vspace{5pt}
+                \item Si $l = \pm \infty$, alors $f$ n'est pas dérivable en $x_0$\\
+                (tangeante verticale).
+                \vspace{5pt}
+                \item Si $f'$ a une limite à gauche et à droite différente en $a$, alors $f$ n'est pas dérivable en $a$.
+                \vspace{5pt}
+                \item Si $f'$ n'admet pas de limite en $a$, on ne peut rien conclure.
+            \end{itemize}
+
+        }
