@@ -77,4 +77,76 @@
                 \vspace{5pt}
                 Si $Q = 0$, la transformation est adiabatique.\\
 
+
+    \chapter{Etat de la matière et gaz parfait}\label{ch:etat-de-la-matiere-et-gaz-parfait}
+
+
+        \section{Les propriétés des gaz}\label{sec:les-proprietes-des-gaz}
+
+            \textbf{Loi des gaz parfaits :} $P V = n R T$
+
+
+        \section{Capacité calorifique d’un système et coefficient de Laplace d’un gaz}\label{sec:capacite-calorifique-dun-systeme-et-coefficient-de-laplace-dun-gaz}
+
+            La capacité thermique est une grandeur extensive en $J.K^{-1}$.\\
+            C'est l'énergie à apporter pour élever la température d'un degré.
+            \vspace{7pt}\\
+            On définit de même des grandeurs intensives associés telles que la capacité thermique massique $c_m$ et la capacité thermique molaire $\overline{C}$.\\
+
+            \textbf{Pour les gaz}, comme ils sont compressibles, on distingue deux modes de chauffage :
+            \vspace{3pt}
+            \begin{itemize}
+                \item \underline{Chauffage isobare :} $P$ constante : on définis $C_p$ (capacité calorifique du gaz à pression constante).
+                \item \underline{Chauffage isobare :} $V$ constante : on définis $C_v$ (capacité calorifique du gaz à volume constant).
+            \end{itemize}
+            \vspace{5pt}
+            Le \textbf{coefficient de Laplace} d'un gaz vaut : $\gamma = \dfrac{C_p}{C_v}$.\\
+            En première approximation, pour les gaz monoatomiques, $\gamma \approx 1,67$ et pour les gaz diatomiques, $\gamma \approx 1,4$.
+
+
+        \section{Les changements d’état d’un corps pur}\label{sec:les-changements-detat-dun-corps-pur}
+
+            \twoCol[41] {
+                Un changement d'état se fait sous température et pression constantes.\\
+                \vspace{0pt}
+                \resizebox{\textwidth}{!}{
+                    \includestandalone[mode=buildnew,page=1, scale]{out/phase_transitions_1}
+                }
+            }{
+
+                \subsection{Échange de chaleur au cours d’un changement d’état}\label{subsec:echange-de-chaleur-au-cours-dun-changement-detat}
+
+                \begin{itemize}
+                    \item Pour la fusion, sublimation et l'évaporation, il faut apporter de l'énergie au système (chaleur positive, endothermique).
+                    \item Pour la solidification, condensation et liquéfaction, la chaleur sera négative (exothermique).
+                \end{itemize}
+                \vspace{5pt}
+                On définit ainsi la chaleur latente de fusion $L_{fus}$, de sublimation $L_{sub}$, d'évaporation $L_{vap}$ (et les autres de signe opposé).\\
+            }
+            \vspace{-7pt}
+
+            \subsection{Représentations graphiques des changements d’état – diagramme de phase}\label{subsec:representations-graphiques-des-changements-detat--diagramme-de-phase}
+
+                \resizebox{.35\textwidth}{!}{
+                \includestandalone[mode=buildnew,page=1, scale]{out/phase_transitions_2}
+            }
+                \resizebox{.5\textwidth}{!}{
+                \includegraphics[width=\textwidth]{graphs/Clapeyron}
+            }
+
+        \vspace{-7pt}
+        La pression de vapeur saturante $P_{vs}$ est la pression à laquelle le liquide et la vapeur sont en équilibre.\\
+        $P_{vs}$ croit avec la température.
+
+        \section{Mélange de corps pur}\label{sec:melange-de-corps-pur}
+
+            \twoCol {
+                Fraction molaire : $x_i = \dfrac{n_i}{x_{tot}}$
+            }{
+                Fraction massique : $w_i = \dfrac{m_i}{m_{tot}}$
+            }
+            \vspace{5pt}\\
+            La masse molaire du mélange correspond à la moyenne pondérée des masses polaires des corps purs.\\
+            On définis de même la pression partielle $P_i = x_i \times P$ où la loi des gaz parfaits s'applique aussi.
+
 \end{document}
