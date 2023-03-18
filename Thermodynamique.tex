@@ -1,0 +1,80 @@
+\documentclass[13pt, twoside, a4paper, french]{report}
+
+\usepackage{ficheslib}
+\newcommand*{\getSubject}{Thermodynamique}
+
+\begin{document}
+    \title{\getSubject}
+    \author{Clément GRENNERAT}
+    \date{Mars 2023}
+    \pagestyle{non-chapter-style}
+
+
+    \chapter{Energie et notions fondamentales de thermodynamique}\label{ch:energie-et-notions-fondamentales-de-thermodynamique}
+
+
+        \section{Rappers sur l'énergie}\label{sec:rappers-sur-l'energie}
+
+            \subsection{Énergie primaire, énergie utile et rendement}\label{subsec:energie-primaire-energie-utile-et-rendement}
+
+                \begin{itemize}
+                    \item \underline{Énergie primaire :} énergie fournie par la nature (soleil, vent, pétrole, etc.).
+                    \item \underline{Énergie finale :} énergie consommée par l'utilisateur final (convertie et transportée : électricité, essence\ldots).
+                    \item \underline{Énergie utile :} énergie utile à l'action souhaitée après de nouvelles conversions.
+                \end{itemize}
+                Le rendement est le rapport entre l'énergie utile et l'énergie primaire.
+                C'est le produit de tous les rendements des différentes conversions.
+
+            \subsection{Chaine énergétique}\label{subsec:chaine-energetique}
+
+                On représente en chaîne :
+                \begin{itemize}
+                    \item \underline{Les réservoirs :} rectangles avec le nom du réservoir et la forme d'énergie stockée.
+                    \item \underline{Les convertisseurs :} ovales.
+                    \item \underline{Le sens des transferts :} flèches avec la forme d'énergie transférée (et le rendement).
+                \end{itemize}
+
+
+        \section{Notions fondamentales}\label{sec:notions-fondamentales}
+
+            \subsection{Système}\label{subsec:systeme}
+
+                La thermodynamique étudie les interactions entre un système $\sigma$ et le milieu extérieur $\sigma_1$.\\
+                Le système a une frontière réelle ou imaginaire.
+                \vspace{5pt}
+                \begin{itemize}
+                    \item \underline{Système ouvert :} échange d'énergie et de matière avec $\sigma_1$
+                    \item \underline{Système fermé :} échange d'énergie, mais pas de matière avec $\sigma_1$
+                    \item \underline{Système isolé :} aucun échange
+                \end{itemize}
+
+            \subsection{Transformations}\label{subsec:transformations}
+
+                Le système passe d'un état initial à un état final.
+                Si l'état initial est le même que l'état final, la transformation est cyclique.
+                Sinon, elle est ouverte.\\
+
+                Le système est caractérisé par des variables d'état.
+                Certaines sont extensives (dépendent de l'étendue du système), et d'autres sont intensives.
+                Les variables extensives sont additives.\\
+
+                \textbf{Transformations réalisées avec une variable constante :}
+                \vspace{5pt}
+                \begin{itemize}
+                    \item \underline{Isochore :} $V$ constant
+                    \item \underline{Isobare :} $P$ constante (Monobare si $P_i = P_f$, mais varie au cours de la transformation).
+                    \item \underline{Isotherme :} $T$ constante (Monotherme si $T_i = T_f$, mais varie au cours de la transformation).
+                \end{itemize}
+                \vspace{5pt}
+                (Une transformation monotherme réversible est isotherme.)\\
+
+                \textbf{Types de transferts d'énergie}
+                \vspace{5pt}
+                \begin{itemize}
+                    \item \underline{Chaleur $Q$ :} échange d'énergie microscopique (transfert d'agitation thermique).
+                    \item \underline{Travail $W$ :} dû aux forces extérieures qui s'exercent sur le système.
+                \end{itemize}
+                \vspace{5pt}
+                Si $Q = 0$, la transformation est adiabatique.\\
+
+\end{document}
