@@ -10,7 +10,7 @@
     \pagestyle{non-chapter-style}
 
 
-    \chapter{Energie et notions fondamentales de thermodynamique}\label{ch:energie-et-notions-fondamentales-de-thermodynamique}
+    \chapter{Énergie et notions fondamentales}\label{ch:energie-et-notions-fondamentales-de-thermodynamique}
 
 
         \section{Rappers sur l'énergie}\label{sec:rappers-sur-l'energie}
@@ -57,6 +57,14 @@
                 Le système est caractérisé par des variables d'état.
                 Certaines sont extensives (dépendent de l'étendue du système), et d'autres sont intensives.
                 Les variables extensives sont additives.\\
+
+                \textbf{Transformations réversibles ou irréversibles :}
+                \vspace{5pt}
+                \begin{itemize}
+                    \item \underline{Réversible :} infiniment lente, passe par une infinité d'états d'équilibre.
+                    \item \underline{Irréversible :} rapide et brutale. Il est impossible de décrire le chemin que le système suit
+                \end{itemize}
+                \vspace{12pt}
 
                 \textbf{Transformations réalisées avec une variable constante :}
                 \vspace{5pt}
@@ -134,9 +142,10 @@
                 \includegraphics[width=\textwidth]{graphs/Clapeyron}
             }
 
-        \vspace{-7pt}
-        La pression de vapeur saturante $P_{vs}$ est la pression à laquelle le liquide et la vapeur sont en équilibre.\\
-        $P_{vs}$ croit avec la température.
+                \vspace{-7pt}
+                La pression de vapeur saturante $P_{vs}$ est la pression à laquelle le liquide et la vapeur sont en équilibre.\\
+                $P_{vs}$ croit avec la température.
+
 
         \section{Mélange de corps pur}\label{sec:melange-de-corps-pur}
 
@@ -148,5 +157,70 @@
             \vspace{5pt}\\
             La masse molaire du mélange correspond à la moyenne pondérée des masses polaires des corps purs.\\
             On définis de même la pression partielle $P_i = x_i \times P$ où la loi des gaz parfaits s'applique aussi.
+
+
+    \chapter{Le premier principe}\label{ch:le-premier-principe-de-la-thermodynamique}
+
+
+        \section{Les différents types d’énergie}\label{sec:les-differents-types-denergie}
+
+            \subsection{Chaleur et température}\label{subsec:chaleur-et-temperature}
+
+                Échange d'énergie microscopique (transfert d'agitation thermique par chocs moléculaires), caractérisé par un changement de température ou d'état.\\
+
+            \subsection{Énergie non calorifique : travail $W$}\label{subsec:energie-non-calorifique}
+
+                \twoCol[61] {
+                $\delta W = X_\re{ext}\ \re dx$, ou $W = \intt^{x_\re{final}}_{x_\re{initial}} X_\re{ext}\ \re dx$.\\
+            }{
+                \begin{itemize}
+                    \item \underline{Travail mécanique :} $\delta W = F_{ext}\ \re d L$
+                    \item \underline{Travail électrique :} \ $\delta W = E_{ext}\ \re d q$
+                    \item \underline{Travail volumique :} $\delta W = - P_{ext}\ \re d V$
+                \end{itemize}
+            }
+
+                \twoCol[61] {
+                \vspace{-30pt}\\
+                \resizebox{.49\textwidth}{!}{
+                    \includestandalone[mode=buildnew,page=1, scale]{out/pv_diagram_1}
+                }
+                \resizebox{.5\textwidth}{!}{
+                    \includestandalone[mode=buildnew,page=1, scale]{out/pv_diagram_2}
+                }
+            }{
+                \vspace{5pt}
+                Dans le cas d'une transformation réversible, comme le système est constamment à l'équilibre, la tension exercée par le milieu extérieur sera également la tension du système : $X_{ext} = X_\sigma$.
+            }
+
+
+        \section{Le premier principe}\label{sec:le-premier-principe}
+
+            C'est le principe de la conversion de l'énergie : l’énergie ne peut être ni créée, ni détruite mais seulement transformée d’une forme en une autre.
+
+            \twoCol {
+                \vspace{4pt}
+                $E_{totale} = E_\re{c,macro} + E_\re{p,macro} + E_\re{c,micro} + E_\re{p,micro}$\\
+                $E_{totale} = E_m + U$
+            }{
+                Dans un système fermé :
+                \[\Delta E_{totale} = \Delta U = Q + W\]
+            }
+            \vspace{7pt}\\
+            $E_\re{c,macro}$, $E_\re{p,macro}$ et $U$ sont des fonctions d'état (ne dépendent pas du chemin suivi), contrairement à $W$ et $Q$.\\
+
+            \textbf{Application du premier principe à un système immobile à l'échelle macroscopique :}
+            \vspace{4pt}\\
+            Nous considérerons que la seule forme de travail échangé est due aux forces de pression : $W = \intt^{V_\re{f}}_{V_\re{i}} - P_\re{ext}\ \re dV$
+            \vspace{4pt}
+            \begin{itemize}
+                \item \underline{Transformation isochores :} $W = 0$ et $Q$ ne dépend pas du chemin suivi car $\Delta U = Q$.
+                \vspace{4pt}
+                \item \underline{Transformation isobare :} Comme $P_{ext} = P_\sigma = \re{const}$, $\Delta U = Q - P_\re{ext} (V_f - V_i)$.\\
+                On définis ainsi l'enthalpie $H = U + PV$.
+                Lors d'une transformation isobare, $Q = \Delta H$.
+                \vspace{4pt}
+                \item \underline{Transformation abiatique :} $Q = 0$ donc $\Delta U = W_{abia}$.
+            \end{itemize}
 
 \end{document}
