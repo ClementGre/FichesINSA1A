@@ -62,7 +62,8 @@
                 \vspace{5pt}
                 \begin{itemize}
                     \item \underline{Réversible :} infiniment lente, passe par une infinité d'états d'équilibre.
-                    \item \underline{Irréversible :} rapide et brutale. Il est impossible de décrire le chemin que le système suit
+                    \item \underline{Irréversible :} rapide et brutale.
+                    Il est impossible de décrire le chemin que le système suit.
                 \end{itemize}
                 \vspace{12pt}
 
@@ -105,7 +106,7 @@
             \vspace{3pt}
             \begin{itemize}
                 \item \underline{Chauffage isobare :} $P$ constante : on définis $C_p$ (capacité calorifique du gaz à pression constante).
-                \item \underline{Chauffage isobare :} $V$ constante : on définis $C_v$ (capacité calorifique du gaz à volume constant).
+                \item \underline{Chauffage isochore :} $V$ constante : on définis $C_v$ (capacité calorifique du gaz à volume constant).
             \end{itemize}
             \vspace{5pt}
             Le \textbf{coefficient de Laplace} d'un gaz vaut : $\gamma = \dfrac{C_p}{C_v}$.\\
@@ -155,7 +156,7 @@
                 Fraction massique : $w_i = \dfrac{m_i}{m_{tot}}$
             }
             \vspace{5pt}\\
-            La masse molaire du mélange correspond à la moyenne pondérée des masses polaires des corps purs.\\
+            La masse molaire du mélange correspond à la moyenne pondérée des masses molaires des corps purs.\\
             On définis de même la pression partielle $P_i = x_i \times P$ où la loi des gaz parfaits s'applique aussi.
 
 
@@ -166,7 +167,7 @@
 
             \subsection{Chaleur et température}\label{subsec:chaleur-et-temperature}
 
-                Échange d'énergie microscopique (transfert d'agitation thermique par chocs moléculaires), caractérisé par un changement de température ou d'état.\\
+                Un transfert de chaleur correspond à un échange d'énergie microscopique (transfert d'agitation thermique par chocs moléculaires), caractérisé par un changement de température ou d'état.
 
             \subsection{Énergie non calorifique : travail $W$}\label{subsec:energie-non-calorifique}
 
@@ -174,7 +175,7 @@
                 $\delta W = X_\re{ext}\ \re dx$, ou $W = \intt^{x_\re{final}}_{x_\re{initial}} X_\re{ext}\ \re dx$.\\
             }{
                 \begin{itemize}
-                    \item \underline{Travail mécanique :} $\delta W = F_{ext}\ \re d L$
+                    \item \underline{Travail mécanique :} $\delta W = F_{ext}\ \re d l$
                     \item \underline{Travail électrique :} \ $\delta W = E_{ext}\ \re d q$
                     \item \underline{Travail volumique :} $\delta W = - P_{ext}\ \re d V$
                 \end{itemize}
@@ -199,12 +200,16 @@
             C'est le principe de la conversion de l'énergie : l’énergie ne peut être ni créée, ni détruite mais seulement transformée d’une forme en une autre.
 
             \twoCol {
-                \vspace{4pt}
-                $E_{totale} = E_\re{c,macro} + E_\re{p,macro} + E_\re{c,micro} + E_\re{p,micro}$\\
-                $E_{totale} = E_m + U$
+                \vspace{-18pt}\\
+                \begin{align*}
+                    E_{totale} &= E_\re{c,macro} + E_\re{p,macro} + E_\re{c,micro} + E_\re{p,micro}\\
+                    &= E_m + U
+                \end{align*}
+                \vspace{-18pt}
             }{
                 Dans un système fermé :
-                \[\Delta E_{totale} = \Delta U = Q + W\]
+                \vspace{4pt}\\
+                $\Delta E_{totale} = \Delta U = Q + W$
             }
             \vspace{7pt}\\
             $E_\re{c,macro}$, $E_\re{p,macro}$ et $U$ sont des fonctions d'état (ne dépendent pas du chemin suivi), contrairement à $W$ et $Q$.\\
@@ -218,9 +223,26 @@
                 \vspace{4pt}
                 \item \underline{Transformation isobare :} Comme $P_{ext} = P_\sigma = \re{const}$, $\Delta U = Q - P_\re{ext} (V_f - V_i)$.\\
                 On définis ainsi l'enthalpie $H = U + PV$.
-                Lors d'une transformation isobare, $Q = \Delta H$.
+                Lors d'une transformation isobare, $Q = \Delta H = \Delta U + P \times \Delta V$.
                 \vspace{4pt}
                 \item \underline{Transformation abiatique :} $Q = 0$ donc $\Delta U = W_{abia}$.
             \end{itemize}
+
+
+        \section{Coefficients calorimétriques et calcul de la chaleur}\label{sec:coefficients-calorimetriques-et-calcul-de-la-chaleur}
+
+
+        \section{Cas du gaz parfait}\label{sec:cas-du-gaz-parfait}
+
+            \subsection{Coefficients calorimétriques des gaz parfaits}\label{subsec:coefficients-calorimetriques-des-gaz-parfaits}
+
+                \underline{Relation de Mayer :} $C_p - C_v = nR$ ou $\overline{C}_p - \overline{C}_v= R$.
+
+            \subsection{Transformation adiabatique d'un gaz parfait}\label{subsec:transformation-adiabatique-d'un-gaz-parfait}
+
+                Toute transformation adiabatique d’un gaz parfait s’accompagne d’un changement de température :
+                \[\Delta U = n \overline{C}_v \Delta T\]
+                (Car $W = 0$ pour une transformation isochore, et $U$ est une variable d'état).
+
 
 \end{document}
