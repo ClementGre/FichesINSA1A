@@ -2,9 +2,22 @@
 
     \subsection{Somme et somme directe}\label{subsec:somme-et-somme-directe}
 
-        Le SeV somme et $F$ et $G$ est $H = {u_F + u_G,\ u_F \in F,\ u_G \in G}$\\
+        Le sev somme de $F$ et $G$ est $H = \{u_F + u_G,\ u_F \in F,\ u_G \in G\}$\\
 
-        On a : $F + G = \Vect{F \cup G}$ ($F + G$ est le plus petit SEV engendré par les parties $F$ et $G$).
+        On a : $F + G = \Vect{F \cup G}$ ($F + G$ est le plus petit SEV engendré par les parties $F$ et $G$).\\
+        $F + G$ est directe si $F \cap G = \{\vec 0 \}$ On note $F \oplus G$.\\
+        Tout élément de $F \oplus G$ s'écrit de façon unique comme somme d'un élément de $F$ et de $G$.
 
     \subsection{Supplémentaires}\label{subsec:supplementaires}
+        $F$ et $G$ sont supplémentaires dans $E$ $\iff$ $E = F \oplus G$ (donc si $F \cap G = \{0_E\}$)\\
 
+        Un sev peut avoir une infinité de supplémentaires.
+
+    \subsection{En dimension finie}\label{subsec:en-dimension-finie}
+
+        \underline{Formule de Grassman :}\\
+        Soit $E$ un ev de dimension finie et $F$ et $G$ deux sev de $E$ :
+        \[\dim(F + G) = \dim(F) + \dim(G) - \dim(F \cap G)\]
+
+        $\mathcal{B}_F \cap \mathcal{B}_G$ est une base de $E$ $\iff$ $F \oplus G = E$.\\
+        Dans un ev de dimension finie $n$, tout sev $F$ admet des supplémentaires de dimension $n - \dim(F)$.
