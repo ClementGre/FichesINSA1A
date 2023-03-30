@@ -237,7 +237,7 @@
                 Tous les points ont la même vitesse :\\ $\varepsilon_c = \dfrac{1}{2} m v^2$
             }{
                 \underline{En rotation :}\\
-                $\vec v = r \dot\theta$ donc $\varepsilon_c = \dfrac{1}{2} \dot\theta^2 \summ{m_i r^2_i} = \dfrac{1}{2} \dot\theta^2 J_\Delta$\\
+                $v = r \dot\theta$ donc $\varepsilon_c = \dfrac{1}{2} \dot\theta^2 \summ{m_i r^2_i} = \dfrac{1}{2} \dot\theta^2 J_\Delta$\\
 
                 Moment d'inertie par rapport à l'axe $\Delta$ : $J_\Delta = \intt \( r^2 \re d m \)$
             }
@@ -289,6 +289,7 @@
                 \[\sum \mathcal{M}_{\vec F} (\Delta) = J_\Delta \ddot \theta = J_\Delta \dot \omega \]
                 ($J_\Delta \ddot \theta$ est la dérivée du moment cinétique projeté sur $\Delta$)\\
 
+
         \section{Dynamique des mouvements simples du solide}\label{sec:dynamique-des-mouvements-simples-du-solide}
 
             \subsection{Introduction}\label{subsec:introduction}
@@ -304,16 +305,62 @@
                 Vecteur rotation instantanée $\vec \Omega = \omega\ \vec{u_z}$\\
                 Le vecteur vitesse peut être retrouvé par $\vec v = \vec \Omega \wedge \vec{OM}$
             }
-
-            \subsection{Solide en translation}\label{subsec:solide-en-translation}
+                \vspace{12pt}\\
+                \twoCol {
+                \subsection{Solide en translation}\label{subsec:solide-en-translation}
 
                 La quantité de mouvement d’un solide est égale à la quantité de mouvement de son barycentre, affecté de la masse totale du système : $\vec{P} = M\ \vec{v_G}$\\
-                PFD : $\summ \vec{F_{ext}} = M\ \vec{a_G} = \dfrac{\re d \vec{P}}{\re d t}$\\
+                \textbf{PFD :} $\summ \vec{F_{ext}} = M\ \vec{a_G} = \dfrac{\re d \vec{P}}{\re d t}$\\
+            }{
+                \subsection{Solide en rotation autour d'un axe fixe}\label{subsec:solide-en-rotation-autour-d'un-axe-fixe}
 
-            \subsection{Solide en rotation autour d'un axe fixe}\label{subsec:solide-en-rotation-autour-d'un-axe-fixe}
+                \textbf{TMC :} $\summ \Gamma_{\vec{F}_\re{ext}} (\mathrm{Oz}) = J_\re{Oz}\ \ddot \theta$\\
 
-                TMC : $\summ \Gamma_{\vec{F}_\re{ext}} (\mathrm{Oz}) = J_\re{Oz}\ \ddot \theta$\\
+                Avec $\Gamma_{\vec{F}} (\re{Oz}) = rF$ (si force selon $\vec {e_\theta}$) \vspace{4pt}\\
+                Et $J_\re{Oz} = m r^2$ (si masse uniforme)\\
+            }
 
-                Avec $\Gamma_{\vec{F}} (\re{Oz}) = rF$ et $ \quad J_\re{Oz} = m r^2$.
+
+    \chapter{Dynamique : Théorèmes énergétiques}\label{ch:dynamique-theoremes-energetiques}
+
+
+        \section{Travail d’une force}\label{sec:travail-dune-force}
+
+            Le travail mécanique représente la quantité d’énergie échangée entre le système et le milieu extérieur et pouvant être transformée d’une forme en une autre.\\
+
+            Pour une force constante, $W_{A\scriptveryshortarrow B}(\vec F) = \vec F \cdot \vec{AB}$\\
+
+            On note aussi, $\delta W = \vec F \cdot \vec l$, ce qui donne pour une force quelconque :\\
+            \[ W_{A\scriptveryshortarrow B}(\vec F) = \int_A^B \vec F \cdot \vec{\re dl} \]
+
+            On définis de même la puissance d'une force :\\
+            \[ P(\vec F) = \dfrac{\delta W(\vec F)}{\re d t} = \vec F \cdot \dfrac{\re dl}{\re dt} = \vec F \cdot \vec v \]
+
+
+        \section{Théorème de l'énergie cinétique (TEC)}\label{sec:theoreme-de-l'energie-cinetique-(tec)}
+
+            Dans un référentiel galiléen, la variation de l'énergie cinétique d'un point matériel est égale à la somme des travaux de toutes les forces :
+
+            \[\Delta E_C = E_C(B) - E_C(A) = \sum_i W_{A \scriptveryshortarrow B}(\vec{F_i}) = W_{A \scriptveryshortarrow B}(\vec{F_{ext}})\]
+
+
+        \section{Énergie potentielle}\label{sec:energie-potentielle}
+
+
+            \begin{itemize}
+                \item \underline{Force conservative :} son travail dépend uniquement des positions initiales et finales.\\
+                On dit que la force dérive d'une énergie potentielle : $\re d E_P = \vec{\operatorname{grad}}\ E_P \cdot \vec{d l} = -\re d W$ donc $\vec F = - \vec{\operatorname{grad}}\ E_P$\\
+                \item \underline{Force non conservative :} son travail dépend du chemin suivi, elles n'ont pas d'énergie potentielle associée.
+            \end{itemize}
+
+
+        \section{Énergie mécanique}\label{sec:energie-mecanique}
+
+            Définition de l'énergie mécanique :
+            \[E_M = E_C + \sum E_P\]
+
+            Dans un référentiel galiléen, la variation d’énergie mécanique d’un point matériel est égale à la somme des travaux des forces non-conservatives :
+
+            \[\Delta E_M = E_M(B) - E_M(A) = \sum_i W_{A \scriptveryshortarrow B}(\vec{F_{i,\textbf{nc}}}) = W_{A \scriptveryshortarrow B}(\vec{F_{ext,\textbf{nc}}})\]
 
 \end{document}

@@ -99,7 +99,7 @@
 }
 
 \setlength{\parindent}{0cm}
-% Minipage : 0.03 spacing for each space between blocks 
+% Minipage : 0.03 spacing for each space between blocks
 
 \bibliographystyle{plain} % Style bibliographique
 
@@ -153,3 +153,20 @@
 \DeclareMathOperator{\rg}{rg}
 \DeclareMathOperator{\Ker}{Ker}
 
+% Small arrows
+
+\newcommand{\veryshortarrow}[1][4pt]{\mathrel{%
+    \hbox{\rule[\dimexpr\fontdimen22\textfont2-.2pt\relax]{#1}{.5pt}}%
+    \mkern-4mu\hbox{\usefont{U}{lasy}{m}{n}\symbol{41}}}}
+
+\makeatletter
+
+\setbox0\hbox{$\xdef\scriptratio{\strip@pt\dimexpr
+\numexpr(\sf@size*65536)/\f@size sp}$}
+
+\newcommand{\scriptveryshortarrow}[1][4pt]{{%
+    \hbox{\rule[\scriptratio\dimexpr\fontdimen22\textfont2-.2pt\relax]
+    {\scriptratio\dimexpr#1\relax}{\scriptratio\dimexpr.5pt\relax}}%
+    \mkern-4mu\hbox{\let\f@size\sf@size\usefont{U}{lasy}{m}{n}\symbol{41}}}}
+
+\makeatother
