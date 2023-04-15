@@ -21,3 +21,22 @@
 
         $\mathcal{B}_F \cap \mathcal{B}_G$ est une base de $E$ $\iff$ $F \oplus G = E$.\\
         Dans un ev de dimension finie $n$, tout sev $F$ admet des supplémentaires de dimension $n - \dim(F)$.
+
+
+\section{Projections vectorielles}\label{sec:projections-vectorielles}
+
+    \[E = F \oplus G \iff \forall \vec x \in E,\ \exists ! \vec x_G \in G,\ \exists ! \vec x_F \in F,\ \vec x = \vec x_F + \vec x_G\]
+
+    Ainsi, on appelle projection vectorielle sur $F$ parallèlement à $G$ l'application $p : E \to E$ définie par $p(\vec x) = \vec x_F$.\\
+
+    Ainsi, si $E = F \oplus G$,
+    \begin{itemize}
+        \item $p$ est linéaire (endomorphisme de $E$)
+        \item $G = \Ker(p)$ et $F = \Im(p)$
+        \item $F = \left\{\vec x \in E,\ p(\vec x) = \vec x\right\} = \Ker(p - id_E)$ ($F$ est l'espace des invariants de $p$)
+    \end{itemize}
+    \vspace{10px}
+    En dimension finie, si un endomorphisme $p$ de $E$ est une projection, alors $\Ker(p) \oplus \Im(p) = E$.\\
+
+    Si $p$ est une projection vectorielle, alors $p \circ p = p$.\\
+    Réciproquement, si $p$ est un endomorphisme de $E$ tel que $p \circ p = p$, alors $p$ est une projection vectorielle sur $\Im(p)$ parallèlement à $\Ker(p)$.\\
