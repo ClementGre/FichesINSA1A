@@ -132,7 +132,7 @@
                 \vspace{5pt}
                 On définit ainsi la chaleur latente de fusion $L_{fus}$, de sublimation $L_{sub}$, d'évaporation $L_{vap}$ (et les autres de signe opposé).\\
             }
-            \vspace{-7pt}
+            \vspace{-10pt}
 
             \subsection{Représentations graphiques des changements d’état – diagramme de phase}\label{subsec:representations-graphiques-des-changements-detat--diagramme-de-phase}
 
@@ -194,7 +194,9 @@
                 Dans le cas d'une transformation réversible, comme le système est constamment à l'équilibre, la tension exercée par le milieu extérieur sera également la tension du système : $X_{ext} = X_\sigma$.
             }
 
-        \vspace{-7pt}
+                \vspace{-7pt}
+
+
         \section{Le premier principe}\label{sec:le-premier-principe}
 
             C'est le principe de la conversion de l'énergie : l’énergie ne peut être ni créée, ni détruite mais seulement transformée d’une forme en une autre.
@@ -242,6 +244,64 @@
                 Toute transformation adiabatique d’un gaz parfait s’accompagne d’un changement de température.\\
                 \underline{Relations de Laplace :}
                 \[P V^\gamma = const. \quad\quad T V^{\gamma - 1} = const. \quad\quad P T^\frac{\gamma}{\gamma - 1} = const. \]
+
+
+    \chapter{Le second principe}
+
+
+        \section{Limites du premier principe}
+
+            Le premier principe permet de traduire le principe de la conservation de l'énergie, mais ne permet pas :
+            \begin{itemize}
+                \item d'expliquer pourquoi certains échanges d'énergie ou transformation sont spontanées alors que d'autres sont impossibles,
+                \item de rendre compte de la qualité de l'énergie (le travail se transforme sans pertes en chaleur, alors que la chaleur se transforme en travail avec un rendement de $30\%$, on dit que la chaleur est une forme dégradée de l'énergie).
+            \end{itemize}
+
+
+        \section{Deuxième principe}
+
+            \subsection{Définition de l'entropie}
+
+                Tout comme nous avons $\delta W = X_\re{ext} \cdot \re d x$, on définie l'entropie $S$ par $\delta Q = T_\re{ext} \cdot \re d S$.\\
+                Or, l'entropie est une fonction d'état (ne dépend que de l'état initial et final) :
+
+                \[\re d S = \dfrac{\delta Q}{T_\re{ext}} = \dfrac{\delta Q_{rev}}{T_\re{ext}} \qquad \Delta S = \int_{E_\re{initial}}^{E_\re{final}} \dfrac{\delta Q_\re{rév}}{T_\sigma}\]
+
+                L'entropie varie avec la quantité de chaleur transférée en supposant la transformation réversible.
+
+            \subsection{Propriété de l’entropie}
+
+                \twoCol {
+                \underline{Pour une transformation réversible :}\\
+                L'entropie du système $\sigma$ et de l'extérieur $\sigma_1$ sont opposées ($\delta Q$ opposés et températures identiques), donc l'entropie totale de l'univers $\sigma'$ (ou de $\{\sigma + \sigma_1\}$ isolé) est nulle : $\Delta S_{\sigma'} = 0$ car $\Delta S_\sigma = - \Delta S_{\sigma_1}$.
+            }{
+                \underline{Pour une transformation irréversible :}\\
+                Les transferts $\delta Q$ sont toujours isolées, mais les températures ne sont pas les mêmes, ainsi, on a :\\
+                $\Delta S_{\sigma'} = Q_\sigma \left( \dfrac{1}{T_\sigma} - \dfrac{1}{T_{\sigma_1} }\right)$.
+            }
+
+                Comme la chaleur va toujours du corps le plus chaud vers le plus froid (second principe), le second principe s'écrit aussi :
+                l'entropie est créable et indestructible.
+
+            \subsection{Enoncés du deuxième principe}
+
+                \begin{itemize}
+                    \item Pour une transformation irréversible (spontanée), l'entropie augmente.
+                    \item Pour une transformation impossible (sans intervention extérieure), l'entropie diminue.
+                    \item Pour une transformation réversible, l'entropie est nulle.\vspace{5pt}
+                \end{itemize}
+                On dit aussi qu'il est impossible de réaliser une transformation dont l'unique effet serait un transfert de chaleur d'un corps donné vers un corps plus chaud.
+
+        \section{Signification physique et microscopique de l’entropie}
+
+            On associe l'entropie au désordre moléculaire d'un système.\\
+            En fait, on peut définir l'entropie à partir du nombre de micro-états ou complexions possible d'un système (positionnement particulier des atomes). Plus le nombre de complexions est élevé, plus le désordre est grand.\\
+            L'entropie augmente donc avec le volume, la température, et le mélange de plusieurs composants qui augmente le nombre de complexions possibles.\\
+
+            On peut donc définir l'entropie à partir du nombre de micro-états $\Omega$ et de la constante de boltzmann $k_B = \dfrac{R}{N_A}$ :
+            \[S = k_B \cdot \ln \Omega\]
+
+            Pour un cristal parfait au zéro absolu, $\Omega = 1$, ainsi, le principe de Nernst ou troisième principe dit : l'entropie à $0K$ d'un corps à complexion unique est nulle.
 
 
 \end{document}
