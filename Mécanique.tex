@@ -9,6 +9,7 @@
     \date{Septembre 2022}
     \tableofcontents
 
+
     \chapter{Statique du solide}\label{ch:statique-du-solide}
 
 
@@ -361,5 +362,25 @@
             Dans un référentiel galiléen, la variation d’énergie mécanique d’un point matériel est égale à la somme des travaux des forces non-conservatives :
 
             \[\Delta E_M = E_M(B) - E_M(A) = \sum_i W_{A \scriptveryshortarrow B}(\vec{F_{i,\textbf{nc}}}) = W_{A \scriptveryshortarrow B}(\vec{F_{ext,\textbf{nc}}})\]
+
+
+        \section{Application aux mouvements simples du solide}
+
+            \twoCol{
+                \subsection{Solide en translation}
+
+                Pour un solide indéformable, tous les points ont la même vitesse donc l'énergie cinétique et potentielle se calculent de la même manière que pour un point matériel.\\
+
+                Il vient de même pour le calcul de travail et de puissance de forces.\\
+            }{
+
+                \subsection{Solide en rotation autour d'un axe fixe}
+                Le travail et la puissance s'expriment en fonction du moment de la foce :\\
+                $\delta W(\vec F) = \Gamma_{\vec F}(\Delta) \re d \theta$ et $P(\vec F) = \Gamma_{\vec F} \dot \theta$\\
+
+                On a $v = r \dot \theta$ donc on trouve :\\
+                $E_C = \dfrac{1}{2} J_\Delta \dot \theta^2$\\
+            }
+
 
 \end{document}
