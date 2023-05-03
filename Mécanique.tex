@@ -383,25 +383,47 @@
         }
 
 
-\chapter{Parallèle mécanique/électricité}
-
-    \section{Forces électromagnétiques}
+\chapter{Forces électromagnétiques}
     
-        \subsection{Force de Lorentz}
+    
+    \section{Force de Lorentz}
+    
+        Une charge dans un champ électrique $\vec E$ et dans un champ magnétique $\vec B$ est soumis à la force de Lorentz:\\
         
-            $\vec F = \vec F_e + \vec F_m = q (\vec E + \vec v \wedge B)$
+        \[\vec F = \vec F_e + \vec F_m = q (\vec E + \vec v \wedge B)\]
+    
+    
+    \section{Force de Laplace}
+        
+        \subsection{Effet Hall}
             
-        \subsection{Force de Laplace}
-
             Dans solide parcouru par un courant et soumis à un champ magnétique, les électrons vont s'accumuler sur une paroi du fil dû à la force de Lorentz $\vec F_B = -e (\vec v \wedge \vec B)$.\\
             
             Cela crée un dipôle à l'intérieur du fil, un champ électrique $\vec E_H$ : c'est l'effet Hall.\\
             En régime permanent, l'accélération des électrons est nulle donc $\vec F_H = -e \vec E_H = - \vec F_B$ donc $\vec E_H = - \vec v \wedge \vec B$.\\
+        
+        \subsection{Force de Laplace}
             
             Le principe des actions réciproques dit que les électrons du courant (soumis au champ $\vec E_H$) exercent une force sur les électrons accumulés, c'est la force de Laplace.\\
             
-            Sur un volume de conducteur section $S$ et de longueur $\re d l$, on a $q = -e \times n_e S \re d l$ avec $n_e$ la densité d'électrons.\\
-            Avec $\vec l$ la longueur du fil, orienté dans le sens de $I$, la force de Laplace est :
+            Sur un volume de conducteur section $S$ et de longueur $\re d l$, on a $q = -e \times n_e S \re d l$ avec $n_e$ la densité d'électrons. On peut alors démontrer que cela se rapporte au courant $I$, et avec $\vec l$ la longueur du fil, orienté dans le sens de $I$, la force de Laplace est :
+            
             \[\vec{\re dF_L} = I \vec{\re dl} \wedge \vec B \quad \re{ou} \quad \vec{F_L} = I \vec l \wedge \vec B \re{ dans un champ uniforme.}\]
+            
         
+        \subsection{Travail et énergie potentielle}
+            
+            Contrairement à la force magnétique de Lorentz qui ne travaille pas, la force de Laplace peut travailler.\\
+            Pour un champ est orthogonal au fil et la force de Laplace colinéaire au déplacement, avec $\re d \lambda$ le déplacement élémentaire :
+            \[\delta W = I B l \times \re d \lambda\]
+            
+            Ou en utilisant $\Phi$ le flux de $\vec B$ à travers la surface balayée $l \times \lambda$ :
+            \[\delta W = I \re d \Phi\]
+            
+            On peut aussi définir une énergie potentielle d’interaction entre le champ $B$ et le circuit :
+            \[\delta W = - \re d E_{p,\re{Laplace}}\]
+            On a donc $E_{p,\re{Laplace}} = - I \Phi$ : le système est stable ($E_{p,\re{Laplace}}$ minimal), pour un flux $\Phi$ maximal, et le circuit se déplacera spontanément dans le sens de l’augmentation du flux.
+           
+
+            
 \end{document}
