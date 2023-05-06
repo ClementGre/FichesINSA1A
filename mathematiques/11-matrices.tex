@@ -1,166 +1,173 @@
 \section{Matrices et opérations}
-
-    \subsection{Définition}
-
-        Une matrice, notée $A \in \mathcal{M}_{n,p}$ est un tableau de scalaires à $n$ lignes et $p$ colonnes.\\
-        Ses coefficients sont notés $a_{ij}$, $i$ étant la ligne et $j$ la colonne.\\
-
-        \twoCol {
-            \underline{Matrices particulières :}
-            \begin{itemize}
-                \item Matrice nulle : $0_\mathcal{M}_{n,p}$
-                \item Matrice ligne : $n = 1$
-                \item Matrice colonne : $p = 1$
-                \item Matrice carrée : $n = p$, on note $A \in \mathcal{M}_{n}$
-            \end{itemize}
-        }{
-            \underline{Matrices particulières carrées :}
-            \begin{itemize}
-                \item Triangulaire supérieure : $\forall i > j, a_{i,j} = 0$
-                \item Triangulaire inférieure : $\forall i < j, a_{i,j} = 0$
-                \item Diagonale : $\forall i \new j, a_{i,j} = 0$
-                \item Identité : diagonale, avec coefs. égaux à 1.
-            \end{itemize}
-        }
-
-    \subsection{Opérations sur les matrices}
-
-        \twoCol {
-
-            \underline{Somme et multiplication par un scalaire}
-
-            \begin{itemize}
-                \item \textbf{Loi interne $+$ :}\\Les coefficient $i,j$ s'ajoutent entre eux \\(matrices de même taille).\vspace{5pt}
-                \item \textbf{Loi externe $\cdot$ :}\\Chaque coefficient est multiplié par le scalaire.
-            \end{itemize}
-        }{
-            \underline{Produit de matrices}\\
-            Soit $A \in \mathcal{M}_{n,p}$ et $B \in \mathcal{M}_{p,q}$, alors $AB = C \in \mathcal{M}_{n,q}$ :
-
-            \[ c_{ij} = \sum_{k=1}^{p} a_{ik} b_{kj} \]
-            On multiplie les lignes de $A$ par les colonnes de $B$.
-        }
-
-    \subsection{Règles de calcul}
-
-        \underline{Puissances de matrices :}
-        \begin{itemize}
-            \item $A^k$ est définis uniquement pour $A \in \mathcal{M}_{n}$ et vaut $A \times A \times \dots \times A$ ($k$ fois).\vspace{5pt}
-        \end{itemize}
-
-        \underline{Produit matriciel :}
-        \begin{itemize}
-            \item On distingue la distributivité à gauche et à droite car $\mathcal{M}_{n,p}(\mathbb{K})$ n'est pas commutatif.
-            \item La multiplication avec un scalaire est commutative : $\lambda \times A = A \times \lambda$.
-            \item L'associativité est vérifiée : $A(B C) = (A B) C = ABC$.\vspace{5pt}
-        \end{itemize}
-
-        \underline{Matrices identité :}\\
-        $I_n$ est l'élément neutre pour le produit matriciel.\vspace{5pt}
-
-        \underline{Matrices particulières :}
-        \begin{itemize}
-            \item Le produit de deux matrices triangulaires supérieures est triangulaire supérieur
-            \item Le produit de deux matrices triangulaires inférieures est triangulaire inférieur
-            \item Le produit de deux matrices diagonales est diagonal\vspace{5pt}.
-        \end{itemize}
-
-        \underline{Binôme de Newton :}\\
-        Si A et B commutent ($AB = BA$) :
-        \[ (A + B)^n = \sum_{k=0}^{n} \binom{n}{k} A^{n-k} B^k \]
+	
+	\subsection{Définition}
+		
+		Une matrice, notée $A \in \mathcal{M}_{n,p}$ est un tableau de scalaires à $n$ lignes et $p$ colonnes.\\
+		Ses coefficients sont notés $a_{ij}$, $i$ étant la ligne et $j$ la colonne.\\
+		
+		\twoCol {
+			\underline{Matrices particulières :}
+			\begin{itemize}
+				\item Matrice nulle : $0_\mathcal{M}_{n,p}$
+				\item Matrice ligne : $n = 1$
+				\item Matrice colonne : $p = 1$
+				\item Matrice carrée : $n = p$, on note $A \in \mathcal{M}_{n}$
+			\end{itemize}
+		}{
+			\underline{Matrices particulières carrées :}
+			\begin{itemize}
+				\item Triangulaire supérieure : $\forall i > j, a_{i,j} = 0$
+				\item Triangulaire inférieure : $\forall i < j, a_{i,j} = 0$
+				\item Diagonale : $\forall i \new j, a_{i,j} = 0$
+				\item Identité : diagonale, avec coefs. égaux à 1.
+			\end{itemize}
+		}
+	
+	\subsection{Opérations sur les matrices}
+		
+		\twoCol {
+			
+			\underline{Somme et multiplication par un scalaire}
+			
+			\begin{itemize}
+				\item \textbf{Loi interne $+$ :}\\Les coefficient $i,j$ s'ajoutent entre eux \\(matrices de même taille).\vspace{5pt}
+				\item \textbf{Loi externe $\cdot$ :}\\Chaque coefficient est multiplié par le scalaire.
+			\end{itemize}
+		}{
+			\underline{Produit de matrices}\\
+			Soit $A \in \mathcal{M}_{n,p}$ et $B \in \mathcal{M}_{p,q}$, alors $AB = C \in \mathcal{M}_{n,q}$ :
+			
+			\[ c_{ij} = \sum_{k=1}^{p} a_{ik} b_{kj} \]
+			On multiplie les lignes de $A$ par les colonnes de $B$.
+		}
+	
+	\subsection{Règles de calcul}
+		
+		\underline{Puissances de matrices :}
+		\begin{itemize}
+			\item $A^k$ est définis uniquement pour $A \in \mathcal{M}_{n}$ et vaut $A \times A \times \dots \times A$ ($k$ fois).\vspace{5pt}
+		\end{itemize}
+		
+		\underline{Produit matriciel :}
+		\begin{itemize}
+			\item On distingue la distributivité à gauche et à droite car $\mathcal{M}_{n,p}(\mathbb{K})$ n'est pas commutatif.
+			\item La multiplication avec un scalaire est commutative : $\lambda \times A = A \times \lambda$.
+			\item L'associativité est vérifiée : $A(B C) = (A B) C = ABC$.\vspace{5pt}
+		\end{itemize}
+		
+		\underline{Matrices identité :}\\
+		$I_n$ est l'élément neutre pour le produit matriciel.\vspace{5pt}
+		
+		\underline{Matrices particulières :}
+		\begin{itemize}
+			\item Le produit de deux matrices triangulaires supérieures est triangulaire supérieur
+			\item Le produit de deux matrices triangulaires inférieures est triangulaire inférieur
+			\item Le produit de deux matrices diagonales est diagonal\vspace{5pt}.
+		\end{itemize}
+		
+		\underline{Binôme de Newton :}\\
+		Si A et B commutent ($AB = BA$) :
+		\[ (A + B)^n = \sum_{k=0}^{n} \binom{n}{k} A^{n-k} B^k \]
 
 
 \section{Lien avec les applications linéaires}
-
-    \subsection{Matrice d'une application linéaire}
-
-        Une application linéaire $f$ est entièrement déterminée par la donnée de $f(e_1)$, \ldots, $f(e_p)$.
-        On peut donc représenter une application linéaire par une matrice.\\
-
-        La matrice de $f$ relativement aux bases $\mathcal{B}$ et $\mathcal{B}'$ a les colonnes formées des coordonnées des images des vecteurs de la base de départ $\mathcal{B}$ exprimés dans la base d'arrivée $\mathcal{B}'$.\\
-        On note cette matrice $[f]_{\mathcal{B},\mathcal{B}'}$.\\
-
-        Si $f$ est un endomorphisme, on peut choisir la même base \mathcal{B} de départ et d'arrivée et on note $[f]_{\mathcal{B}}$.
-
-    \subsection{Image d'un vecteur par une application linéaire}
-
-        On multiplie la matrice d'une application linéaire par
-        $X = \begin{pmatrix}
-                 x_1\\ \vdots\\ x_n
-        \end{pmatrix}$
-        pour obtenir le vecteur image de $X$ par $f$.\\
-        On note $Y = AX$.
-
-
-        \twoCol {
-
-            \subsection{L'espace vectoriel $\mathcal{M}_{n,p}(\mathbb{K})$}
-
-            $\mathcal{M}_{n,p}(\mathbb{K})$ est un $\mathbb{K}$-ev. donc :
-            \begin{itemize}
-                \item $[f + g]_{\mathcal{B},\mathcal{B}'} = [f]_{\mathcal{B},\mathcal{B}'} + [g]_{\mathcal{B},\mathcal{B}'}$
-                \item $[\lambda f]_{\mathcal{B},\mathcal{B}'} = \lambda [f]_{\mathcal{B},\mathcal{B}'}$
-            \end{itemize}
-            \vspace{5pt}\\
-
-            On définis ainsi un isomorphisme :\vspace{-8pt}\\
-            \[\begin{cases}
-                  \mathcal{L}(E,\ F) &\to \mathcal{M}_{n,p}(\mathbb{K})\\
-                  f &\mapsto [f]_{\mathcal{B},\mathcal{B}'}
-            \end{cases}\]\vspace{-8pt}\\—}
-            Où $\dim(\mathcal{M}_{n,p}(\mathbb{K})) = np = \dim(F) \times \dim(E)$
-        }{
-            \subsection{Composées d'applications linéaires et produit matriciel}
-
-            Soient $f\ :\ E \rightarrow F$ et $g\ :\ F \rightarrow G$ deux applications linéaires :
-
-            \[[g \circ f]_{\mathcal{B}_E,\mathcal{B}_G} = [g]_{\mathcal{B}_F,\mathcal{B}_G} \times [f]_{\mathcal{B}_E,\mathcal{B}_F}\]
-
-            On met en première la matrice de l'application appliquée en dernière.
-        }
+	
+	\subsection{Matrice d'une application linéaire}
+		
+		Une application linéaire $f$ est entièrement déterminée par la donnée de $f(e_1)$, \ldots, $f(e_p)$.
+		On peut donc représenter une application linéaire par une matrice.\\
+		
+		La matrice de $f$ relativement aux bases $\mathcal{B}$ et $\mathcal{B}'$ a les colonnes formées des coordonnées des images des vecteurs de la base de départ $\mathcal{B}$ exprimés dans la base d'arrivée $\mathcal{B}'$.\\
+		On note cette matrice $[f]_{\mathcal{B},\mathcal{B}'}$.\\
+		
+		Si $f$ est un endomorphisme, on peut choisir la même base \mathcal{B} de départ et d'arrivée et on note $[f]_{\mathcal{B}}$.
+	
+	\subsection{Image d'un vecteur par une application linéaire}
+		
+		On multiplie la matrice d'une application linéaire par
+		$X = \begin{pmatrix}
+			     x_1\\ \vdots\\ x_n
+		\end{pmatrix}$
+		pour obtenir le vecteur image de $X$ par $f$.\\
+		On note $Y = AX$.
+		
+		
+		\twoCol {
+			
+			\subsection{L'espace vectoriel $\mathcal{M}_{n,p}(\mathbb{K})$}
+			
+			$\mathcal{M}_{n,p}(\mathbb{K})$ est un $\mathbb{K}$-ev. donc :
+			\begin{itemize}
+				\item $[f + g]_{\mathcal{B},\mathcal{B}'} = [f]_{\mathcal{B},\mathcal{B}'} + [g]_{\mathcal{B},\mathcal{B}'}$
+				\item $[\lambda f]_{\mathcal{B},\mathcal{B}'} = \lambda [f]_{\mathcal{B},\mathcal{B}'}$
+			\end{itemize}
+			\vspace{5pt}\\
+			
+			On définis ainsi un isomorphisme :\vspace{-8pt}\\
+			\[\begin{cases}
+				  \mathcal{L}(E,\ F) &\to \mathcal{M}_{n,p}(\mathbb{K})\\
+				  f &\mapsto [f]_{\mathcal{B},\mathcal{B}'}
+			\end{cases}\]\vspace{-8pt}\\
+			Où $\dim(\mathcal{M}_{n,p}(\mathbb{K})) = np = \dim(F) \times \dim(E)$
+		}{
+			\subsection{Composées d'applications linéaires et produit matriciel}
+			
+			Soient $f\ :\ E \rightarrow F$ et $g\ :\ F \rightarrow G$ deux applications linéaires :
+			
+			\[[g \circ f]_{\mathcal{B}_E,\mathcal{B}_G} = [g]_{\mathcal{B}_F,\mathcal{B}_G} \times [f]_{\mathcal{B}_E,\mathcal{B}_F}\]
+			
+			On met en première la matrice de l'application appliquée en dernière.
+		}
 
 
 \section{Inversion de matrices}
-
-    $A \in \mathcal{M}_n$ est inversible $\iff \exists A^{-1} \in \mathcal{M}_n\ /\ A^{-1}A = AA^{-1} = I_n$.\\
-    Cela équivaut à dire que $A$ est la matrice d'une application linéaire bijective.\\
-
-    Ainsi, on a $(A^{-1})^{-1} = A$ et $(AB)^{-1} = B^{-1} A^{-1}$.\\
-
-    \underline{Calcul de l'inverse :} \vspace{4pt}\\
-    Soit $A = [f]_\mathcal{B}$, alors $A^{-1} = [f^{-1}]_\mathcal{B}$.
-    (L'écriture sous forme d'une AL correspond à celle matricielle.) \vspace{2pt}\\
-    On résous donc le système $Y = AX$ : on exprime $X$ en fonction de $Y$ quelconque et on obtient $A^{-1}$.
-
-    \twoCol{
-        \section{Rang d'une matrice}
-
-        Le rang d'une matrice $A$ est le rang des vecteurs colonne de $A$, et le rang de l'AL associée.\\
-
-        Pour une matrice carré :\\ $A \in \mathcal{M}_n$ est inversible $\iff \rg(A) = n$.\\
-        Pour une matrice rectangulaire :\\ $A \in \mathcal{M}_{n,p}$, $\rg(A) \le \min(n,p)$.
-    }{
-        \section{Transposition}
-
-    }
-    \vspace{1pt}\\
+	
+	$A \in \mathcal{M}_n$ est inversible $\iff \exists A^{-1} \in \mathcal{M}_n\ /\ A^{-1}A = AA^{-1} = I_n$.\\
+	Cela équivaut à dire que $A$ est la matrice d'une application linéaire bijective.\\
+	
+	Ainsi, on a $(A^{-1})^{-1} = A$ et $(AB)^{-1} = B^{-1} A^{-1}$.\\
+	
+	\underline{Calcul de l'inverse :} \vspace{4pt}\\
+	Soit $A = [f]_\mathcal{B}$, alors $A^{-1} = [f^{-1}]_\mathcal{B}$.
+	(L'écriture sous forme d'une AL correspond à celle matricielle.) \vspace{2pt}\\
+	On résous donc le système $Y = AX$ : on exprime $X$ en fonction de $Y$ quelconque et on obtient $A^{-1}$.
+	
+	\twoCol[50]{
+		\section{Rang d'une matrice}
+		
+		Le rang d'une matrice $A$ est le rang des vecteurs colonne de $A$, et le rang de l'AL associée.\\
+		
+		Pour une matrice carré :\\ $A \in \mathcal{M}_n$ est inversible $\iff \rg(A) = n$.\\
+		Pour une matrice rectangulaire :\\ $A \in \mathcal{M}_{n,p}$, $\rg(A) \le \min(n,p)$.
+	}{
+		\section{Transposition}
+		Transposée de $A \in \mathcal{M}_{n,p}$ : $B \in \mathcal{M}_{p,n}$ tel que $a_{i,j} = b_{j,i}$.\vspace{5pt}\\
+		$^t(AB) = {}^tB \times {}^tA$ ; $\rg({}^tA) = \rg(A)$ ; $({}^tA)^{-1} = ({}^tA^{-1})$.\\
+		
+		\underline{Matrice symétrique :} $A \in \mathcal{S}_n \iff {}^tA = A$.\\
+		\underline{Matrice antisymétrique :} $A \in \mathcal{A}_n \iff {}^tA = -A$.\\
+		
+		$\mathcal{S}_n \oplus \mathcal{A}_n$, $\dim(\mathcal{S}_n) = \dfrac{n(n+1)}{2}$ et $\dim(\mathcal{A}_n) = \dfrac{n(n-1)}{2}$.
+		
+	}
+	\vspace{1pt}\\
 
 
 \section{Matrices de changements de bases}
-
-    Matrice de passage de $\mathcal{B}$ à $\mathcal{B}'$ : $\re{Pass}_{\mathcal{B} \rightarrow \mathcal{B}'} = [\mathcal{B}']_\mathcal{B} =  [id_E]_{\mathcal{B}',\mathcal{B}}$.\\
-    Elle exprime en colonne les coordonnés des vecteurs de $\mathcal{B}'$ exprimés dans la base $\mathcal{B}$.\\
-
-    En multipliant par $[\mathcal{B}']_\mathcal{B}$ on transforme les coordonnés exprimés dans $\mathcal{B}'$ en coordonnés exprimés dans $\mathcal{B}$.\\
-    Comme pour la composition de fonctions, on lit de droite à gauche : $[\mathcal{B''}]_{\mathcal{B}} = [\mathcal{B'}]_{\mathcal{B}} \times [\mathcal{B}'']_{\mathcal{B}'}$\\
-    Pour un vecteur $x$ : $[x]_{\mathcal{B}} = [\mathcal{B'}]_\mathcal{B} \times [x]_{\mathcal{B}'}$
-    \vspace{5pt}\\
-    On a $([\mathcal{B}']_\mathcal{B})^{-1} = [\mathcal{B}]_{\mathcal{B}'}$ : il faudra souvent inverser la matrice de passage.
-    \vspace{5pt}\\
-    Pour changer la base de départ d'une AL, on multiplie à droite par la matrice de passage, et pour changer la base d'arrivée, on multiplie à gauche : $[f]_{\mathcal{B}',\mathcal{C}'} = [\mathcal{C}]_{\mathcal{C'}} \times [f]_{\mathcal{B},\mathcal{C}} \times [\mathcal{B'}]_{\mathcal{B}}$\\
-
-    $A$ et $B$ sont équivalentes$\iff$sont la même AL dans des bases différentes$\iff A = Q^{-1} B P \iff \boldsymbol{\rg(A) = \rg(B)}$.\\
-    Pour une matrice carré, si $P = Q$, les matrices sont semblables : elles représentent le même endomorphisme.\\
-
-    Deux matrices semblables sont équivalentes, mais l'inverse n'est pas vrai.
+	
+	Matrice de passage de $\mathcal{B}$ à $\mathcal{B}'$ : $\re{Pass}_{\mathcal{B} \rightarrow \mathcal{B}'} = [\mathcal{B}']_\mathcal{B} =  [id_E]_{\mathcal{B}',\mathcal{B}}$.\\
+	Elle exprime en colonne les coordonnés des vecteurs de $\mathcal{B}'$ exprimés dans la base $\mathcal{B}$.\\
+	
+	En multipliant par $[\mathcal{B}']_\mathcal{B}$ on transforme les coordonnés exprimés dans $\mathcal{B}'$ en coordonnés exprimés dans $\mathcal{B}$.\\
+	Comme pour la composition de fonctions, on lit de droite à gauche : $[\mathcal{B''}]_{\mathcal{B}} = [\mathcal{B'}]_{\mathcal{B}} \times [\mathcal{B}'']_{\mathcal{B}'}$\\
+	Pour un vecteur $x$ : $[x]_{\mathcal{B}} = [\mathcal{B'}]_\mathcal{B} \times [x]_{\mathcal{B}'}$
+	\vspace{5pt}\\
+	On a $([\mathcal{B}']_\mathcal{B})^{-1} = [\mathcal{B}]_{\mathcal{B}'}$ : il faudra souvent inverser la matrice de passage.
+	\vspace{5pt}\\
+	Pour changer la base de départ d'une AL, on multiplie à droite par la matrice de passage, et pour changer la base d'arrivée, on multiplie à gauche : $[f]_{\mathcal{B}',\mathcal{C}'} = [\mathcal{C}]_{\mathcal{C'}} \times [f]_{\mathcal{B},\mathcal{C}} \times [\mathcal{B'}]_{\mathcal{B}}$\\
+	
+	$A$ et $B$ sont équivalentes$\iff$sont la même AL dans des bases différentes$\iff A = Q^{-1} B P \iff \boldsymbol{\rg(A) = \rg(B)}$.\\
+	Pour une matrice carré, si $P = Q$, les matrices sont semblables : elles représentent le même endomorphisme.\\
+	
+	Deux matrices semblables sont équivalentes, mais l'inverse n'est pas vrai.
 
