@@ -387,7 +387,7 @@
     
     
     \section{Force de Lorentz}
-    
+        
         Une charge dans un champ électrique $\vec E$ et dans un champ magnétique $\vec B$ est soumis à la force de Lorentz:\\
         
         \[\vec F = \vec F_e + \vec F_m = q (\vec E + \vec v \wedge B)\]
@@ -409,7 +409,6 @@
             Sur un volume de conducteur section $S$ et de longueur $\re d l$, on a $q = -e \times n_e S \re d l$ avec $n_e$ la densité d'électrons. On peut alors démontrer que cela se rapporte au courant $I$, et avec $\vec l$ la longueur du fil, orienté dans le sens de $I$, la force de Laplace est :
             
             \[\vec{\re dF_L} = I \vec{\re dl} \wedge \vec B \quad \re{ou} \quad \vec{F_L} = I \vec l \wedge \vec B \re{ dans un champ uniforme.}\]
-            
         
         \subsection{Travail et énergie potentielle}
             
@@ -423,7 +422,69 @@
             On peut aussi définir une énergie potentielle d’interaction entre le champ $B$ et le circuit :
             \[\delta W = - \re d E_{p,\re{Laplace}}\]
             On a donc $E_{p,\re{Laplace}} = - I \Phi$ : le système est stable ($E_{p,\re{Laplace}}$ minimal), pour un flux $\Phi$ maximal, et le circuit se déplacera spontanément dans le sens de l’augmentation du flux.
-           
 
+
+\chapter{Oscillations}
+    
+    
+    \section{Généralités}
+        
+        Un phénomène périodique se répète à lui-même à intervalles de temps égaux.
+        Il est pseudopériodique s'il ne se répète pas exactement avec la même amplitude.\\
+        Les degrés de liberté sont les paramètres dont dépend l’état vibratoire du système.\\
+    
+    
+    \section{Oscillations libres}
+        
+        \twoCol {
             
+            \subsection{Oscillations non amorties}
+            $\ddot s + \omega_0^2 s = 0$\\
+            $s(t) = S_m \cos(\omega_0 t + \varphi)$\\
+        }{
+            
+            \subsection{Oscillations amorties}
+            $\ddot s + 2\delta \dot s + \omega_0^2 s = 0$\\
+            $s(t) = S_m e^{-\delta t} \cos(\omega t + \varphi)$\\
+        }
+        
+        \begin{itemize}
+            \item $S_m$ l'amplitude et $\varphi$ la phase à l'origine déterminés par les conditions initiales.
+            \item $\delta$ le coefficient d'amortissement, peut être déterminé numériquement avec une enveloppe exponentielle.
+            \item $\omega_0$ la pulsation propre.
+            \item $\omega^2 = \omega_0^2 - \delta^2$ la pulsation de l'oscillation amortie.
+        \end{itemize}
+        \vspace{7pt}
+        Si $\Delta > 0 \iff \delta > \omega_0$, le système n'oscille pas.\\
+        Si $\Delta = 0 \iff \delta = \omega_0$, on parle d'amortissement critique, c'est le cas où le système atteint le plus rapidement sa position d'équilibre.\\
+        
+        $\delta$ peut aussi être mesuré par la méthode du décrément logarithmique :\\
+        On fait deux mesures de $S_\re{max}$ entre $k$ périodes, on a $\delta k T = \ln\left(\dfrac{S_\re{max}(t_0)}{S_\re{max}(t_0 + kT)}\right)$.\\
+        (Les cosinus vallent $1$, les constantes $S_m$ se simplifient, et le $\ln$ fait sortir $\delta k T$).
+    
+    
+    \section{Oscillations forcées}
+        
+        Une excitation de l'extérieur est imposée au système :
+        \[\ddot s + 2\delta \dot s + \omega_0^2 s = Y_0 \cos(\Omega t)\]
+        
+        \twoCol {
+            
+            \subsection{Solution particulière}
+            
+            \[s(t) = s_H + S_m \cos(\Omega t + \varphi)\]
+            \vspace{4pt}
+            Avec $S_m \dfrac{Y_0}{\sqrt {(\omega_0^2 - \Omega^2)^2 + 4\delta^2 \Omega^2}}$\vspace{4pt}\\
+            Et $\tan \varphi = \dfrac{-2\delta \Omega}{\omega_0^2 - \Omega^2}$
+        }{
+            \subsection{Phénomène de résonance}
+            
+            Pour $\Omega = \omega \iff \Omega^2 = \omega_0^2 - 2\delta^2$, il y a une augmentation brutale de l'amplitude :\\
+            
+            $S_\re{max} = \dfrac{Y_0}{2\delta \sqrt {\omega_0^2 - \delta^2}}$
+            
+            Facteur de qualité : $Q = \dfrac{\omega_0}{\omega_2 - \omega_1} = \dfrac{\omega_0}{2\delta}$ avec $\omega_1$ et $\omega_2$ les pulsations de coupure à $-3\ \re{dB}$ ($\frac{\re{MAX}}{\sqrt{2}}$).
+        }
+
+
 \end{document}
