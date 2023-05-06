@@ -1,0 +1,16 @@
+\section{Notion de développement limité}
+	
+	Une fonction admet un développement limité d'ordre $n$ en $a$ s'il existe des réels $a_0, a_1, \ldots, a_n$ tels que :\\
+	\[f(x) \underset{x \rightarrow a}{=} \underbrace{a_0 + a_1 (x - a) + a_2 (x - a) + \ldots + a_n (x - a)}_\re{Partie régulière} + \underbrace{o((x - a)^n)}_\re{Reste}\]
+	
+	\twoCol {
+		Pour un DL en $0$ :
+		\begin{itemize}
+			\item Si $f$ est paire, alors $a_{2k+1} = 0$.
+			\item Si $f$ est impaire, alors $a_{2k} = 0$.
+		\end{itemize}
+	}{
+		La partie régulière du $DL$ en 0 est unique.\\
+		Le DL peut être tronqué à l'ordre $p \le n$.
+	}
+	
