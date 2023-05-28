@@ -1,48 +1,88 @@
 \section{Notion de développement limité}
 
-Une fonction admet un développement limité d'ordre $n$ en $a$ s'il existe des réels $a_0, a_1, \ldots, a_n$ tels que :\\
-\[f(x) \underset{x \rightarrow a}{=} \underbrace{a_0 + a_1 (x - a) + a_2 (x - a) + \ldots + a_n (x - a)}_\re{Partie régulière} + \underbrace{o((x - a)^n)}_\re{Reste}\]
+    Une fonction admet un développement limité d'ordre $n$ en $a$ s'il existe des réels $a_0, a_1, \ldots, a_n$ tels que :\\
+    \[f(x) \underset{x \rightarrow a}{=} \underbrace{a_0 + a_1 (x - a) + a_2 (x - a) + \ldots + a_n (x - a)}_\re{Partie régulière} + \underbrace{o((x - a)^n)}_\re{Reste}\]
 
-\twoCol {
-    Pour un DL en $0$ :
-    \begin{itemize}
-        \item Si $f$ est paire, alors $a_{2k+1} = 0$.
-        \item Si $f$ est impaire, alors $a_{2k} = 0$.
-    \end{itemize}
-}{
-    La partie régulière du $DL$ en 0 est unique.\\
-    Le DL peut être tronqué à l'ordre $p \le n$.\\
-    $f$ est équivalent en $a$ à son terme de plus petit degré.
-}
-\vspace{7pt}\\
-\textbf{DL et régularité d'une fonction :}\\
-$f$ admet un $\re{DL}_0$ en $a$ $\iff$ $f$ admet une limite finie en $a$ (continue ou prolongeable par continuité en $a$).\\
-$f$ admet un $\re{DL}_1$ en $a$ $\iff$ $f$ est dérivable en $a$ et $f'(a) = a_1$.\\
-Pou un DL d'ordre $n \ge 2$, $f$ n'est pas forcément dérivable $n$ fois en $a$.\\
+    \twoCol {
+        Pour un DL en $0$ :
+        \begin{itemize}
+            \item Si $f$ est paire, alors $a_{2k+1} = 0$.
+            \item Si $f$ est impaire, alors $a_{2k} = 0$.
+        \end{itemize}
+    }{
+        La partie régulière du $DL$ en 0 est unique.\\
+        Le DL peut être tronqué à l'ordre $p \le n$.\\
+        $f$ est équivalent en $a$ à son terme de plus petit degré.
+    }
+    \vspace{7pt}\\
+    \textbf{DL et régularité d'une fonction :}\\
+    $f$ admet un $\re{DL}_0$ en $a$ $\iff$ $f$ admet une limite finie en $a$ (continue ou prolongeable par continuité en $a$).\\
+    $f$ admet un $\re{DL}_1$ en $a$ $\iff$ $f$ est dérivable en $a$ et $f'(a) = a_1$.\\
+    Pou un DL d'ordre $n \ge 2$, $f$ n'est pas forcément dérivable $n$ fois en $a$.\\
 
 
 \section{Formule de Taylor-Young}
 
-Soit $f$ définie sur un voisinage de $a$ et dérivable $n$ fois, le $\re{DL}_n$ de $f$ en $a$ s'écrit :\\
-\[f(x) \underset{x \rightarrow a}{=} \sum_{k=0}^n \frac{f^{(k)}(a)}{k!} (x - a)^k + o((x - a)^n)\]
+    Soit $f$ définie sur un voisinage de $a$ et dérivable $n$ fois, le $\re{DL}_n$ de $f$ en $a$ s'écrit :\\
+    \[f(x) \underset{x \rightarrow a}{=} \sum_{k=0}^n \frac{f^{(k)}(a)}{k!} (x - a)^k + o((x - a)^n)\]
 
-On peut donc identifier les coefficients $a_k = \dfrac{f^{(k)}(a)}{k!}$. Ainsi, si $f$ est $C^\infty$ au voisinage de $a$, alors elle admet un DL à tout ordre en $a$. La réciproque est fausse.\\
+    On peut donc identifier les coefficients $a_k = \dfrac{f^{(k)}(a)}{k!}$. Ainsi, si $f$ est $C^\infty$ au voisinage de $a$, alors elle admet un DL à tout ordre en $a$. La réciproque est fausse.\\
 
-\textbf{DL usuels :}
-\begin{align*}
-    e^x &\underset{x \rightarrow 0}{=} 1 + x + \dfrac{x^2}{2!} + \dfrac{x^3}{3!} + \dots + \dfrac{x^n}{n!} + o(x^n) \underset{x \rightarrow 0}{=} \sum_{k=0}^n \frac{x^k}{k!} + o(x^n)\\
-    \ch(x) &\re{ : tous les ordres paires de l'exponentielle}\\
-    \sh(x) & \re{ : tous les ordres impaires de l'exponentielle}\\
-    \cos(x) &\underset{x \rightarrow 0}{=} 1 - \dfrac{x^2}{2!} + \dfrac{x^4}{4!} - \dots + (-1)^n \dfrac{x^{2n}}{(2n)!} + o(x^{2n+1}) \quad \re{(ch() avec alternance de signe)}\\
-    \sin(x) &\underset{x \rightarrow 0}{=} x - \dfrac{x^3}{3!} + \dfrac{x^5}{5!} - \dots + (-1)^n \dfrac{x^{2n+1}}{(2n+1)!} + o(x^{2n+2}) \quad \re{(sh() avec alternance de signe)}\\
-    \dfrac{1}{1 - x} &\underset{x \rightarrow 0}{=} 1 + x + x^2 + \dots + x^n + o(x^n)\\
-    \ln(1 + x) &\underset{x \rightarrow 0}{=} x - \dfrac{x^2}{2} + \dfrac{x^3}{3} - \dots + (-1)^{n-1} \dfrac{x^n}{n} + o(x^n)\\
-    (1+x)^\alpha &\underset{x \rightarrow 0}{=} 1 + \alpha x + \dfrac{\alpha(\alpha-1)}{2!} x^2 + \dots + \dfrac{\alpha(\alpha-1)\dots(\alpha-n+1)}{n!} x^n + o(x^n)\\
-\end{align*}
+    \textbf{DL usuels :}
+    \begin{align*}
+        e^x &\underset{x \rightarrow 0}{=} 1 + x + \dfrac{x^2}{2!} + \dfrac{x^3}{3!} + \dots + \dfrac{x^n}{n!} + o(x^n) \underset{x \rightarrow 0}{=} \sum_{k=0}^n \frac{x^k}{k!} + o(x^n)\\
+        \ch(x) &\re{ : tous les ordres paires de l'exponentielle}\\
+        \sh(x) & \re{ : tous les ordres impaires de l'exponentielle}\\
+        \cos(x) &\underset{x \rightarrow 0}{=} 1 - \dfrac{x^2}{2!} + \dfrac{x^4}{4!} - \dots + (-1)^n \dfrac{x^{2n}}{(2n)!} + o(x^{2n+1}) \quad \re{(ch() avec alternance de signe)}\\
+        \sin(x) &\underset{x \rightarrow 0}{=} x - \dfrac{x^3}{3!} + \dfrac{x^5}{5!} - \dots + (-1)^n \dfrac{x^{2n+1}}{(2n+1)!} + o(x^{2n+2}) \quad \re{(sh() avec alternance de signe)}\\
+        \dfrac{1}{1 - x} &\underset{x \rightarrow 0}{=} 1 + x + x^2 + \dots + x^n + o(x^n)\\
+        \ln(1 + x) &\underset{x \rightarrow 0}{=} x - \dfrac{x^2}{2} + \dfrac{x^3}{3} - \dots + (-1)^{n-1} \dfrac{x^n}{n} + o(x^n)\\
+        (1+x)^\alpha &\underset{x \rightarrow 0}{=} 1 + \alpha x + \dfrac{\alpha(\alpha-1)}{2!} x^2 + \dots + \dfrac{\alpha(\alpha-1)\dots(\alpha-n+1)}{n!} x^n + o(x^n)
+    \end{align*}
+
+    \newpage
+
 
 \section{Opérations sur les développements limités}
 
+    \twoCol {
+        \subsection{Somme et produit}
 
+        On peut faire la somme et le produit de deux DL$_n$.
+        \smallskip
+
+        Pour le produit, on tronque le DL à l'ordre $n$.
+    }{
+        \subsection{Quotient}
+
+        Si le dénominateur a un coefficient constant non nul, on peut faire le quotient de deux DL$_n$ avec l'algorithme de division suivant les puissances croissantes.
+    }
+
+    \subsection{Changements de variable et composition de DL}
+
+        On peut faire un changement de variable polynomial dans un DL si les deux variables tendent vers $0$.
+        \medskip
+
+        Autrement, on peut composer deux DL$_n$ en $0$ si le premier tend bien vers $0$ (coefficient constant nul).
+
+        \twoCol {
+            \subsection{Intégration de DL}
+
+            On peut intégrer un DL$_n$ en $0$ en ajoutant une constante $F(0)$.
+            \smallskip
+
+            Toute primitive de $f$ admettra le DL intégré.
+        }{
+            \subsection{Dérivation de DL}
+
+            On peut dériver un DL$_n$ en $0$ si on sait que $f'$ admet un DL$_{n-1}$ en $0$.
+            \smallskip
+
+            Cela ne prouve pas que $f'$ admet un DL$_n$ en $0$.
+        }
+
+
+\section{Étude locale d'une courbe}
 
 
 
