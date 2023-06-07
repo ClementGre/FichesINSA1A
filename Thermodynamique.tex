@@ -370,10 +370,23 @@
 
     \section{Enthalpies et entropie standards de réaction}
 
-        L'enthalpie est une fonction d'état (loi de Hess), on passera donc souvent par un autre chemin, en décomposant les éléments en leurs états standards de référence, puis en utilisant les enthalpies de formation.
+        L'enthalpie est une fonction d'état, on passera donc souvent par un autre chemin, en décomposant les éléments en leurs états standards de référence, puis en utilisant les enthalpies de formation.
+        Loi de Hess :
         \[\Delta_r H^\circ_T = \sum^{n_\re{produits}}_{j=1} \nu_j \times \Delta_f H^\circ_T(j)\ \ - \sum^{n_\re{réactifs}}_{i=1} \nu_i \times \Delta_f H^\circ_T(i)\]
 
 
     \section{Fonctions potentiel thermodynamique}
+
+        On définis $G = H - T \times S$. $G$ est une fonction potentiel thermodynamique si :
+        \begin{itemize}
+            \item $T$ et $P$ soient constantes (monotherme et isobare).
+            \item Le travail échangé est uniquement dû aux forces de pression.
+        \end{itemize}
+        On a donc $\Delta G_\sigma = \Delta H - T \Delta S $ :
+        \begin{itemize}
+            \item Si $\Delta G_\sigma < 0$, la transformation est irréversible.
+            \item Si $\Delta G_\sigma = 0$, la transformation est réversible.
+            \item Si $\Delta G_\sigma > 0$, la transformation est impossible.
+        \end{itemize}
 
 \end{document}
