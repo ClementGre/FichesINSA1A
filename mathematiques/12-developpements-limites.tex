@@ -84,7 +84,25 @@
 
 \section{Étude locale d'une courbe}
 
+    \subsection{Étude locale au voisinage de $x = a$}
 
+        L'équation de la tangente en $a$ se trouve à partir du DL$_1$ de $f$ en $a$.\\
 
+        La position de $f$ par rapport à sa tangente au voisinage de $a$ dépend du coefficient qui suit\\(pas forcément celui du degré $2$) :\\
+        \begin{itemize}
+            \item Si l'ordre $n$ est pair, alors le signe de $a_n (x - a)^n$ sera celui de $a_n$.\\
+            Si $a_n > 0$, alors $f$ est au dessus de sa tangente, sinon elle est en dessous.
+            \item Si $n$ est impair, $f$ traversera sa tangente en $a$ (on étudie le signe de $a_n (x - a)^n$).
+        \end{itemize}
 
+    \subsection{Développement limité généralisé (DLG) en $\pm \infty$ et branche infinie}
 
+        $f$ admet un $DL$ à l'ordre $n$ en $\pm \infty$ s'il existe des réels $a_0, \dots, a_n$ tels que :\\
+        \[f(x) = a_0 + \frac{a_1}{x} + \dots + \frac{a_n}{x^n} + o\left(\frac{1}{x^n}\right)\]
+
+        Pour calculer des DLG, en $\pm \infty$, on fait souvent le changement de variable $x = \dfrac{1}{t}$ et on calcule un DL en $0$.
+
+        Si $\dfrac{f(x)}{x} \underset{\pm \infty}{=} a + \dfrac{b}{x} + o\left(\dfrac{1}{x}\right)$, alors un DL de $f$ en $\pm \infty$ est $ax + b + o(1)$.\\
+
+        Ainsi, la courbe de $f$ admet comme asymptote la droite $y = ax + b$ en $\pm \infty$.
+        Le signe du terme suivant permet de déterminer la position locale de $f$ par rapport à son asymptote.
