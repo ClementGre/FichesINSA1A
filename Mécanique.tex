@@ -5,7 +5,7 @@
 
 \begin{document}
 \title{\getSubject}
-\author{Clément GRENNERAT}
+\author{Clément \sn{Grennerat}}
 \date{Septembre 2022}
 \tableofcontents
 
@@ -174,96 +174,8 @@
         $\vec{a_R} = \vec{a_{R'}} + \left( \dfrac{\re{d}^2 \vec{OO'}}{\re d t^2} \right)_R$
 
 
-\chapter{Introduction à la dynamique}\label{ch:introduction-a-la-dynamique}
-
-    À Chaque fois :
-    \begin{itemize}
-        \item Grandeur d'inertie : capacité à résister à la modification du mouvement.
-        \item Grandeur cinématique : décrit le mouvement.
-    \end{itemize}
-
-
-    \section{Les grandeurs cinétiques du point}\label{sec:les-grandeurs-cinetiques-du-point}
-
-        \twoCol {
-
-            \subsection{Énergie cinétique}\label{subsec:l-energie-cinetique}
-
-            $\varepsilon_c = \dfrac{1}{2} m v^2$\\
-            ($m$ grandeur d'inertie et $v$ grandeur cinématique).
-
-            \[\textbf{PFD : } \dfrac{\re d \varepsilon_c}{\re d t} = \summ P_{ext}\]
-        }{
-
-            \subsection{Quantité de mouvement}\label{subsec:la-quantite-de-mouvement}
-
-            $\vec p = m \vec v$\\
-            ($m$ grandeur d'inertie et $v$ grandeur cinématique).\\
-            \vspace{-14pt}
-            \begin{align*}
-                \textbf{PFD :   } \dfrac{\re d \vec p}{\re d t} &= \summ \vec{F_{ext}}\\
-                m \vec a &= \sum \vec{F_{ext}}
-            \end{align*}
-        }
-
-        \subsection{Moment cinétique}\label{subsec:le-moment-cinetique}
-            \threeCol[15][45] {
-            \vspace{-18pt}
-            \begin{flalign*}
-                \vec \sigma &= \vec{OM} \wedge \vec p&\\
-                &= \vec{OM} \wedge m \vec v&\\
-                &= r \vec{e_r} \wedge m r \dot\theta \vec{e_\theta}&\\
-                &= m r^2 \dot\theta \vec{e_z}&\\
-                &= J \vec \Omega&
-            \end{flalign*}
-        }{
-            \begin{itemize}
-                \item Moment d'inertie : $J = m r^2$\\(grandeur d'inertie)
-                \item Vecteur rotation instantané : $\vec \Omega = \dot\theta \vec{e_z}$\\(grandeur cinématique)
-            \end{itemize}
-        }{
-            $\textbf{PFD : } \dfrac{\re d \vec \sigma}{\re d t} = \summ \vec{\mathcal{M}_{ext}}$
-        }
-
-
-    \section{Les grandeurs cinétiques d'un solide}\label{sec:les-grandeurs-cinetiques-d'un-solide}
-
-        \subsection{Énergie cinétique d'un solide}\label{subsec:l'energie-cinetique-d'un-solide}
-
-            Somme des énergies cinétiques des points du solide : $\varepsilon_c = \summ \varepsilon_{c,i}$\\
-
-            \twoCol[45] {
-            \underline{En translation :}\\
-            Tous les points ont la même vitesse :\\ $\varepsilon_c = \dfrac{1}{2} m v^2$
-        }{
-            \underline{En rotation :}\\
-            $v = r \dot\theta$ donc $\varepsilon_c = \dfrac{1}{2} \dot\theta^2 \summ{m_i r^2_i} = \dfrac{1}{2} \dot\theta^2 J_\Delta$\\
-
-            Moment d'inertie par rapport à l'axe $\Delta$ : $J_\Delta = \intt \( r^2 \re d m \)$
-        }
-
-            \twoCol[45] {
-            \subsection{Quantité de mouvement d’un solide}\label{subsec:la-quantite-de-mouvement-dun-solide}
-            (Solide en translation)\\
-            $\vec p = \summ{m_i \vec v_i} = M \vec v$
-        }{
-            \subsection{Moment cinétique d'un solide}\label{subsec:le-moment-cinetique-dun-solide}
-            Solide en rotation autour d'un axe fixe $\Delta$ à vitesse $\vec \Omega = \dot\theta \vec{u_z}$\\
-            $\vec \sigma = \vec \Omega \summ{J_i} = J \vec \Omega$
-        }
-
-
-    \section{Le principe d'inertie}\label{sec:le-principe-d'inertie}
-
-        Un système est incapable de changer son état par lui même.\\
-        Dans un référentiel Galiléen, tout système isolé ou pseudo-isolé est immobile ou à vitesse uniforme.\\
-
-        On dit que les grandeurs cinétiques d'un système isolé ou pseudo-isolé sont conservatives :\\
-        \[\dfrac{\re d \varepsilon_c}{\re d t} = 0 \quad\quad \dfrac{\re d \vec p}{\re d t} = \vec 0 \quad\quad \dfrac{\re d \vec \sigma}{\re d t} = \vec 0\]\\
-
 
 \chapter{Dynamique : Lois de Newton}\label{ch:dynamique-lois-de-newton}
-
 
     \section{Dynamique du point}\label{sec:dynamique-du-point}
 
@@ -271,54 +183,87 @@
 
             \begin{itemize}
                 \item \underline{\textbf{1ère loi de Newton : principe d’inertie}}\\
-                Il existe des référentiels privilégiés dits galiléens dans lesquels le mouvement d'un point isolé ou pseudo-isolé est rectiligne uniforme.\\
+                Il existe des référentiels privilégiés dits galiléens dans lesquels le mouvement d'un point isolé ou pseudo-isolé est rectiligne uniforme.
                 Ainsi, si $R_g$ est galiléen, alors tout référentiel en translation rectiligne uniforme par rapport à $R_g$ est aussi galiléen.\\
 
                 \item \underline{\textbf{2ème loi de Newton : principe fondamental de la dynamique (PFD)}}\\
-                Les forces sont à l’origine du mouvement : $\summ \vec F_\re{ext} = \dfrac{\re \vec d p}{\re d t} = m \vec a$ (dans un ref. galiléen).\\
+                Les forces sont à l’origine du mouvement : $\summ \vec F_\re{ext} = \dfrac{\re d \vec p}{\re d t} = m \vec a$ dans un référentiel galiléen.\\
 
                 \item \underline{\textbf{3ème loi de Newton : principe des actions réciproques}}\\
-                Une force unique existant seule n'existe pas.\\
                 Si deux points sont en interaction, on a deux forces : $\vec{f_\re{1/2}} = - \vec{f_\re{2/1}}$\\
-                D'où la résultante des forces intérieures à un système est nulle.
+                Une force unique existant seule n'existe pas, d'où la résultante nulle des forces intérieures à un système.
             \end{itemize}
 
-        \subsection{Théorème du moment cinétique}\label{subsec:theoreme-du-moment-cinetique}
+        \subsection{Théorème du moment cinétique (TMC)}\label{subsec:theoreme-du-moment-cinetique}
 
-            TMC pour un point matériel en rotation autour d'un axe fixe $\Delta$ :
+            Pour un point matériel en rotation autour d'un axe fixe $\Delta$ ($J_\Delta \ddot \theta$ la dérivée du moment cinétique sur $\Delta$) :
             \[\sum \mathcal{M}_{\vec F} (\Delta) = J_\Delta \ddot \theta = J_\Delta \dot \omega \]
-            ($J_\Delta \ddot \theta$ est la dérivée du moment cinétique projetée sur $\Delta$)\\
 
+    \section{Le principe d'inertie}\label{sec:le-principe-d'inertie}
+
+        \[\dfrac{\re d \varepsilon_c}{\re d t} = 0 \quad\quad \dfrac{\re d \vec p}{\re d t} = \vec 0 \quad\quad \dfrac{\re d \vec \sigma}{\re d t} = \vec 0\]
+
+        Un système est incapable de changer son état par lui même.\\
+        (dans un référentiel Galiléen, tout système isolé ou pseudo-isolé est immobile ou à vitesse uniforme).
+
+    \section{Les grandeurs cinétiques du point}\label{sec:les-grandeurs-cinetiques-du-point}
+
+        \twoCol[60] {
+            \subsection{Moment cinétique}\label{subsec:le-moment-cinetique}
+            \twoColSized[15][70] {
+                \vspace{-18pt}
+                \begin{flalign*}
+                    \vec \sigma &= \vec{OM} \wedge \vec p&\\
+                    &= \vec{OM} \wedge m \vec v&\\
+                    &= r \vec{e_r} \wedge m r \dot\theta \vec{e_\theta}&\\
+                    &= m r^2 \dot\theta \vec{e_z}&\\
+                    &= J \vec \Omega&
+                \end{flalign*}
+            }{
+                \begin{itemize}
+                    \item Moment d'inertie :\\ $J = m r^2$ \quad (grandeur d'inertie)\vspace{4pt}
+                    \item Vecteur rotation instantané :\\ $\vec \Omega = \dot\theta \vec{e_z}$ \quad (grandeur cinématique)
+                \end{itemize}
+
+                \[\dfrac{\re d \vec \sigma}{\re d t} = \summ \vec{\mathcal{M}_{ext}}\]
+            }
+
+        }{
+            \subsection{Énergie cinétique}\label{subsec:l-energie-cinetique}
+            \vspace{-10pt}
+            \[\varepsilon_c = \dfrac{1}{2} m v^2 \hspace*{4em} \dfrac{\re d \varepsilon_c}{\re d t} = \summ P_{ext}\]
+
+
+            \subsection{Quantité de mouvement}\label{subsec:la-quantite-de-mouvement}
+            \vspace{-20pt}
+            \begin{align*}
+                \vec p = m \vec v \hspace*{4em} \dfrac{\re d \vec p}{\re d t} &= \summ \vec{F_{ext}}\\
+                m \vec a &= \sum \vec{F_{ext}}
+            \end{align*}
+        }
 
     \section{Dynamique des mouvements simples du solide}\label{sec:dynamique-des-mouvements-simples-du-solide}
 
-        \subsection{Introduction}\label{subsec:introduction}
-
-            \twoCol {
-            \subsubsection{Solide en translation}\label{subsubsec:solide-en-translation}
-            Tous les vecteurs interne restent équipollents\\
-            (tous les point on la même vitesse et acceleration)
-        }{
-            \subsubsection{Rotation autour d'un axe fixe}\label{subsubsec:rotation-autour-d'un-axe-fixe}
-            Tous les points ont la même vitesse angulaire :\\
-            Vitesse angulaire $\omega = \dot \theta$\\
-            Vecteur rotation instantanée $\vec \Omega = \omega\ \vec{u_z}$\\
-            Le vecteur vitesse peut être retrouvé par $\vec v = \vec \Omega \wedge \vec{OM}$
-        }
-            \vspace{12pt}\\
-            \twoCol {
+        \twoCol {
             \subsection{Solide en translation}\label{subsec:solide-en-translation}
+            Tous les vecteurs interne restent équipollents.\\
+            $\Rightarrow$ Tous les point on la même vitesse et acceleration.\\
 
-            La quantité de mouvement d’un solide est égale à la quantité de mouvement de son barycentre, affecté de la masse totale du système : $\vec{P} = M\ \vec{v_G}$\\
-            \textbf{PFD :} $\summ \vec{F_{ext}} = M\ \vec{a_G} = \dfrac{\re d \vec{P}}{\re d t}$\\
+            La quantité de mouvement d’un solide est égale à la quantité de mouvement de son barycentre, affecté de la masse totale du système : $\vec{P} = M\ \vec{v_G}$ \vspace{4pt}\\
+            \textbf{PFD :} $\summ \vec{F_{ext}} = M\ \vec{a_G} = \dfrac{\re d \vec{P}}{\re d t}$
+            \vspace{-2em}
         }{
             \subsection{Solide en rotation autour d'un axe fixe}\label{subsec:solide-en-rotation-autour-d'un-axe-fixe}
+            Tous les points ont la même vitesse angulaire $\omega = \dot \theta$\\
+            Vecteur rotation instantanée $\vec \Omega = \omega\ \vec{u_z}$\\
+            Le vecteur vitesse peut être retrouvé par $\vec v = \vec \Omega \wedge \vec{OM}$\vspace*{4pt}\\
+            \textbf{TMC :} $\summ \Gamma_{\vec{F}_\re{ext}} (\mathrm{Oz}) = J_\re{Oz}\ \ddot \theta$\vspace{4pt}
 
-            \textbf{TMC :} $\summ \Gamma_{\vec{F}_\re{ext}} (\mathrm{Oz}) = J_\re{Oz}\ \ddot \theta$\\
-
-            Avec $\Gamma_{\vec{F}} (\re{Oz}) = rF$ (si force selon $\vec {e_\theta}$) \vspace{4pt}\\
-            Et $J_\re{Oz} = m r^2$ (si masse uniforme)\\
+            Avec $\Gamma_{\vec{F}} (\re{Oz}) = rF$ si force selon $\vec {e_\theta}$ \vspace{4pt}\\
+            Et $J_\re{Oz} = m r^2$ si masse uniforme
+            \vspace{-2em}
         }
+
 
 
 \chapter{Dynamique : Théorèmes énergétiques}\label{ch:dynamique-theoremes-energetiques}
@@ -333,7 +278,7 @@
         On note aussi, $\delta W = \vec F \cdot \vec{\re d l}$, ce qui donne pour une force quelconque :\\
         \[ W_{A\scriptveryshortarrow B}(\vec F) = \int_A^B \vec F \cdot \vec{\re dl} \]
 
-        On définis de même la puissance d'une force :\\
+        On définis de même la puissance instantanée d'une force :\\
         \[ P(\vec F) = \dfrac{\delta W(\vec F)}{\re d t} = \vec F \cdot \dfrac{\vec{\re d l}}{\re dt} = \vec F \cdot \vec v \]
 
 
@@ -369,7 +314,7 @@
         \twoCol{
             \subsection{Solide en translation}
 
-            Pour un solide indéformable, tous les points ont la même vitesse donc l'énergie cinétique et potentielle se calculent de la même manière que pour un point matériel.\\
+            Pour un solide indéformable, tous les points ont la même vitesse donc l'énergie cinétique et potentielle se calculent de la même manière que pour un point matériel (somme discrète ou barycentre).\\
 
             Il vient de même pour le calcul de travail et de puissance de forces.\\
         }{
@@ -378,7 +323,7 @@
             Le travail et la puissance s'expriment en fonction du moment de la foce :\\
             $\delta W(\vec F) = \Gamma_{\vec F}(\Delta) \re d \theta$ et $P(\vec F) = \Gamma_{\vec F} \dot \theta$\\
 
-            On a $v = r \dot \theta$ donc on trouve :\\
+            On a $v = r \dot \theta$ donc on trouve :\vspace{4pt}\\
             $E_C = \dfrac{1}{2} J_\Delta \dot \theta^2$\\
         }
 
@@ -397,7 +342,7 @@
 
         \subsection{Effet Hall}
 
-            Dans solide parcouru par un courant et soumis à un champ magnétique, les électrons vont s'accumuler sur une paroi du fil dû à la force de Lorentz $\vec F_B = -e (\vec v \wedge \vec B)$.\\
+            Dans un solide parcouru par un courant et soumis à un champ magnétique, les électrons vont s'accumuler sur une paroi du fil dû à la force de Lorentz $\vec F_B = -e (\vec v \wedge \vec B)$.\\
 
             Cela crée un dipôle à l'intérieur du fil, un champ électrique $\vec E_H$ : c'est l'effet Hall.\\
             En régime permanent, l'accélération des électrons est nulle donc $\vec F_H = -e \vec E_H = - \vec F_B$ donc $\vec E_H = - \vec v \wedge \vec B$.\\
